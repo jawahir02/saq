@@ -1467,3 +1467,24 @@ saq-header p {
         display: flex !important;
     }
 }
+
+/* Client Logo Marquee */
+.client-card {
+    background: white;
+    padding: 0.52rem 1.04rem; /* 30% larger padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px; /* 30% larger than 55px */
+    width: 156px; /* 30% larger than 120px */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+}
+
+@media (max-width: 768px) {
+    .client-card {
+        padding: 0.4rem 0.8rem;
+        height: 55px;
+        width: 120px;
+    }
+}
+
