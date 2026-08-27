@@ -1424,3 +1424,19 @@ saq-header p {
  }
 }
 
+
+.hero-text-content {
+    transform: translateX(10%);
+}
+@media (max-width: 768px) {
+    .hero-text-content {
+        transform: none;
+        text-align: center !important;
+    }
+    .hero-text-content .btn {
+        margin: 0 auto;
+    }
+    .hero-text-content div {
+        justify-content: center !important;
+    }
+}
