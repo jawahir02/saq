@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoriesToRender = window.siteData.categories.slice(0, 25);
         categoriesToRender.forEach((cat, index) => {
             const card = document.createElement('a');
-            card.href = `products.html#${cat.slug}`;
+            card.href = `${cat.slug}.html`;
             card.className = 'cat-card fade-in-up';
             card.style.transitionDelay = `${(index % 4) * 0.1}s`;
             
