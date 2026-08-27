@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosch Power Tools | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 1rem; margin-bottom: 0.6rem; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.8rem; color: #666; margin-bottom: 0; line-height: 1.4; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { height: auto; font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Bosch Power Tools</h1>
+                <a href="#products-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Products
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/SiSbHNoITjE?si=qyohdCEo8c0-nYof" title="Bosch Power Tools YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Bosch Power Tools Supplier in UAE</h2>
+                    <p class="text-content"><strong>Built for Excellence: Exceptional performance and lasting durability for professionals in trade and industry.</strong></p>
+                    <p class="text-content">As a leading Bosch dealer in the UAE, SAQ Building Materials provides a superior product range specifically designed to enhance the efficiency and productivity of professionals working on construction sites. Bosch, the world market leader in innovation, is the first choice for professionals globally.</p>
+                    <p class="text-content">From heavy-duty rotary hammers and reciprocating saws to precision grinders and table saws, we offer a comprehensive range of high-performance tools engineered to tackle the toughest jobs. Designed with advanced technology to reduce kickback and ensure safety, Bosch products deliver longer operating life and lower operational costs.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Trust us for all your power tool needs, including first-class Bosch power tools and spare parts in Dubai, and experience excellence, speed, and robustness in every project.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products-section" class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Professional Product Range</h2>
+                <div class="pt-grid">
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="GBH%20500.png" alt="GSH 500" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>GSH 500 PROFESSIONAL</h4>
+                        <p>Great efficiency: High impact energy coupled with superior impact rate resulting in high chipping output.</p>
+                    </div>
+                    
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="GBH%202-26.png" alt="GBH 2-26" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>GBH 2-26 DFR PROFESSIONAL</h4>
+                        <p>Faster than a speeding bullet – The powerful all-rounder with a quick-change chuck for daily heavy-duty use.</p>
+                    </div>
+                    
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="GBH%202-24.png" alt="GBH 2-24" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>GBH 2-24 DFR PROFESSIONAL</h4>
+                        <p>Best drilling speed in class due to optimized gear housing set, designed for precision and durability on the job site.</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="GWS.png" alt="GWS" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>GWS 9-115 PROFESSIONAL</h4>
+                        <p>Superior grinding and cutting performance due to high power and torque at 900 W, perfect for tough materials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 40px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        @media (max-width: 768px) {
+            .final-cta.section-padding {
+                padding-top: 30px !important;
+                padding-bottom: 30px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Our Products</h1>
+            </div>
+        </section>
+
+        <section class="section-padding bg-warm-white">
+            <div class="container">
+                <div class="category-grid" id="all-products-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-charcoal text-white final-cta">
+            <div class="container text-center" style="max-width: 800px;">
+                <h2 class="section-title" style="color: white;">Can't find what you're looking for?</h2>
+                <div class="cta-btns" style="justify-content: center; margin-top: 2rem;">
+                    <a href="https://wa.me/971557566060" class="btn btn-accent">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/data.js?v=3"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('all-products-grid');
+            if (grid && window.siteData && window.siteData.categories) {
+                window.siteData.categories.forEach((cat, index) => {
+                    const card = document.createElement('a');
+                    card.href = `${cat.slug}.html`;
+                    card.id = cat.id;
+                    card.className = 'cat-card fade-in-up';
+                    card.style.transitionDelay = `${(index % 4) * 0.1}s`;
+                    card.style.display = 'flex'; // Ensure flex behaves
+                    
+                    card.innerHTML = `
+                        <div class="cat-img-wrapper" style="width: 100%; aspect-ratio: 1/1; background: white; overflow: hidden; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <img style="width: 100%; height: 100%; object-fit: contain; padding: 1.5rem;" src="${cat.img}" alt="${cat.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="width:100%; height:100%; background:var(--warm-beige); position:absolute; top:0; left:0; display:none; align-items:center; justify-content:center; color:var(--charcoal); text-align:center; padding:1rem; font-size:0.8rem;">[IMG: ${cat.name}]</div>
+                        </div>
+                        <div class="cat-content" style="padding: 1.2rem; text-align: left;">
+                            <div style="font-family:var(--font-secondary); font-size:0.8rem; color:var(--charcoal); margin-bottom:0.5rem;">0${index + 1}</div>
+                            <h3 style="color: var(--charcoal); font-family: var(--font-primary); font-size: 1.1rem; margin: 0; text-transform: uppercase; font-weight: 700;">${cat.name}</h3>
+                            <p class="prod-desc" style="font-size: 0.85rem; color: #666; margin-top: 5px; line-height: 1.4;">${cat.desc}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+                
+                // Trigger intersection observer for new elements
+                const fadeElements = document.querySelectorAll('.fade-in-up');
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                fadeElements.forEach(el => observer.observe(el));
+            }
+        });
+    </script>
+</body>
+</html>

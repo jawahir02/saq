@@ -1,0 +1,57 @@
+/* Print specific styling */
+@page {
+  size: A4 portrait;
+  margin: 0; /* Margins are handled by the .container class to ensure proper background bleed if needed */
+}
+
+@media print {
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: var(--color-white);
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    background-color: var(--color-white);
+  }
+  
+  /* The last page shouldn't force a blank page after it */
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Prevent elements from breaking across pages if they accidentally overflow */
+  .product-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Apply the same sizing for screen view so it looks like a document before printing */
+@media screen {
+  body {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+}

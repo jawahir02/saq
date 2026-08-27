@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Chemicals | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .pt-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; max-width: 920px; margin-left: auto; margin-right: auto; }
+        .pt-card { width: calc(33.333% - 1rem); background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { gap: 1rem; }
+            .pt-card { width: calc(33.333% - 0.66rem); }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { width: calc(50% - 0.4rem) !important; padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Construction Chemicals</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/DhtAZpMhHjE?si=7UAEv6ItOGgtUhZ3" title="Construction Chemicals YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Construction Chemicals Suppliers in UAE</h2>
+                    <p class="text-content"><strong>Meeting international standards for tile fixing, waterproofing, concrete repair, plastering, and thermal insulation.</strong></p>
+                    <p class="text-content">SAQ Building Materials is a trusted supplier of superior quality construction chemicals in Dubai. Our product range speeds up the construction process while providing strength and sustainability to every structure — from residential buildings to large-scale industrial and infrastructure projects.</p>
+                    <p class="text-content" style="margin-bottom: 0;">We supply a comprehensive selection of chemicals including facade and thermal insulation systems, self-levelling compounds, concrete repair mortars, plastering mortars, and high-performance concrete admixtures from the world's most trusted brands.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Our Partner Brands</h2>
+
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b17.png" alt="Sodamco" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Sodamco</h3>
+                        <p class="text-content" style="font-weight: 500;">Best-selling concrete repair and self-levelling solutions for all project types.</p>
+                        <p class="text-content">We offer their complete range of self-levelling compounds, concrete repair mortars, and construction chemicals.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b18.png" alt="Weber" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Weber</h3>
+                        <p class="text-content" style="font-weight: 500;">Quick-setting floor smooth compounds.</p>
+                        <p class="text-content">Weber's quick-setting floor smooth compound (23kg) levels floors in minutes with a single pour, ideal ahead of any floor covering installation.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b5.png" alt="Henkel Polybit" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Henkel Polybit</h3>
+                        <p class="text-content" style="font-weight: 500;">High-impact resistance against abrasion and chemicals.</p>
+                        <p class="text-content">Henkel Polybit products offer excellent crack resistance and smooth levelling performance. Their high-performance chemical range ensures the proper mechanical strength for any structure, making them a top choice for construction projects demanding both durability and quality.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b43.png" alt="Fosroc" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Fosroc</h3>
+                        <p class="text-content" style="font-weight: 500;">Reliable concrete repair chemicals that prolong the life of original structures.</p>
+                        <p class="text-content">Fosroc offers an unparalleled range of flooring solutions and concrete repair chemicals — from design through to construction and final installation. Their products are trusted globally to improve and modify surface levels while extending structural longevity.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b44.png" alt="Laticrete" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Laticrete</h3>
+                        <p class="text-content" style="font-weight: 500;">"Better Concrete. Better World." — industry-leading durability solutions.</p>
+                        <p class="text-content">Laticrete's concrete chemicals are engineered to improve long-term performance and durability of concrete surfaces. Their product synergy ensures that different chemicals work together, creating safe, easy-to-maintain floors that stand the test of time.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b45.png" alt="Mapei" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Mapei</h3>
+                        <p class="text-content" style="font-weight: 500;">A complete range of admixtures and flooring solutions built for a global market.</p>
+                        <p class="text-content">Mapei products are developed with a global vision after thorough research, covering everything from concrete admixtures to flooring compounds. They provide the best possible solutions for every construction challenge, ensuring consistent quality and lasting surfaces.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b46.png" alt="Terraco" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Terraco</h3>
+                        <p class="text-content" style="font-weight: 500;">Breakthrough technologies using only quality raw materials.</p>
+                        <p class="text-content">Terraco continuously develops innovative products after rigorous testing to create a genuine value chain in the construction industry. Their expertise spans facade renders, thermal insulation systems, and decorative finishes that combine performance with aesthetic appeal.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b42.png" alt="Dr. Fixit" style="max-width: 100%; max-height: 100%; border-radius: 4px;"></div>
+                        <h3>Dr. Fixit</h3>
+                        <p class="text-content" style="font-weight: 500;">High quality construction chemicals.</p>
+                        <p class="text-content">Dr. Fixit provides highly versatile and durable construction chemicals in the market, designed to meet international standards for all project requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+                <div class="pt-grid">
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="facade.png" alt="Facade Insulation" style="max-width: 100%; max-height: 100%;"></div>
+                        <h4>Facade & Thermal Insulation</h4>
+                        <p>ETICS systems with monocouche, mineral and polymeric renders to eliminate thermal bridges and prevent mould growth.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Self Leveling Compound.png" alt="Self Levelling Compound" style="max-width: 100%; max-height: 100%;"></div>
+                        <h4>Self Levelling Compound</h4>
+                        <p>Quick-setting floor compounds (Weber Floor Smooth FD) that seek their own level in minutes, ready for any floor covering.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Technical &amp; Concrete Repair.png" alt="Concrete Repair" style="max-width: 100%; max-height: 100%;"></div>
+                        <h4>Technical & Concrete Repair</h4>
+                        <p>Cementitious and epoxy mortars for smoothening, grouting, anchoring, and structural concrete remediation.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Plastering Mortars.png" alt="Plastering Mortars" style="max-width: 100%; max-height: 100%;"></div>
+                        <h4>Plastering Mortars</h4>
+                        <p>Premixed mounting mortars, rush coats, plasters, and finishing putties for fast, consistent, low-wastage application.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Concrete Admixtures.png" alt="Concrete Admixtures" style="max-width: 100%; max-height: 100%;"></div>
+                        <h4>Concrete Admixtures</h4>
+                        <p>Plasticisers, superplasticisers, retarders, accelerators, anti-freeze agents, and SBR/PVA-based admixtures for ready-mix and precast concrete.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

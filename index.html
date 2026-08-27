@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAQ Building Materials | Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    
+    <saq-header></saq-header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" style="position: relative; overflow: hidden; padding: 100px 0 60px; text-align: left; display: flex; align-items: center; min-height: 60vh; background: transparent;">
+            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none;">
+                <source src="hero-bg.mp4" type="video/mp4">
+            </video>
+            <!-- White overlay for the video -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(253, 251, 249, 0.88); z-index: 1; pointer-events: none;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;">
+                <div style="max-width: 750px; text-align: left; width: 100%;">
+                    <h1 style="font-family: var(--font-display, serif); font-size: clamp(40px, 5vw, 64px); color: var(--charcoal); line-height: 1.2; font-weight: 500; margin-bottom: 1rem;">
+                    Quality Materials.<br>
+                    Reliable Supply.<br>
+                    Built Around Your Project.
+                </h1>
+                <p style="max-width: 650px; font-size: 1.1rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 2rem;">
+                    Building materials, paints, protective coatings and interior fit-out solutions for contractors, designers and builders across Dubai and the UAE.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-start;">
+                    <a href="products.html" class="btn btn-accent" style="padding: 0.8rem 2rem;">EXPLORE PRODUCTS</a>
+                    <a href="https://wa.me/971557566060" class="btn btn-outline" style="border: 1px solid var(--gold); color: var(--gold); padding: 0.8rem 2rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: transparent;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>ORDER ON WHATSAPP
+                    </a>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Helpline Bar -->
+        <div class="hero-helpline" style="position: relative; z-index: 10;">
+            <div class="hero-helpline-col">
+                <span>ORDER HELPLINE</span>
+                <a href="tel:+971557566060">+971 55 756 6060</a>
+            </div>
+            <div class="hero-helpline-col">
+                <span style="display: flex; align-items: center; gap: 4px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    WHATSAPP
+                </span>
+                <a href="https://wa.me/971557566060">+971 55 756 6060</a>
+            </div>
+            <div class="hero-helpline-col">
+                <span>EMAIL</span>
+                <a href="mailto:samaalqasar@gmail.com">samaalqasar@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- Brands Marquee Section -->
+        <section class="clients-marquee-section" style="padding: 3rem 0; background: #faf9f6; border-bottom: 1px solid #eaeaea;">
+            <div class="container text-center">
+                <h2 style="font-family: var(--font-display, serif); font-size: 1.8rem; color: var(--navy-blue); font-weight: 500; margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 0.05em;">OUR MAJOR CLIENTS</h2>
+            </div>
+            
+            <div style="width: 100%; overflow: hidden; position: relative;">
+                <div style="display: flex; width: max-content; animation: scroll-marquee 30s linear infinite;">
+                    <!-- First Set -->
+                    <div style="display: flex; gap: 2rem; padding: 0 1rem; align-items: center;">
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="1.png" alt="Client 1" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="2.png" alt="Client 2" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="3.png" alt="Client 3" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="4.png" alt="Client 4" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="5.png" alt="Client 5" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="6.png" alt="Client 6" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="7.png" alt="Client 7" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                    </div>
+                    <!-- Duplicate Set for infinite scroll -->
+                    <div style="display: flex; gap: 2rem; padding: 0 1rem; align-items: center;">
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="1.png" alt="Client 1" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="2.png" alt="Client 2" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="3.png" alt="Client 3" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="4.png" alt="Client 4" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="5.png" alt="Client 5" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="6.png" alt="Client 6" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 90px; width: 180px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);"><img src="7.png" alt="Client 7" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes scroll-marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+            </style>
+        </section>
+
+                <!-- 5. WHY PARTNER WITH SAQ -->
+        <section class="" style="background-color: #FDFBF9; padding: 1rem 0 3rem 0; position: relative; overflow: hidden;">
+            <img src="parallax2.png" alt="" class="parallax-bg" style="position: absolute; right: -5%; top: 50%; transform: translateY(calc(-50% + var(--parallax-y, 0px))); height: 120%; width: auto; opacity: 0.09; z-index: 0; pointer-events: none; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%); mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);">
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="why-section-header fade-in-up">
+                    <span class="eyebrow" style="color: var(--gold);">OUR COMMITMENT</span>
+                    <h2 style="font-family: var(--font-primary); font-size: 2.2rem; font-weight: 800; color: var(--navy-blue); margin-top: 0.5rem; margin-bottom: 1rem; text-transform: uppercase;">WHY PARTNER WITH US</h2>
+                    <p style="font-size: 1rem; color: var(--charcoal); opacity: 0.8; line-height: 1.5;">Trusted products, expertise, and responsive service<br>to support every stage of your project.</p>
+                </div>
+                
+                <div class="why-cards">
+                    <div class="why-card fade-in-up">
+                        <div class="why-card-image">
+                            <img src="assets/why_1_paint.jpg" alt="Paints">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>AUTHORIZED<br>JOTUN DEALER</h3>
+                            <p>Authentic paints and specialist coatings backed by manufacturer trust.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.1s">
+                        <div class="why-card-image">
+                            <img src="assets/why_2_interior.jpg" alt="Interior Materials">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="10" width="4" height="12"/>
+                                <rect x="10" y="4" width="4" height="18"/>
+                                <rect x="16" y="8" width="4" height="14"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>INTERIOR &<br>FIT-OUT SPECIALISTS</h3>
+                            <p>Curated materials to meet the demands of modern interior design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.2s">
+                        <div class="why-card-image">
+                            <img src="assets/why_3_delivery.jpg" alt="Delivery">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>FLEXIBLE, RELIABLE<br>SERVICE</h3>
+                            <p>Reliable site deliveries tailored to keep your timelines on track.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.3s">
+                        <div class="why-card-image">
+                            <img src="assets/why_4_support.jpg" alt="Project Support">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>PROJECT-FOCUSED<br>SUPPORT</h3>
+                            <p>Dedicated to helping you source the right materials for any project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MISSION DASHBOARD -->
+        <section class="mission-dashboard-section section-padding" style="background-color: #FDFBF9; position: relative; overflow: hidden;">
+            <img src="parallax.png" alt="" class="parallax-bg" style="position: absolute; left: -5%; top: 50%; transform: translateY(calc(-50% + var(--parallax-y, 0px))); height: 120%; width: auto; opacity: 0.15; z-index: 0; pointer-events: none; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%); mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);">
+            <div class="container" style="position: relative; z-index: 1;">
+                
+                <!-- 1. Header Grid -->
+                <div class="mission-header-grid fade-in-up">
+                    <div class="mission-header-left">
+                        <span class="eyebrow" style="color: var(--gold);">OUR MISSION</span>
+                        <h2 class="mission-title">BUILDING VALUE<br>BEYOND MATERIALS<span style="color: var(--gold);">.</span></h2>
+                        <p class="mission-subtitle">We combine trusted materials, practical expertise and dependable<br>service to help projects move forward.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Process Timeline Grid -->
+                <div class="process-timeline-grid fade-in-up" style="transition-delay: 0.1s;">
+                    <!-- Step 1 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">01</span>
+                                <span class="process-word">SPECIFY</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Compass Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M8 22h8M12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 22l7-12 7 12"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Understanding the requirement<br>before selecting the material.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">02</span>
+                                <span class="process-word">SOURCE</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Layers Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Bringing together the right<br>materials for the project.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">03</span>
+                                <span class="process-word">DELIVER</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Truck Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Getting materials where they<br>need to be, when they are needed.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">04</span>
+                                <span class="process-word">BUILD</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node last">
+                            <div class="process-icon-circle">
+                                <!-- Building Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20"/><line x1="12" y1="22" x2="12" y2="2"/><line x1="8" y1="22" x2="8" y2="2"/><line x1="16" y1="22" x2="16" y2="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Helping transform specifications<br>into finished spaces.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Approach & Values Grid -->
+                <div class="approach-values-grid fade-in-up" style="transition-delay: 0.2s;">
+                    
+                    <!-- Middle: Our Approach Text -->
+                    <div class="approach-text-col">
+                        <span class="eyebrow" style="color: var(--gold);">OUR APPROACH</span>
+                        <p class="approach-bold-text">Delivering maximum value through dependable materials, trusted products, and responsive service for contractors, designers, and builders.</p>
+                        <p class="approach-regular-text">Supplying products is only part of the job. True value comes from combining quality materials with practical expertise and a commitment to moving every project forward.</p>
+                    </div>
+
+                    <!-- Right: What We Stand For Grid -->
+                    <div class="values-dashboard-col">
+                        <span class="eyebrow" style="color: var(--gold); text-align: center; display: block; margin-bottom: 2rem;">WHAT WE STAND FOR</span>
+                        
+                        <div class="values-2x2-grid">
+                            <!-- Value 1 -->
+                            <div class="dash-value-item">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M8 22h8M12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 22l7-12 7 12"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">01</span> <span class="dv-title">EXPERTISE</span></div>
+                                    <p>Experience that helps you<br>choose with confidence.</p>
+                                </div>
+                            </div>
+                            <!-- Value 2 -->
+                            <div class="dash-value-item right-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">02</span> <span class="dv-title">QUALITY</span></div>
+                                    <p>Quality in every product.<br>Care in every detail.</p>
+                                </div>
+                            </div>
+                            <!-- Value 3 -->
+                            <div class="dash-value-item bottom-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="20" y2="4"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="8" y1="4" x2="8" y2="20"/><line x1="16" y1="4" x2="16" y2="20"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">03</span> <span class="dv-title">COMMITMENT</span></div>
+                                    <p>When we commit,<br>we deliver.</p>
+                                </div>
+                            </div>
+                            <!-- Value 4 -->
+                            <div class="dash-value-item right-border-none bottom-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">04</span> <span class="dv-title">INTEGRITY</span></div>
+                                    <p>Straightforward relationships<br>built on trust.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Value 5 (Centered) -->
+                        <div class="dash-value-item centered-item">
+                            <div class="dash-value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </div>
+                            <div class="dash-value-text">
+                                <div class="dv-header"><span class="dv-num">05</span> <span class="dv-title">RESPONSIBILITY</span></div>
+                                <p>Building responsibly,<br>for the long term.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <!-- PRODUCTS SECTION -->
+        <section class="section-padding" style="background-color: #FDFBF9; padding: 4rem 0;">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title" style="font-family: var(--font-display); font-size: 2.2rem; color: var(--navy-blue); margin: 0 auto 0.5rem auto; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; display: block; width: 100%;">EVERYTHING YOUR PROJECT NEEDS</h2>
+                <p style="margin: 0 auto 3rem auto; color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; line-height: 1.6; max-width: 600px; text-align: center;">A comprehensive range of building materials, finishing products, tools, and construction solutions.</p>
+                <div class="category-grid" id="category-grid" style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory;">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <style>
+                    /* Custom Scrollbar for the horizontal scroll */
+                    .category-grid::-webkit-scrollbar {
+                        height: 6px;
+                    }
+                    .category-grid::-webkit-scrollbar-track {
+                        background: rgba(0,0,0,0.05);
+                        border-radius: 4px;
+                    }
+                    .category-grid::-webkit-scrollbar-thumb {
+                        background: var(--gold);
+                        border-radius: 4px;
+                    }
+                    .cat-card {
+                        flex: 0 0 calc(25% - 15px);
+                        min-width: 280px;
+                        scroll-snap-align: start;
+                        background: white;
+                        text-decoration: none;
+                        display: block;
+                        text-align: left;
+                        transition: transform 0.3s ease;
+                    }
+                    .cat-card:hover {
+                        transform: translateY(-5px);
+                    }
+                    .cat-img-wrapper {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        background: white; /* Match card background for clean look */
+                        overflow: hidden;
+                        position: relative;
+                        border-bottom: 1px solid rgba(0,0,0,0.05); /* Separator between img and text */
+                    }
+                    .cat-img-wrapper img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        padding: 1.5rem; /* Stop tools from touching the edges */
+                    }
+                    .cat-content {
+                        padding: 1.2rem;
+                    }
+                    .cat-content h3 {
+                        color: var(--charcoal);
+                        font-family: var(--font-primary);
+                        font-size: 1.1rem;
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                    .cat-content p {
+                        font-size: 0.85rem; color: #666; margin-top: 5px; line-height: 1.4;
+                    }
+                    .cat-content .cat-arrow {
+                        display: none; /* Hide 'VIEW PRODUCTS' text */
+                    }
+                </style>
+            </div>
+        </section>
+
+<!-- BRANDS SECTION -->
+        <section class="brands-hero-section">
+            <div class="brands-split-container">
+                <div class="brands-left-text">
+                    <span class="eyebrow" style="color: var(--gold);">OUR PARTNERS</span>
+                    <h2 class="section-title">BRANDS WE DISTRIBUTE & REPRESENT</h2>
+                    <p>We partner with world-class manufacturers to bring you trusted materials, professional products and proven performance.</p>
+                </div>
+                <div class="brands-right-image">
+                    <img src="assets/brands.png" alt="Trusted Building Material Brands">
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-warm-white" style="padding-bottom: 0px; width: 100%; overflow: hidden;">
+    <div style="width: 100%; position: relative; padding: 0.5rem 0;">
+<div style="display: flex; width: max-content; animation: scroll-marquee 40s linear infinite; margin-bottom: 0.1rem;">
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b24.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b25.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b26.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b27.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b31.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b32.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b34.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b35.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b37.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b38.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b39.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b1.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b24.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b25.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b26.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b27.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b31.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b32.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b34.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b35.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b37.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b38.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b39.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b1.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+</div>
+<div style="display: flex; width: max-content; animation: scroll-marquee-reverse 40s linear infinite; margin-bottom: 0.1rem;">
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b2.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b3.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b4.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b5.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b6.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b7.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b11.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b12.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b13.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b14.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b15.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b16.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b17.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b2.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b3.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b4.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b5.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b6.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b7.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b11.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b12.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b13.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b14.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b15.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b16.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b17.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+</div>
+<div style="display: flex; width: max-content; animation: scroll-marquee 40s linear infinite; margin-bottom: 0.1rem;">
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b21.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b22.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b23.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b19.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b20.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b28.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b29.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b30.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b8.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b9.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b10.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b18.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+    <div style="display: flex; gap: 0.1rem; padding: 0 0.125rem; align-items: center;">
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b21.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b22.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b23.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b19.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b20.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b28.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b29.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b30.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b8.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b9.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b10.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+        <div style="background: white; padding: 0.1rem 0.25rem; display: flex; align-items: center; justify-content: center; height: 50px; width: 110px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);"><img src="assets/b18.png" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+    </div>
+</div>
+    </div>
+    <style>@keyframes scroll-marquee-reverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }</style>
+</section>
+
+
+
+
+        
+        <!-- BLUE VALUE BANNER -->
+        <section class="value-banner" style="background-color: #1a2639; padding: 0.75rem 0;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; text-align: center;">
+                    
+                    <!-- 1. SAME DAY DELIVERY -->
+                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h4 style="color: white; font-family: var(--font-display, serif); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; margin: 0; text-transform: uppercase;">SAME DAY DELIVERY</h4>
+                    </div>
+
+                    <!-- 2. ASK US -->
+                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                            </svg>
+                        </div>
+                        <h4 style="color: white; font-family: var(--font-display, serif); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; margin: 0; text-transform: uppercase;">ASK US</h4>
+                    </div>
+
+                    <!-- 3. INSTAGRAM -->
+                    <a href="https://instagram.com" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;" class="hover-opacity">
+                        <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <h4 style="color: white; font-family: var(--font-display, serif); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; margin: 0; text-transform: uppercase;">INSTAGRAM</h4>
+                    </a>
+
+                    <!-- 4. LINKEDIN -->
+                    <a href="https://linkedin.com" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;" class="hover-opacity">
+                        <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                              <rect x="2" y="9" width="4" height="12"></rect>
+                              <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h4 style="color: white; font-family: var(--font-display, serif); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; margin: 0; text-transform: uppercase;">LINKEDIN</h4>
+                    </a>
+
+                </div>
+            </div>
+            <style>
+                .hover-opacity { transition: opacity 0.2s ease; }
+                .hover-opacity:hover { opacity: 0.7; }
+            </style>
+        </section>
+
+        <!-- 13. FINAL CTA -->
+        <section class="final-cta bg-charcoal text-white" style="padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="padding: 0 4%; max-width: 1600px; margin: 0 auto; width: 100%;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3rem;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: 0.05em; color: var(--gold);">NEED MATERIALS FOR YOUR NEXT PROJECT?</h2>
+                        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.6;">Tell us what you need. Our team will help you find the right products and arrange supply tailored to your requirements.</p>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 2rem;">
+                            <p style="font-size: 0.8rem; color: var(--gold); font-weight: 600; margin: 0; letter-spacing: 0.05em; text-transform: uppercase;">We securely accept</p>
+                            <div class="payment-rect" style="height: 22px; min-width: 34px; font-size: 10px; margin: 0; background: transparent;">VISA</div>
+                            <div class="payment-rect" style="height: 22px; min-width: 34px; margin: 0; background: transparent;">
+                                <div class="mc-circle mc-red" style="width: 12px; height: 12px; left: 6px;"></div>
+                                <div class="mc-circle mc-yellow" style="width: 12px; height: 12px; right: 6px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">                    <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px;">
+                            <a href="https://wa.me/971557566060" class="btn btn-accent" style="padding: 0.8rem 1.2rem; font-size: 0.95rem; display: inline-flex; align-items: center; white-space: nowrap;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>WhatsApp
+                            </a>
+                            <a href="tel:+971557566060" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white; padding: 0.8rem 1.2rem; font-size: 0.95rem; display: inline-flex; align-items: center; white-space: nowrap;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call
+                            </a>
+                            <a href="mailto:samaalqasar@gmail.com" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white; padding: 0.8rem 1.2rem; font-size: 0.95rem; display: inline-flex; align-items: center; white-space: nowrap;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+    <floating-call-btn></floating-call-btn>
+
+    <script src="js/data.js?v=3"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

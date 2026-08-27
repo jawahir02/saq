@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 40px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue)">Our Partners</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0;">Brands We Represent</h1>
+            </div>
+        </section>
+        <section class="section-padding bg-warm-white">
+            <div class="container">
+                <div class="brand-grid" id="all-brands-grid"></div>
+            </div>
+        </section>
+    </main>
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('all-brands-grid');
+            if (grid && window.siteData && window.siteData.brands) {
+                window.siteData.brands.forEach((brand, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'brand-logo-item fade-in-up visible';
+                    if (brand.img) {
+                        item.innerHTML = `<img src="${brand.img}" alt="${brand.name}" style="width: 100%; height: 100px; object-fit: contain; border-radius: 4px; background: #fff; padding: 10px; border: 1px solid rgba(0,0,0,0.05);">`;
+                    } else {
+                        item.innerHTML = `<div style="font-weight:700; color:var(--charcoal); font-size:1.2rem; letter-spacing:1px;">${brand.name.toUpperCase()}</div>`;
+                    }
+                    grid.appendChild(item);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

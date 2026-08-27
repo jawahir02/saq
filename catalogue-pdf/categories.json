@@ -1,0 +1,498 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "name": "Interior Paints & Emulsions",
+    "title_1": "INTERIOR",
+    "title_2": "PAINTS & EMULSIONS",
+    "brands": [
+      {
+        "name": "JOTUN",
+        "products": ["Fenomastic My Home Rich Matt", "Fenomastic Wonderwall Lux", "Fenomastic Pure Color Emulsion", "Jotaplast Interior Silk", "Jotun Woodshield Interior Varnish"]
+      },
+      {
+        "name": "CAPAROL",
+        "products": ["Caparol CapaSilan", "Caparol CapaMatt", "Caparol ElectroShield", "Caparol Fungitex W"]
+      },
+      {
+        "name": "DULUX",
+        "products": ["Dulux EasyCare", "Dulux Inspire Interior Matt", "Dulux Diamond Matt", "Dulux Velvet Touch"]
+      },
+      {
+        "name": "BERGER PAINTS",
+        "products": ["Berger Silk Glamor", "Berger Easy Clean", "Berger Bison Emulsion", "Berger Luxury Silk", "Berger Robbialac"]
+      },
+      {
+        "name": "NATIONAL PAINTS",
+        "products": ["National Shield Matt Emulsion", "National Silk Emulsion", "National Acrylic Emulsion", "National Plastic Emulsion", "National Eggshell Emulsion"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "name": "Exterior Paints & Textured Coatings",
+    "title_1": "EXTERIOR",
+    "title_2": "PAINTS &<br>TEXTURED COATINGS",
+    "brands": [
+      {
+        "name": "JOTUN",
+        "products": ["Jotashield Eterna Smooth", "Jotashield Extreme", "Jotashield Heritage Traditional Tex", "Jotun Texo Texture Compound"]
+      },
+      {
+        "name": "CAPAROL",
+        "products": ["Caparol StructurePutz", "Caparol Rashaat", "Caparol Mineralputz"]
+      },
+      {
+        "name": "DULUX",
+        "products": ["Dulux Weathershield Smooth", "Dulux Weathershield Tex", "Dulux Weathershield Max", "Dulux Weathershield Creation"]
+      },
+      {
+        "name": "BERGER PAINTS",
+        "products": ["Berger Weathercoat Smooth", "Berger Weathercoat Vintage Tex", "Berger Weathercoat Flex", "Berger Weathercoat Ultra"]
+      },
+      {
+        "name": "NATIONAL PAINTS",
+        "products": ["National Shield Tex Ultra", "National Shield Antique", "National Relief Texture", "National Micro Tex", "National Granite Finish"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "name": "Primers, Sealers & Undercoats",
+    "title_1": "PRIMERS & SEALERS",
+    "title_2": "& UNDERCOATS",
+    "brands": [
+      {
+        "name": "JOTUN",
+        "products": ["Jotun PVA Primer", "Jotun Acrylic Emulsion Exterior Primer", "Jotun Craft Primer", "Jotun Cito Primer"]
+      },
+      {
+        "name": "CAPAROL",
+        "products": ["Caparol CapaPrime P", "Caparol SounderGrund", "Caparol Haftgrund", "Caparol Tiefgrund"]
+      },
+      {
+        "name": "FOSROC",
+        "products": ["Nitoprime 25", "Nitoprime 31", "Nitoprime Zincrich", "Nitobond AR"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["Sikafloor-156", "Sika Latex Primer", "SikaPrimer-3 N", "SikaBond Primer"]
+      },
+      {
+        "name": "BERGER PAINTS",
+        "products": ["Berger Weathercoat Sealer", "Berger Alkali Resistant Primer", "Berger Water-Based Wall Primer"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "name": "Wood & Metal Protective Finishes",
+    "title_1": "WOOD & METAL",
+    "title_2": "PROTECTIVE FINISHES",
+    "brands": [
+      {
+        "name": "JOTUN",
+        "products": ["Gardex Premium Gloss", "Gardex Semi-Gloss", "Gardex Wood Protection", "Jotun Woodshield Stain", "Jotun Woodshield Varnish"]
+      },
+      {
+        "name": "DULUX",
+        "products": ["Hammerite Direct to Rust Metal Paint", "Dulux Gloss Enamel", "Dulux WoodSheen", "Dulux Trade Protective Woodstain"]
+      },
+      {
+        "name": "SIKKENS",
+        "products": ["Cetol Filter 7 Plus", "Cetol HLS Extra", "Rubbol BL Primer", "Cetol BLX-Pro"]
+      },
+      {
+        "name": "NATIONAL PAINTS",
+        "products": ["National Synthetic Enamel", "National Red Oxide Primer", "National Polyurethane Clear Coat", "National Wood Stains"]
+      },
+      {
+        "name": "CAPAROL",
+        "products": ["Capalac High Gloss", "Capalac Rust Protection Primer", "Capalac BaseTop"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "number": "05",
+    "name": "Industrial & Specialized Coatings",
+    "title_1": "INDUSTRIAL",
+    "title_2": "& SPECIALIZED COATINGS",
+    "brands": [
+      {
+        "name": "JOTUN",
+        "products": ["Jotamastic 90", "Penguard FC", "Hardtop XP", "Baltoflake", "Jotafloor Sealer"]
+      },
+      {
+        "name": "HEMPEL",
+        "products": ["Hempadur 45143", "Hempathane Topcoat 55210", "Hempels Silicone Acrylic 56940", "Hempadur Avantguard 750"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["Sikafloor-264", "Sikafloor-263 SL", "Sika Permacor", "Sikafloor-161", "Sikafloor-220 Anti-Static"]
+      },
+      {
+        "name": "PPG / SIGMA",
+        "products": ["Sigmadur 550", "Sigmacover 380", "Sigmashield 880", "Sigmathane Glass Flake"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "number": "06",
+    "name": "Waterproofing Systems & Membranes",
+    "title_1": "WATERPROOFING",
+    "title_2": "SYSTEMS & MEMBRANES",
+    "brands": [
+      {
+        "name": "FOSROC",
+        "products": ["Brushbond", "Proofex 3000", "Nitoproof 600", "Proofex Torch-Apply", "Proofex Smart"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["Sika Bituseal S-12", "Mapei Mapelastic", "SikaFill", "Sikalastic-560", "SikaBit Self-Adhesive Sheet", "Sika Injection Resins"]
+      },
+      {
+        "name": "HENKEL POLYBIT",
+        "products": ["Polybond", "Polyfelt", "Bitustick 1200", "Henkel Polyflex", "Polyroof"]
+      },
+      {
+        "name": "WEBER SODAMCO",
+        "products": ["Weber dry 110 FX", "Weber dry 360 PU", "Weber dry 701", "Weber dry 310"]
+      },
+      {
+        "name": "DR. FIXIT",
+        "products": ["Dr. Fixit Fastflex", "Dr. Fixit Raincoat", "Dr. Fixit Torch-On Membrane", "Dr. Fixit K2 Smarter Waterproofing"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "number": "07",
+    "name": "Tile Adhesives & Grouts",
+    "title_1": "TILE ADHESIVES",
+    "title_2": "& GROUTS",
+    "brands": [
+      {
+        "name": "WEBER / SODAMCO",
+        "products": ["Webercol Standard", "Webercol Flex", "Weberjoint Fine", "Webercol Pro", "Weberjoint Thick"]
+      },
+      {
+        "name": "MAPEI",
+        "products": ["Keraset", "Keraflex Maxi S1", "Keracolor FF", "Ultracolor Plus", "Mapestone", "Kerapoxy"]
+      },
+      {
+        "name": "LATICRETE",
+        "products": ["Laticrete 317", "Laticrete 254 Platinum", "Laticrete PermaColor Grout", "Laticrete 335 Flex"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["SikaCeram-4", "SikaCeram-118", "SikaCeram-217", "SikaCeram FLX 23", "SikaCeram 750 Epoxy", "SikaCeram CleanGrout"]
+      },
+      {
+        "name": "FOSROC",
+        "products": ["Nitobond Tile Adhesive", "Fosroc NitoTile GP", "NitoTile XS"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "number": "08",
+    "name": "Structural Bonding Agents & Admixtures",
+    "title_1": "STRUCTURAL",
+    "title_2": "BONDING AGENTS",
+    "brands": [
+      {
+        "name": "FOSROC",
+        "products": ["Nitobond SBR", "Nitobond AR", "Conplast RP264", "Conplast SP430", "Structuro 200"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["Sikadur-31 CF", "Sika ViscoCrete-3110", "SikaLatex", "Sika-1 Waterproofer", "Sikacrete-114"]
+      },
+      {
+        "name": "MAPEI",
+        "products": ["Mapefer 1K", "Planicrete", "Eporip", "Dynamon Easy", "Mapeplast"]
+      },
+      {
+        "name": "MASTER BUILDERS",
+        "products": ["MasterRheobuild", "MasterCast", "MasterEmaco", "MasterPolyheed"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "number": "09",
+    "name": "Cements (OPC, White & Speciality)",
+    "title_1": "CEMENTS",
+    "title_2": "(OPC, WHITE & SPECIALITY)",
+    "brands": [
+      {
+        "name": "EMIRATES CEMENT",
+        "products": ["Ordinary Portland Cement (OPC Grade 42.5/52.5)"]
+      },
+      {
+        "name": "RAK WHITE CEMENT",
+        "products": ["Premium White Portland Cement", "Masonry Cement", "Decorative White Cement"]
+      },
+      {
+        "name": "NATIONAL CEMENT CO",
+        "products": ["Portland Pozzolana Cement (PPC)", "Sulfate Resisting Cement (SRC Grade 42.5)"]
+      },
+      {
+        "name": "MAPEI",
+        "products": ["Ultrafast Cement", "Mapecem", "Binder", "Planitop Fast 330"]
+      },
+      {
+        "name": "DAMMAM / FUJAIRAH",
+        "products": ["High Early Strength Cement", "Low Heat Portland Cement"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "number": "10",
+    "name": "Wall Putty & Surface Leveling Plasters",
+    "title_1": "WALL PUTTY &",
+    "title_2": "SURFACE PLASTERS",
+    "brands": [
+      {
+        "name": "WEBER / SODAMCO",
+        "products": ["Webercoat Wall Putty", "Weber wall finish", "Weber dry levell"]
+      },
+      {
+        "name": "KNAUF",
+        "products": ["Knauf Fugenfüller", "Knauf Joint Filler Super", "Knauf Joint Compound", "Knauf Uniflott"]
+      },
+      {
+        "name": "JOTUN",
+        "products": ["Jotun Stucco Putty", "Jotun Masonry Stucco"]
+      },
+      {
+        "name": "NATIONAL PAINTS",
+        "products": ["National Wall Putty Interior", "National Exterior Putty", "National Acrylic Stucco"]
+      },
+      {
+        "name": "CAPAROL",
+        "products": ["Caparol CapaFiller", "Caparol Accord", "Caparol Filler Coat"]
+      },
+      {
+        "name": "GYPROC",
+        "products": ["Gyproc Joint Compound", "Gyproc ProClean Jointing"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "number": "11",
+    "name": "Masonry Blocks & Bricks",
+    "title_1": "MASONRY",
+    "title_2": "BLOCKS & BRICKS",
+    "brands": [
+      {
+        "name": "AAC BLOCKS",
+        "products": ["Thermalite AAC Blocks", "Litecrete Autoclaved Aerated Blocks", "Siporex Aerated Blocks"]
+      },
+      {
+        "name": "CONCRETE BLOCKS",
+        "products": ["Standard 200mm Hollow Blocks", "150mm Solid Masonry Blocks", "100mm Partition Blocks", "Thermo Concrete Blocks"]
+      },
+      {
+        "name": "BRICK PRODUCTS",
+        "products": ["Refractory Fire Bricks", "Red Clay Facing Bricks", "Decorative Paving Bricks", "Engineering Bricks"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "number": "12",
+    "name": "Construction Aggregates",
+    "title_1": "CONSTRUCTION",
+    "title_2": "AGGREGATES",
+    "brands": [
+      {
+        "name": "SAND",
+        "products": ["Washed Dune Sand", "White Plastering Sand", "Black Sand", "Crushed Sand (Screened)"]
+      },
+      {
+        "name": "GRAVEL & STONE",
+        "products": ["Gabbro Crushed Aggregate 20mm", "Gabbro Aggregate 10mm", "Aggregate 5mm (Chickpea/Pea Gravel)", "Road Sub-base Aggregate Grade A", "Riprap Stone"]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "number": "13",
+    "name": "Gypsum Boards & Drywall Systems",
+    "title_1": "GYPSUM BOARDS",
+    "title_2": "& DRYWALL SYSTEMS",
+    "brands": [
+      {
+        "name": "KNAUF",
+        "products": ["Knauf Standard Board RG (12.5mm / 15mm)", "Knauf Moisture Resistant Board (MR Green)", "Knauf Fire Resistant Board (FR Pink)", "Knauf Aquapanel Cement Board"]
+      },
+      {
+        "name": "GYPROC / SAINT-GOBAIN",
+        "products": ["Gyproc WallBoard Regular", "Gyproc MoistureLine (MR)", "Gyproc FireLine (FR)", "Gyproc SoundBloc Acoustic", "Gyproc Habito High Impact", "Aquaroc Cement Board"]
+      },
+      {
+        "name": "GYPSIMNA / ELEPHANT",
+        "products": ["Standard Gypsum Board 12.5mm", "Moisture Resistant Plasterboard 12.5mm"]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "number": "14",
+    "name": "Metal Studs, Tracks & Framing Profiles",
+    "title_1": "METAL STUDS",
+    "title_2": "TRACKS & FRAMING",
+    "brands": [
+      {
+        "name": "GYPROC",
+        "products": ["Gypframe C-Studs (50mm/70mm/92mm)", "Gypframe U-Tracks", "Gypframe Furring Channels", "Gypframe Main Channels", "Gypframe L-Angle"]
+      },
+      {
+        "name": "KNAUF",
+        "products": ["Knauf C-Stud Framing Profiles", "Knauf U-Runner Tracks", "Knauf Ceiling Furring Channels (CD 60/27)", "Knauf Perimeter Wall Angle (UD 28/27)"]
+      },
+      {
+        "name": "USG BORAL",
+        "products": ["Drywall Metal Framing Studs", "Main Runners", "Cross Tees", "Wall Tracks"]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "number": "15",
+    "name": "Architectural Ceilings & Acoustic Panels",
+    "title_1": "ARCHITECTURAL",
+    "title_2": "CEILINGS & ACOUSTIC",
+    "brands": [
+      {
+        "name": "ARMSTRONG",
+        "products": ["Fine Fissured Mineral Fiber Tiles", "Dune RH99 Tiles", "Metal Lay-in Panels", "Ultima OP Acoustic"]
+      },
+      {
+        "name": "ROCKFON",
+        "products": ["Rockfon Artic", "Rockfon Ekla", "Rockfon Color-all", "Rockfon Pacific"]
+      },
+      {
+        "name": "HUNTER DOUGLAS",
+        "products": ["Architectural Aluminum Strip Ceilings", "Baffles System", "Cell Ceiling Systems"]
+      },
+      {
+        "name": "ECOPHON",
+        "products": ["Gedina A", "Solo Square Acoustic Panels", "Advantage Tiles", "Akusto Wall Panels"]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "number": "16",
+    "name": "Silicones, Sealants & Polyurethane Foams",
+    "title_1": "SILICONES",
+    "title_2": "SEALANTS & FOAMS",
+    "brands": [
+      {
+        "name": "DOWSIL / DOW CORNING",
+        "products": ["Dowsil 732", "Dowsil 781", "Dowsil 791 Weatherproofing Sealant", "Dowsil 813"]
+      },
+      {
+        "name": "SIKA",
+        "products": ["Sikaflex-11 FC+", "Sikasil-E", "Sika Boom Polyurethane Foam", "Sikaflex-714 PU", "Sikasil-715 Weatherproof", "Sikaflex Construction Purform"]
+      },
+      {
+        "name": "SOUDAL",
+        "products": ["Soudafoam Gun", "Soudafoam 1K", "Soudal Silicone Universal", "Fix ALL Flexi"]
+      },
+      {
+        "name": "WACKER",
+        "products": ["Wacker GS Silicone", "Wacker Neutral Silicone", "Wacker Anchor Fix"]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "number": "17",
+    "name": "Construction Adhesives & Anchoring Resins",
+    "title_1": "CONSTRUCTION",
+    "title_2": "ADHESIVES & RESINS",
+    "brands": [
+      {
+        "name": "HILTI",
+        "products": ["Hilti HIT-HY 200-R V3", "Hilti HIT-RE 500 V4", "Hilti GX 120 Gas Fastening", "Hilti HUS Anchor Screws"]
+      },
+      {
+        "name": "FISCHER",
+        "products": ["Fischer FIS V 360 S", "Fischer FIS EM Plus", "Fischer Express Cement", "Fischer Nylon Wall Plugs (SX/DUOPOWER)"]
+      },
+      {
+        "name": "BOSTIK",
+        "products": ["Bostik No More Nails", "Bostik Gripfill", "Bostik Simson MSR"]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "number": "18",
+    "name": "Reinforcement & Binding Materials",
+    "title_1": "REINFORCEMENT",
+    "title_2": "& BINDING MATERIALS",
+    "brands": [
+      {
+        "name": "GI WIRE",
+        "products": ["1.6mm (16 SWG) Annealed Galvanized Binding Wire", "1.2mm Tying Wire", "PVC Coated Wire"]
+      },
+      {
+        "name": "REBAR ACCESSORIES",
+        "products": ["Heavy-Duty Plastic Wheel Spacers", "Concrete Cover Blocks (25mm/50mm)", "Rebar Couplers", "Rebar Safety Caps", "Steel Tie Wire Reels"]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "number": "19",
+    "name": "Painting Tools & Application Equipment",
+    "title_1": "PAINTING TOOLS",
+    "title_2": "& EQUIPMENT",
+    "brands": [
+      {
+        "name": "HARRIS",
+        "products": ["Harris Trade Emulsion Roller Sleeve (9\")", "Harris Flat Paint Brushes", "Harris Extension Pole (2m–4m)", "Harris Masonry Roller"]
+      },
+      {
+        "name": "PURDY",
+        "products": ["Purdy Monarch Elite", "Purdy Marathon Roller Cover", "Purdy Chinex Glide"]
+      },
+      {
+        "name": "WAGNER",
+        "products": ["Wagner Airless Paint Sprayers (ControlPro 250M)", "Wagner Heavy Duty Spray Nozzles", "Paint Trays", "Roller Frames"]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "number": "20",
+    "name": "General Site Consumables & Safety Hardware",
+    "title_1": "SITE CONSUMABLES",
+    "title_2": "& SAFETY HARDWARE",
+    "brands": [
+      {
+        "name": "3M",
+        "products": ["3M 2090 Blue Painter's Masking Tape", "3M N95 Respirator Dust Masks", "3M Protective Eyewear", "3M Scotch general masking tape"]
+      },
+      {
+        "name": "JSP / MSA",
+        "products": ["JSP Safety Helmets (EVO3)", "MSA V-Gard Hard Hats", "High-Visibility Reflex Vests (Class 2)", "Safety Harness double lanyard"]
+      },
+      {
+        "name": "PROTECTIVE",
+        "products": ["Heavy-Duty Floor Protection Rolls", "Canvas Drop Cloths", "Polyethylene Dust Sheets", "Caution Barrier Tape"]
+      }
+    ]
+  }
+]

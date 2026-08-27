@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 40px; background: transparent; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        body { background-color: #FDFBF9; }
+        section { background-color: transparent !important; }
+    </style>
+</head>
+<body>
+    <img src="parallax.png" alt="" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; opacity: 0.15; z-index: -1; pointer-events: none;">
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Since 2008</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 15px;">
+                    About <img src="herologo.png" alt="SAQ" style="height: 0.9em; width: auto; object-fit: contain;">
+                </h1>
+            </div>
+        </section>
+        <!-- COMPANY INTRODUCTION (DIAGONAL GRID) -->
+        <section class="bg-warm-white" style="padding: 2rem 0;">
+            <div class="container" style="max-width: 1000px;"> <!-- Reduced content size -->
+                <style>
+                    .diagonal-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 30px; 
+                        align-items: center;
+                    }
+                    .diag-text-box {
+                        font-size: 1.05rem; 
+                        line-height: 1.8; 
+                        color: var(--charcoal);
+                        padding: 0 10px; 
+                        opacity: 0;
+                        animation: fade-in-up 1.2s ease-out forwards;
+                    }
+                    .diag-text-1 { animation-delay: 0.3s; }
+                    .diag-text-2 { animation-delay: 0.6s; }
+                    .diag-text-box p {
+                        margin-bottom: 16px; 
+                    }
+                    .diag-image-box {
+                        padding: 5px; 
+                    }
+                    .diag-img {
+                        width: 100%;
+                        aspect-ratio: 16/9; 
+                        object-fit: cover;
+                        background-color: #e0e0e0;
+                        border-radius: 12px;
+                        border: 6px solid #ffffff; 
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.03);
+                        opacity: 0;
+                        animation: fade-in-up 1.2s ease-out forwards;
+                        box-sizing: border-box;
+                    }
+                    .diag-title {
+                        opacity: 0;
+                        animation: fade-in-up 1.2s ease-out forwards;
+                        animation-delay: 0.1s;
+                    }
+                    .diag-img-1 { animation-delay: 0.2s; }
+                    .diag-img-2 { animation-delay: 0.5s; }
+
+                    @keyframes fade-in-up {
+                        0% { opacity: 0; transform: translateY(30px); }
+                        100% { opacity: 1; transform: translateY(0); }
+                    }
+
+                    @media (max-width: 768px) {
+                        .diagonal-grid {
+                            grid-template-columns: 1fr 1fr;
+                            gap: 8px; /* Tighter gap */
+                        }
+                        .diag-text-box {
+                            font-size: 0.75rem;
+                            padding: 0; /* Remove side padding on mobile */
+                        }
+                        .diag-text-box h2 {
+                            font-size: 0.9rem !important;
+                            margin-bottom: 0.4rem !important;
+                        }
+                        .diag-text-box p {
+                            margin-bottom: 6px;
+                            line-height: 1.4;
+                        }
+                        .diag-image-box {
+                            padding: 2px; /* Reduce shadow bleed padding */
+                        }
+                        .diag-img {
+                            aspect-ratio: 1/1; 
+                            border-radius: 8px;
+                            border-width: 3px; /* Thinner border on mobile */
+                            box-shadow: 0 5px 10px rgba(0,0,0,0.08); /* Smaller shadow */
+                        }
+                    }
+                </style>
+
+                <div class="diag-title" style="text-align: center; margin-bottom: 2.5rem; margin-top: 0; display: flex; justify-content: center;">
+                    <h2 class="section-title" style="font-size: clamp(18px, 2.5vw, 28px); line-height: 1.4; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 0; max-width: 600px;">
+                        <span style="background: linear-gradient(135deg, var(--navy-blue) 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">LEADING BUILDING MATERIALS SUPPLIER IN DUBAI</span>
+                    </h2>
+                </div>
+
+                <div class="diagonal-grid">
+                    <!-- Top Left: Text 1 -->
+                    <div class="diag-text-box diag-text-1">
+                        <p>Established in 2008 as an authorized Jotun dealer, SAQ Building Materials has spent nearly two decades supporting contractors, designers, and builders across Dubai and the UAE.</p>
+                        <p>We understand that modern projects demand more than just standard supplies—they require precision, quality, and flexibility.</p>
+                    </div>
+
+                    <!-- Top Right: Image 1 -->
+                    <div class="diag-image-box">
+                        <!-- Placeholder for first company image -->
+                        <img src="assets/intro-architecture.jpg" alt="Company Facility" class="diag-img diag-img-1">
+                    </div>
+
+                    <!-- Bottom Left: Image 2 -->
+                    <div class="diag-image-box">
+                        <!-- Placeholder for second company image -->
+                        <img src="assets/intro-architecture.jpg" alt="Company Operations" class="diag-img diag-img-2">
+                    </div>
+
+                    <!-- Bottom Right: Text 2 -->
+                    <div class="diag-text-box diag-text-2">
+                        <p>Beyond our core expertise in premium Jotun paints and protective coatings, we specialize in supplying a comprehensive range of materials tailored specifically for interior design and fit-out works.</p>
+                        <p>Whether you need exact finishes for a high-end interior space or dependable site deliveries without frustrating minimum order restrictions, we make sure you get the right products exactly when you need them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHY PARTNER WITH SAQ -->
+        <section class="" style="background-color: #FDFBF9; padding: 1rem 0 3rem 0; position: relative; overflow: hidden;">
+            <img src="parallax2.png" alt="" class="parallax-bg" style="position: absolute; right: -5%; top: 50%; transform: translateY(calc(-50% + var(--parallax-y, 0px))); height: 120%; width: auto; opacity: 0.09; z-index: 0; pointer-events: none; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%); mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);">
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="why-section-header fade-in-up">
+                    <span class="eyebrow" style="color: var(--gold);">OUR COMMITMENT</span>
+                    <h2 style="font-family: var(--font-primary); font-size: 2.2rem; font-weight: 800; color: var(--navy-blue); margin-top: 0.5rem; margin-bottom: 1rem; text-transform: uppercase;">WHY PARTNER WITH US</h2>
+                    <p style="font-size: 1rem; color: var(--charcoal); opacity: 0.8; line-height: 1.5;">Trusted products, expertise, and responsive service<br>to support every stage of your project.</p>
+                </div>
+                
+                <div class="why-cards">
+                    <div class="why-card fade-in-up">
+                        <div class="why-card-image">
+                            <img src="assets/why_1_paint.jpg" alt="Paints">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>AUTHORIZED<br>JOTUN DEALER</h3>
+                            <p>Authentic paints and specialist coatings backed by manufacturer trust.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.1s">
+                        <div class="why-card-image">
+                            <img src="assets/why_2_interior.jpg" alt="Interior Materials">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="10" width="4" height="12"/>
+                                <rect x="10" y="4" width="4" height="18"/>
+                                <rect x="16" y="8" width="4" height="14"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>INTERIOR &<br>FIT-OUT SPECIALISTS</h3>
+                            <p>Curated materials to meet the demands of modern interior design.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.2s">
+                        <div class="why-card-image">
+                            <img src="assets/why_3_delivery.jpg" alt="Delivery">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>FLEXIBLE, RELIABLE<br>SERVICE</h3>
+                            <p>Reliable site deliveries tailored to keep your timelines on track.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-card fade-in-up" style="transition-delay: 0.3s">
+                        <div class="why-card-image">
+                            <img src="assets/why_4_support.jpg" alt="Project Support">
+                        </div>
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="why-card-text">
+                            <h3>PROJECT-FOCUSED<br>SUPPORT</h3>
+                            <p>Dedicated to helping you source the right materials for any project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MISSION DASHBOARD -->
+        <section class="mission-dashboard-section section-padding" style="background-color: #FDFBF9; position: relative; overflow: hidden;">
+            <img src="parallax.png" alt="" class="parallax-bg" style="position: absolute; left: -5%; top: 50%; transform: translateY(calc(-50% + var(--parallax-y, 0px))); height: 120%; width: auto; opacity: 0.15; z-index: 0; pointer-events: none; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%); mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);">
+            <div class="container" style="position: relative; z-index: 1;">
+                
+                <!-- 1. Header Grid -->
+                <div class="mission-header-grid fade-in-up">
+                    <div class="mission-header-left">
+                        <span class="eyebrow" style="color: var(--gold);">OUR MISSION</span>
+                        <h2 class="mission-title">BUILDING VALUE<br>BEYOND MATERIALS<span style="color: var(--gold);">.</span></h2>
+                        <p class="mission-subtitle">We combine trusted materials, practical expertise and dependable<br>service to help projects move forward.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Process Timeline Grid -->
+                <div class="process-timeline-grid fade-in-up" style="transition-delay: 0.1s;">
+                    <!-- Step 1 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">01</span>
+                                <span class="process-word">SPECIFY</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Compass Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M8 22h8M12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 22l7-12 7 12"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Understanding the requirement<br>before selecting the material.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">02</span>
+                                <span class="process-word">SOURCE</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Layers Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Bringing together the right<br>materials for the project.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">03</span>
+                                <span class="process-word">DELIVER</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node">
+                            <div class="process-icon-circle">
+                                <!-- Truck Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Getting materials where they<br>need to be, when they are needed.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-col">
+                        <div class="process-image-box">
+                            <div class="process-overlay">
+                                <span class="process-num">04</span>
+                                <span class="process-word">BUILD</span>
+                            </div>
+                        </div>
+                        <div class="process-timeline-node last">
+                            <div class="process-icon-circle">
+                                <!-- Building Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20"/><line x1="12" y1="22" x2="12" y2="2"/><line x1="8" y1="22" x2="8" y2="2"/><line x1="16" y1="22" x2="16" y2="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                            </div>
+                        </div>
+                        <p class="process-desc">Helping transform specifications<br>into finished spaces.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Approach & Values Grid -->
+                <div class="approach-values-grid fade-in-up" style="transition-delay: 0.2s;">
+                    
+                    <!-- Middle: Our Approach Text -->
+                    <div class="approach-text-col">
+                        <span class="eyebrow" style="color: var(--gold);">OUR APPROACH</span>
+                        <p class="approach-bold-text">Delivering maximum value through dependable materials, trusted products, and responsive service for contractors, designers, and builders.</p>
+                        <p class="approach-regular-text">Supplying products is only part of the job. True value comes from combining quality materials with practical expertise and a commitment to moving every project forward.</p>
+                    </div>
+
+                    <!-- Right: What We Stand For Grid -->
+                    <div class="values-dashboard-col">
+                        <span class="eyebrow" style="color: var(--gold); text-align: center; display: block; margin-bottom: 2rem;">WHAT WE STAND FOR</span>
+                        
+                        <div class="values-2x2-grid">
+                            <!-- Value 1 -->
+                            <div class="dash-value-item">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M8 22h8M12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM5 22l7-12 7 12"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">01</span> <span class="dv-title">EXPERTISE</span></div>
+                                    <p>Experience that helps you<br>choose with confidence.</p>
+                                </div>
+                            </div>
+                            <!-- Value 2 -->
+                            <div class="dash-value-item right-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">02</span> <span class="dv-title">QUALITY</span></div>
+                                    <p>Quality in every product.<br>Care in every detail.</p>
+                                </div>
+                            </div>
+                            <!-- Value 3 -->
+                            <div class="dash-value-item bottom-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="20" y2="4"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="8" y1="4" x2="8" y2="20"/><line x1="16" y1="4" x2="16" y2="20"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">03</span> <span class="dv-title">COMMITMENT</span></div>
+                                    <p>When we commit,<br>we deliver.</p>
+                                </div>
+                            </div>
+                            <!-- Value 4 -->
+                            <div class="dash-value-item right-border-none bottom-border-none">
+                                <div class="dash-value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                                </div>
+                                <div class="dash-value-text">
+                                    <div class="dv-header"><span class="dv-num">04</span> <span class="dv-title">INTEGRITY</span></div>
+                                    <p>Straightforward relationships<br>built on trust.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Value 5 (Centered) -->
+                        <div class="dash-value-item centered-item">
+                            <div class="dash-value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </div>
+                            <div class="dash-value-text">
+                                <div class="dv-header"><span class="dv-num">05</span> <span class="dv-title">RESPONSIBILITY</span></div>
+                                <p>Building responsibly,<br>for the long term.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BRANDS SECTION -->
+        <section class="brands-hero-section">
+            <div class="brands-split-container">
+                <div class="brands-left-text">
+                    <span class="eyebrow" style="color: var(--gold);">OUR PARTNERS</span>
+                    <h2 class="section-title">BRANDS WE DISTRIBUTE & REPRESENT</h2>
+                    <p>We partner with world-class manufacturers to bring you trusted materials, professional products and proven performance.</p>
+                </div>
+                <div class="brands-right-image">
+                    <img src="assets/brands.png" alt="Trusted Building Material Brands">
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-warm-white" style="padding-bottom: 30px;">
+            <div class="container">
+                <div class="brand-grid" id="brand-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

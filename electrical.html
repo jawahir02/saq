@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Products | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Electrical Products</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <!-- Add YouTube video link here when available -->
+                    <!-- <div class="intro-video-wrapper"><iframe src="..." frameborder="0" allowfullscreen></iframe></div> -->
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Electrical Items Suppliers in UAE</h2>
+                    <p class="text-content"><strong>A one-stop source for all essential electrical supplies for residential and commercial construction.</strong></p>
+                    <p class="text-content">SAQ Building Materials is a renowned electrical items supplier in Dubai, offering superior quality cables, conduits, lighting, circuit breakers, and more at competitive prices. We stock a wide range of products from the most trusted manufacturers in the electrical wholesale market.</p>
+                    <p class="text-content" style="margin-bottom: 0;">From 100% copper cables by DUCAB to fire-rated circuits, LED panels, and complete cable management systems — we ensure every electrical requirement for your building project is met reliably and at pocket-friendly rates.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Our Partner Brands</h2>
+
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; margin-bottom: 2rem; width: 100%;">
+                    <img src="assets/b38.png" alt="Ducab" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b40.png" alt="Ramco" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b39.png" alt="Legrand" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b16.png" alt="ABB" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b14.png" alt="Decoduct" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b22.png" alt="MK" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                    <img src="assets/b41.png" alt="Kero Brook" style="height: 45px; width: auto; object-fit: contain; max-width: 100%;">
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+                <div class="pt-grid">
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/electrical cables.png" alt="Electrical Cables" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Electrical Cables</h4>
+                        <p>Single and multi-conductor copper cables for industrial, telecom, mining, and building applications.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/fire cables.png" alt="Fire Cables" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Fire Cables</h4>
+                        <p>Fire-resistant cables that maintain circuit integrity for alarms, suppression systems, and life-safety circuits.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/pvc.png" alt="PVC & GI Conduits" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>PVC & GI Conduits</h4>
+                        <p>Durable conduit pipes for protecting and routing electrical wiring in exposed indoor and outdoor locations.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/cable trays.png" alt="Cable Trays" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Cable Trays</h4>
+                        <p>Versatile cable tray systems in various shapes and materials for power distribution and cable management.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/led panels.png" alt="LED Panels" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>LED Panels</h4>
+                        <p>Sleek, energy-efficient LED panel lights using optical guide plate technology for superior light quality.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/mcb.png" alt="MCB, ELCB & MCCB" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>MCB, ELCB & MCCB</h4>
+                        <p>Miniature, molded case, and earth leakage circuit breakers in all ratings to protect electrical installations.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/switches&sockets.png" alt="Switches & Sockets" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Switches & Sockets</h4>
+                        <p>A wide variety of switches and sockets from top brands in all styles for residential and commercial use.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/floor boxes.png" alt="Floor Boxes" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Floor Boxes</h4>
+                        <p>Aesthetic and functional floor boxes that integrate seamlessly with flooring for clean electrical access.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="assets/ventilation fans.png" alt="Ventilation Fans" style="width: 100%; height: auto; border-radius: 4px; display: block;"></div>
+                        <h4>Ventilation Fans</h4>
+                        <p>Residential and commercial exhaust fans in various sizes to maintain healthy air quality and circulation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

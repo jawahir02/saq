@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paints & Protective Coatings | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 2rem 0; background: #eee; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+        
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { height: auto; font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Paints & Coatings</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <!-- Placeholder for YouTube Video -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lh7Es3R82T0?si=s2GvvzEfg1QkuqaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Premium Paint Suppliers in Dubai</h2>
+                    <p class="text-content"><strong>Providing world-class paints with long-lasting durability to protect and enhance your property.</strong></p>
+                    <p class="text-content">SAQ Building Materials is one of the best paint suppliers in Dubai, offering total paint solutions from premium brands like Jotun and Al Jazeera. From interior decorative finishes to heavy-duty protective coatings, our products meet the latest industry standards.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Whether you need easy-to-clean latex paints for household walls or robust oil-based epoxies for priming and industrial use, we supply everything needed for a perfect, long-lasting finish.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Our Partner Brands</h2>
+                
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b27.png" alt="Jotun Paints" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Jotun Paints</h3>
+                        <p class="text-content" style="font-weight: 500;">Renowned for extreme durability and technological innovation.</p>
+                        <p class="text-content">Jotun is the most popular paint brand in Dubai. They provide comprehensive decorative finishes and protective coatings designed for sustainability and long-lasting protection against corrosion, making them the top choice for professionals.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b26.png" alt="Al Jazeera Paints" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Al Jazeera Paints</h3>
+                        <p class="text-content" style="font-weight: 500;">Environmentally responsible, premium quality coatings.</p>
+                        <p class="text-content">Founded in 1979, Al Jazeera is a leading Middle Eastern manufacturer offering over 320,000 tons of LEED-certified, environmentally friendly paints, including highly specialized fire-resistant and zero VOC solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+                <div class="pt-grid">
+                    <!-- Products -->
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="fenomastic.PNG" alt="Fenomastic" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Fenomastic</h4>
+                        <p>Superior quality interior emulsion with rich matt or smooth silk finishes for the most accurate colors.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="jotashield.PNG" alt="Jotashield" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Jotashield</h4>
+                        <p>Premium pure acrylic exterior paints with low dirt pick-up and advanced color performance.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="lady%20design.PNG" alt="Lady Design" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Lady Design</h4>
+                        <p>Interior textures inspired by natural materials to add stunning depth and character to your walls.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="woodshield.PNG" alt="Woodshield" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Woodshield</h4>
+                        <p>True wood protection with 2x UV protection to prevent cracking, peeling, and color fading.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="hardtop.PNG" alt="Hardtop XP" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Hardtop XP</h4>
+                        <p>A popular polyurethane topcoat paint combining high volume solids with excellent gloss retention.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="jotafloor.PNG" alt="Jotafloor" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Jotafloor</h4>
+                        <p>High-performance, two-component epoxy flooring with excellent chemical, impact, and abrasion resistance.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="megayahcht.PNG" alt="Marine Paints" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Marine Paints</h4>
+                        <p>Silyl acrylate antifouling paints like Megayacht for highly stable, predictable hull protection.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="penguard.PNG" alt="Penguard Topcoat" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Penguard Topcoat</h4>
+                        <p>Glossy pure epoxy topcoat offering excellent chemical resistance for factory floors and caustic environments.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="zero%20voc%20paints.png" alt="Zero VOC Paints" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Zero VOC Paints</h4>
+                        <p>Environmentally friendly Al Jazeera coatings certified by US Green Seal for healthy indoor spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polythene Sheets | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .product-list { list-style: none; padding: 0; margin: 0.8rem 0 0; border-left: 3px solid var(--navy-blue); padding-left: 0.8rem; }
+        .product-list li { font-size: 0.82rem; color: var(--charcoal); padding: 0.3rem 0; display: flex; align-items: center; gap: 0.4rem; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .product-list li:last-child { border-bottom: none; }
+        .product-list li::before { content: "✓"; color: var(--navy-blue); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Polythene Sheets</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Polythene Sheet Supplier in Dubai</h2>
+                    <p class="text-content"><strong>SAQ Building Materials is a leading supplier of highly versatile polythene sheets in Dubai, UAE, made from premium synthetic polyethylene resin.</strong></p>
+                    <p class="text-content">Our heavy-duty polythene sheet rolls offer the ultimate plastic protection, customized to suit the specific length, width, and weight requirements of any project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section">
+            <div class="container">
+                <div class="brands-grid" style="grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div>
+                        <div style="width:100%; margin-bottom:1rem; display:flex; align-items:center; justify-content:flex-start;"><img src="polythene1.png" alt="Polythene Sheets" style="max-width: 100%; max-height: 250px; object-fit: contain; border-radius: 4px;"></div>
+                        <h3 style="color: var(--navy-blue); margin-bottom: 1rem; font-size: 1.2rem;">Key Features & Applications</h3>
+                        <ul class="product-list">
+                            <li><strong>Waterproofing:</strong> Acts as a vapour and moisture barrier in construction foundations and concrete slabs.</li>
+                            <li><strong>Damp-Proof Membrane:</strong> Ideal for severe dampness conditions (recommended 1000 gauge minimum).</li>
+                            <li><strong>Protection:</strong> Shields flooring, construction supplies, and structures from high pressure and harsh weather.</li>
+                            <li><strong>Versatile Use:</strong> Widely applicable in painting, agriculture, greenhouse, and nursery environments.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div style="width:100%; margin-bottom:1rem; display:flex; align-items:center; justify-content:flex-start;"><img src="polythene2.png" alt="Polythene Site Installation" style="max-width: 100%; max-height: 250px; object-fit: contain; border-radius: 4px;"></div>
+                        <h3 style="color: var(--navy-blue); margin-bottom: 1rem; font-size: 1.2rem;">Concrete Site Installation</h3>
+                        <ul class="product-list">
+                            <li><strong>Base Layer:</strong> Laid on a blinding layer of sand or compacted fuel ash over the hardcore surface.</li>
+                            <li><strong>Lapping:</strong> Lapped 150mm at joints and continued across surrounding walls under the DPC.</li>
+                            <li><strong>Sealing:</strong> Overlap joints are sealed with mastic tape and completed with polythene jointing tape.</li>
+                            <li><strong>Specifications:</strong> Standard rolls are 4m x 25m (~1kg/m). Custom sizing available.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

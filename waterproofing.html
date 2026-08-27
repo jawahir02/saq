@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterproofing Products | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .product-list { list-style: none; padding: 0; margin: 0.8rem 0 0; border-left: 3px solid var(--navy-blue); padding-left: 0.8rem; }
+        .product-list li { font-size: 0.82rem; color: var(--charcoal); padding: 0.3rem 0; display: flex; align-items: center; gap: 0.4rem; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .product-list li:last-child { border-bottom: none; }
+        .product-list li::before { content: "✓"; color: var(--navy-blue); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Waterproofing Products</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/zY3huQRYgjc?si=fP9lEpENfTPYU6RT" title="Waterproofing Materials YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Waterproofing Coating Materials Supplier in UAE</h2>
+                    <p class="text-content"><strong>Providing the best waterproofing solutions for all your needs from renowned brands like Henkel Polybit and Weber Sodamco.</strong></p>
+                    <p class="text-content">SAQ Building Materials is a trusted supplier of superior quality waterproofing materials in Dubai. We understand the importance of reliable water protection and offer a comprehensive selection of products to effectively protect your structures from water damage and ensure long-lasting durability.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Our product range covers everything from epoxies and cement-based compounds to PU liquid membranes, bituminous products, and joint sealants. Rest assured that you are getting top-notch quality at competitive prices, backed by our team's expertise and exceptional customer service.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Top Waterproofing Brands</h2>
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b17.png" alt="Sodamco" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Sodamco</h3>
+                        <p class="text-content" style="font-weight: 500;">Cement waterproofing products.</p>
+                        <p class="text-content">Sodamco enhances the durability of swimming pools, water tanks, and foundations. Their cement-base solutions offer ultimate protection across various surfaces.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b18.png" alt="Weber" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Weber</h3>
+                        <p class="text-content" style="font-weight: 500;">High-performance bituminous solutions.</p>
+                        <p class="text-content">Weber offers bituminous waterproofing materials and polyurethane membranes for retaining walls and rooftops, ensuring premium protection and high water resistance.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b5.png" alt="Henkel Polybit" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Henkel Polybit</h3>
+                        <p class="text-content" style="font-weight: 500;">Premium waterproofing systems.</p>
+                        <p class="text-content">They offer a wide range of waterproofing materials ranging from membranes to waterstops, making it easy to build water-resistant structures from basement to roof.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b43.png" alt="Fosroc" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Fosroc</h3>
+                        <p class="text-content" style="font-weight: 500;">Cement waterproofing solutions.</p>
+                        <p class="text-content">Fosroc provides solutions for structural concrete, podium landscapes, balcony, and basement slabs, ensuring comprehensive protection for every possible area.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b44.png" alt="Laticrete" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Laticrete</h3>
+                        <p class="text-content" style="font-weight: 500;">Varied range of membrane products.</p>
+                        <p class="text-content">Laticrete provides thin, easy-to-use bituminous sheet membranes that act as a quick fix for crack isolation and anti-fractures, designed to withstand the test of time.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b45.png" alt="Mapei" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Mapei</h3>
+                        <p class="text-content" style="font-weight: 500;">Best in class waterproof coating.</p>
+                        <p class="text-content">With superior cement-based waterproofing products, Mapei solves infiltration problems for industrial and residential infrastructures across the globe.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b46.png" alt="Terraco" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Terraco</h3>
+                        <p class="text-content" style="font-weight: 500;">Sustainable and versatile materials.</p>
+                        <p class="text-content">Terraco produces polyurethane and cement sheet waterproofing that meet international standards for ground and roof applications. Their bituminous paint is also a best-seller.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b42.png" alt="Dr. Fixit" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Dr. Fixit</h3>
+                        <p class="text-content" style="font-weight: 500;">High quality PU waterproofing.</p>
+                        <p class="text-content">Dr. Fixit designs highly versatile and durable waterproofing materials to international standards, ranging from polyurethane coatings to bituminous sheet membranes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+
+                <div class="pt-grid">
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Bituminous Membran.png" alt="Bituminous Membrane" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <h4>Bituminous Membrane</h4>
+                        <p>We supply top-quality bituminous waterproofing products from Weber Sodamco and Henkel Polybit. These sheet membranes and paints are highly flexible, offer shape stability, accommodate structural movement, and provide a positive barrier to water and vapour while resisting atmospheric agents and chemical attacks.</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Cement Based Waterproofing.png" alt="Cement Based Waterproofing" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <h4>Cement Based Waterproofing</h4>
+                        <p>Products like weber dry 110 FX form an elastomeric, resistant membrane suitable for potable water tanks, reservoirs, canals, and tunnels. It offers excellent adhesion on damp substrates, resists high hydrostatic positive and negative pressures, and prevents reinforcement corrosion while remaining non-toxic and chloride-free.</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="Polyurethane (PU) Liquid Membranes.png" alt="PU Liquid Membranes" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <h4>Polyurethane (PU) Liquid Membranes</h4>
+                        <p>PU membranes create a continuous watertight seal with permanent high elasticity and UV resistance. They are easy to apply via brush, roller, or spray gun and provide long-lasting waterproofing with excellent adhesion to concrete, metal, bitumen membranes, and acrylic paints. Ideal for water storage tanks, flat rooftops, and flowerbeds.</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img"><img src="PU Joint Sealan.png" alt="PU Joint Sealant" style="max-width: 100%; max-height: 100%; object-fit: contain;"></div>
+                        <h4>PU Joint Sealant</h4>
+                        <p>Our PU construction joint sealants (like weber joint seal) cure under atmospheric humidity to form highly flexible, tear-resistant joints. They offer excellent adhesion on most construction materials, resist UV rays and climatic ageing, do not stain marble or granite, and can be easily painted over after full curing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

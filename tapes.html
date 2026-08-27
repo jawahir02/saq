@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapes & Consumables | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 85px; height: 85px; aspect-ratio: 1/1; background: #fff; border-radius: 4px; margin: 0 1rem 0.5rem 0; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.5); font-size: 0.8rem; text-align: center; border: 1px solid rgba(0,0,0,0.05); }
+        .product-img { width: 120px; height: 120px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .product-list { list-style: none; padding: 0; margin: 0.8rem 0 0; border-left: 3px solid var(--navy-blue); padding-left: 0.8rem; clear: both; display: block; }
+        .product-list li { font-size: 0.82rem; color: var(--charcoal); padding: 0.3rem 0; display: flex; align-items: center; gap: 0.4rem; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .product-list li:last-child { border-bottom: none; }
+        .product-list li::before { content: "✓"; color: var(--navy-blue); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 70px; height: 70px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .product-img { width: 90px; height: 90px; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Tapes & Consumables</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/vy7Txey64RE?si=c6C7TIGdCYzq90mT" title="Tapes & Consumables YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Tapes, Tile Protection Sheets & Consumables Supplier in Dubai</h2>
+                    <p class="text-content"><strong>A complete range of premium masking tapes, BOPP tapes, and tile protection consumables at economical prices.</strong></p>
+                    <p class="text-content">SAQ Building Materials is a renowned supplier of building materials and consumables in the UAE. We are widely preferred as a leading double-sided tape and masking tape supplier in Dubai, ensuring superior quality across our product range at pocket-friendly rates.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Our best-selling consumables catalogue includes single and double-sided masking tapes, BOPP tapes, aluminium tapes, foam tapes, PVC tapes, duct tapes, corrugated packaging rolls, and high-quality tile protection sheets for professional works.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Our Partner Brands</h2>
+                
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b4.png" alt="3M" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>3M</h3>
+                        <p class="text-content">Global leaders in high-performance adhesive solutions, offering industrial-grade masking, duct, and mounting tapes for the most demanding applications.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b47.png" alt="HPX" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>HPX</h3>
+                        <p class="text-content">Specialists in professional-grade tapes, providing reliable and heavy-duty tape solutions for construction, automotive, and general repairs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="categories-section" class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img product-img"><img src="double sided masking tape.png" alt="Double Sided & Masking Tape" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>Double Sided & Masking Tape</h3>
+                        <p class="text-content" style="font-weight: 500;">Easy-to-tear, pressure-sensitive adhesive masking tapes.</p>
+                        <p class="text-content">Available in a variety of widths, our masking tapes (or sticky tapes) are designed primarily for painting to cleanly mask off areas without leaving residue or causing damage. We offer tapes in various adhesion strengths, including custom orders for specific industrial or household applications.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img product-img"><img src="bopp.png" alt="BOPP Tapes" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>BOPP Tapes</h3>
+                        <p class="text-content" style="font-weight: 500;">Solvent-free, pressure-sensitive adhesive tapes for packaging.</p>
+                        <p class="text-content">BOPP tapes adhere with application pressure and require no water or heat for activation. They consist of a pressure-sensitive adhesive coated onto a backing material like plastic film. We supply both single-sided for bonding to surfaces and double-sided tapes with removable release liners.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img product-img"><img src="tile protection sheet.png" alt="Tile Protection Sheet" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>Tile Protection Sheet</h3>
+                        <p class="text-content" style="font-weight: 500;">High-quality floor protection meeting international standards.</p>
+                        <p class="text-content">We supply top-quality tile protection sheets designed for rigid construction and ease of use. Our supervisors oversee every step of product development to ensure unmatched quality at economical prices, keeping your expensive flooring safe during construction works.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img product-img"><img src="corrugated roll.png" alt="Corrugated Roll" style="max-width: 95%; max-height: 95%; object-fit: contain;"></div>
+                        <h3>Corrugated Roll</h3>
+                        <p class="text-content" style="font-weight: 500;">100% eco-friendly, 2PLY creased rolls for multipurpose packaging.</p>
+                        <p class="text-content">Fabricated from top-notch raw material, our high-strength corrugated rolls are highly adaptable and reusable. They are widely used across industries to protect valuables during shipping and moving.</p>
+                        <ul class="product-list">
+                            <li>Protecting glass and metal products</li>
+                            <li>Packaging plastic ware and steel utensils</li>
+                            <li>Moving and shipping protection</li>
+                            <li>Textile industry packaging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

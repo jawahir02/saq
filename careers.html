@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        body { background-color: #FDFBF9; }
+        section { background-color: transparent !important; }
+        
+        /* Compact Hero Section */
+        .careers-hero { 
+            padding: 120px 5% 60px; 
+            background: transparent; 
+            color: var(--charcoal); 
+            text-align: center; 
+            border-bottom: 1px solid rgba(0,0,0,0.05); 
+            min-height: 80vh; /* Takes up most of the screen */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .careers-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .careers-hero p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 20px 0 35px;
+        }
+
+        .hero-apply-box {
+            background-color: var(--navy-blue);
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-apply-box h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .hero-apply-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin: 0 0 20px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background-color: var(--gold, #d4af37);
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-apply-box {
+                padding: 20px 15px;
+            }
+            .hero-apply-box h2 {
+                font-size: 1.25rem;
+            }
+            .hero-apply-box p {
+                font-size: 0.9rem;
+            }
+            .apply-btn {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="parallax.png" alt="" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; opacity: 0.15; z-index: -1; pointer-events: none;">
+    <saq-header></saq-header>
+    <main>
+        <!-- Compact Hero that fits on one screen -->
+        <section class="careers-hero">
+            <div class="careers-hero-content">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: 0.5rem; display: block;">Join Our Team</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(36px, 5vw, 60px); letter-spacing: 0.02em; line-height: 1.1;">Build Your Future With Us</h1>
+                
+                <p>At SAQ Building Materials, we are always looking for passionate, driven individuals who want to make an impact in the construction and design supply industry.</p>
+                
+                <!-- Application box moved into the hero -->
+                <div class="hero-apply-box">
+                    <h2>Submit a General Application</h2>
+                    <p>We are constantly expanding and always on the lookout for great talent. Send us your resume and let us know how you can contribute to our team.</p>
+                    <a href="mailto:careers@saqbuildingmaterials.com?subject=General Application" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

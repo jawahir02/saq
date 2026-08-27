@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Tools | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin: 2rem 0; background: #eee; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+        
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { height: auto; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Power Tools</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <!-- Placeholder for YouTube Video -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_EEtGCL-2P8?si=WLkjkYmUqHg7hvjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Power Tools Suppliers in Dubai</h2>
+                    <p class="text-content"><strong>The 5 essential Power tools brands to consider before making a purchase.</strong></p>
+                    <p class="text-content">SAQ Building Materials is a leading power tools supplier in Dubai, offering top-notch portable and stationary tools from major global brands. Our extensive portfolio includes cordless drills, saws, routers, hammers, and accessories.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Whether you need the mobility of hand-held tools or the unmatched strength and accuracy of stationary machine tools, we provide reliable solutions for construction professionals and household tasks alike.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Our Partner Brands</h2>
+                
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b19.png" alt="DeWalt" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>DeWalt</h3>
+                        <p class="text-content" style="font-weight: 500;">One of the oldest power tools brands in the world.</p>
+                        <p class="text-content">A top choice globally for professionals in concrete and carpentry. Known for inventing the portable electric drill, DeWalt offers a massive range of corded and cordless options. Their innovative FlexVolt battery technology powers almost any heavy-duty equipment on site.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b7.png" alt="Stanley" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Stanley</h3>
+                        <p class="text-content" style="font-weight: 500;">Excellence in construction since 1843.</p>
+                        <p class="text-content">Setting the standard in the construction industry, Stanley manufactures superior quality power tools that help professionals build, repair, and protect. They continue a long legacy of innovation and strength.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b25.png" alt="Clarke" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Clarke</h3>
+                        <p class="text-content" style="font-weight: 500;">Best after-sales services and cost-effective solutions.</p>
+                        <p class="text-content">Clarke supplies a vast range of electrical and mechanical equipment, including drills, cut-off saws, and impact drivers. They stand out from competitors by offering exceptional after-sales support and reliable warranties.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b24.png" alt="Bosch" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Bosch</h3>
+                        <p class="text-content" style="font-weight: 500;">A familiar name amongst contractors since 1886.</p>
+                        <p class="text-content">Appreciated for quality, sustainability, and robust performance. Bosch offers an innovative portfolio of cordless tools and measuring devices. Known for unmatched battery reliability and flexibility, Bosch tools help pros do the job perfectly.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img" ><img src="assets/b15.png" alt="Makita" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                        <h3>Makita</h3>
+                        <p class="text-content" style="font-weight: 500;">High quality and extremely powerful since 1958.</p>
+                        <p class="text-content">Makita tools are a staple on construction sites, offering a streamlined cordless system with powerful voltage options. From circular saws to impact drivers, their heavy-duty equipment is trusted by true professionals for substantial building renovations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+                <div class="pt-grid">
+                    <!-- Products -->
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="cordless.png" alt="Cordless" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Cordless</h4>
+                        <p>Outstanding performance with Lithium-ion battery powered cordless tools.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="sawing.png" alt="Sawing" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Sawing</h4>
+                        <p>Portable and Stationary power tools for perfection in wood works.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="driller.png" alt="Drilling" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Drilling / Tighter</h4>
+                        <p>Variable speed with high power output for drilling and fastening purposes.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="rotary.png" alt="Rotary Hammers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Rotary / Demolition</h4>
+                        <p>Heavy Duty, Durable Rotary and Demolition Hammers.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="tile%20cutter.png" alt="Tile Cutters" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Tile Cutters</h4>
+                        <p>High power output for tile cutting purposes.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="chopsaws.png" alt="Chopsaws" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Chopsaws</h4>
+                        <p>High power output for metal cutting.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="grinders.png" alt="Grinders" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Grinders</h4>
+                        <p>High power output and high over load capacity.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="sanding.png" alt="Sanding" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Sanding</h4>
+                        <p>Portable finishing and random orbit sanders.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="planers.png" alt="Planers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Planers / Routers</h4>
+                        <p>Wood finishing and designing power tools.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="chain%20saws.png" alt="Chain Saws" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Chain Saws</h4>
+                        <p>Wood finishing and designing power tools.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="nibblers.png" alt="Nibblers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Nibblers / Shears</h4>
+                        <p>Shear and Nibbler portable power tools.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="assets/blowers.png" alt="Blowers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Blowers</h4>
+                        <p>Wood finishing and designing power tools.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="pneumatic%20nail%20gun.png" alt="Pneumatic Nail Guns" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Pneumatic Nail Guns</h4>
+                        <p>Accurate and precise high caliber nailers for a more comfortable use.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="heatgun.png" alt="Heat Guns" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Heat Guns</h4>
+                        <p>2000W Heat Gun with Variable heat temperature.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="pressure%20washer.png" alt="Pressure Washers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Pressure Washers</h4>
+                        <p>Wide range of heavy duty industrial use pressure washers.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="vaccuum%20cleaner.png" alt="Vacuum Cleaner" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Vacuum Cleaner</h4>
+                        <p>Wet/Dry Heavy Duty Industrial Use Vacuum Cleaners.</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="measuring%20laser.png" alt="Measuring Lasers" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Measuring Lasers</h4>
+                        <p>Multiple direction and multiple point leveling machines.</p>
+                    </div>
+                    <div class="pt-card">
+                        <div class="pt-img" ><img src="levelling%20laser.png" alt="Leveling Laser" style="width: 100%; height: auto; display: block;"></div>
+                        <h4>Leveling Laser</h4>
+                        <p>High accuracy leveling lasers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Featured Models (In Stock)</h2>
+                
+                <div class="pt-grid">
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="DEWALT DCD776S2-B5 18V XR LI-ION 13MM COMPACT HAMMER DRILL DRIVER.png" alt="DeWalt DCD776S2" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">DeWalt DCD776S2-B5</h4>
+                        <p>18V XR Li-Ion 13mm Compact Hammer Drill Driver</p>
+                    </div>
+                    
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="DEWALT DWD024-B5 13MM PERCUSSION DRILL 220V.png" alt="DeWalt DWD024" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">DeWalt DWD024-B5</h4>
+                        <p>13mm Percussion Drill 220V</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="DEWALT DWE4010T-B5 115MM SMALL ANGLE GRINDER TOGGLE SWITCH 730W.png" alt="DeWalt DWE4010T" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">DeWalt DWE4010T-B5</h4>
+                        <p>115mm Small Angle Grinder 730W</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="GBH 2-26.png" alt="Bosch GBH 2-26" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">Bosch GBH 2-26 DRE</h4>
+                        <p>Professional Rotary Hammer with SDS plus</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="GBH 2-24.png" alt="Bosch GBH 2-24" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">Bosch GBH 2-24 DRE</h4>
+                        <p>Professional Rotary Hammer Drill</p>
+                    </div>
+
+                    <div class="pt-card">
+                        <div class="pt-img" style="height: 150px; background: white;"><img src="GWS.png" alt="Bosch GWS" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                        <h4 style="margin-top: 1rem;">Bosch GWS Series</h4>
+                        <p>Professional Angle Grinder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

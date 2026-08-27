@@ -1,0 +1,455 @@
+<style>
+  .p2-container {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    background-color: #ffffff;
+    background-image: url('assets/images/pdf2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .p2-container > div {
+    flex-shrink: 0;
+  }
+  .p2-top {
+    display: block;
+    padding: 6mm 15mm 0mm 15mm;
+    min-height: 60mm;
+  }
+  .p2-img-1 {
+    float: right;
+    width: 72mm;
+    height: 60mm;
+    margin-left: 6mm;
+    margin-bottom: 2mm;
+    background-color: #ddd;
+    background-image: url('assets/images/facility.png');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    shape-margin: 2mm;
+    position: relative;
+  }
+  .p2-img-label {
+    position: absolute;
+    bottom: 0; left: 0;
+    background: #1a2b3d;
+    color: white;
+    padding: 1.5mm 2.5mm;
+    font-size: 6pt;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .p2-label {
+    color: #a68a61;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .p2-h1 {
+    font-size: 17pt;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a2b3d;
+    margin-bottom: 2.5mm;
+  }
+  .p2-h1 span {
+    color: #a68a61;
+  }
+  .p2-text {
+    font-size: 8pt;
+    line-height: 1.35;
+    margin-bottom: 2mm;
+    color: #444;
+  }
+  .p2-text.bold {
+    font-weight: 600;
+    color: #222;
+  }
+
+  .p2-commitment {
+    padding: 0mm 15mm;
+    clear: both;
+    margin-top: 7mm;
+  }
+  .p2-commitment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2mm;
+  }
+  .p2-cards {
+    display: flex;
+    gap: 2.5mm;
+  }
+  .p2-card {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 1mm;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding-bottom: 1.5mm;
+  }
+  .p2-card-img {
+    height: 24mm;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #eee;
+  }
+  .p2-card-icon {
+    position: absolute;
+    top: 19mm; left: 2.5mm;
+    width: 7mm; height: 7mm;
+    background: #1a2b3d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    font-size: 6pt;
+  }
+  .p2-card-content {
+    padding: 4mm 2.5mm 2mm 2.5mm;
+  }
+  .p2-card-title {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: #1a2b3d;
+    margin-bottom: 1.5mm;
+    line-height: 1.1;
+  }
+  .p2-card-text {
+    font-size: 6pt;
+    color: #555;
+    line-height: 1.25;
+  }
+
+  .p2-mission {
+    display: flex;
+    margin-top: 8mm;
+  }
+  .p2-mission-left {
+    width: 40%;
+    background: #1a2b3d;
+    color: white;
+    padding: 4mm 7mm 4mm 15mm;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    box-sizing: border-box;
+  }
+  .p2-mission-right {
+    width: 60%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    padding: 1.5mm 2.5mm 1.5mm 0;
+    box-sizing: border-box;
+  }
+  .p2-step {
+    flex: 1;
+    text-align: center;
+    padding: 0 1.5mm;
+    position: relative;
+  }
+  .p2-step-icon-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18mm;
+    height: 18mm;
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .p2-step-content {
+    position: relative;
+    z-index: 1;
+  }
+  .p2-step-num {
+    color: #a68a61;
+    font-size: 9.5pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+  }
+  .p2-step-title {
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1mm;
+    color: #1a2b3d;
+  }
+  .p2-step-text {
+    font-size: 6pt;
+    color: #555;
+    line-height: 1.2;
+  }
+
+  .p2-approach {
+    display: flex;
+    margin-top: 8mm;
+  }
+  .p2-approach-left {
+    width: 35%;
+    padding: 2.5mm 4mm 2.5mm 15mm;
+    box-sizing: border-box;
+  }
+  .p2-approach-right {
+    width: 65%;
+    background: #1a2b3d;
+    color: white;
+    display: flex;
+    padding: 4mm 4mm 2.5mm 2.5mm;
+    gap: 2.5mm;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .p2-stand-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .p2-stand-num {
+    font-size: 6pt;
+    color: #a68a61;
+    margin-bottom: 1mm;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  .p2-stand-icon {
+    width: 2.5mm;
+    height: 2.5mm;
+    margin-left: 1mm;
+  }
+  .p2-stand-title {
+    font-size: 6.5pt;
+    font-weight: 700;
+    margin-bottom: 1mm;
+    letter-spacing: 0.05em;
+  }
+  .p2-stand-text {
+    font-size: 6pt;
+    color: #ccc;
+    line-height: 1.2;
+  }
+
+  .p2-footer {
+    padding: 2.5mm 15mm 6mm 15mm;
+    display: flex;
+    align-items: center;
+    gap: 6mm;
+    position: relative;
+    margin-top: 8mm;
+  }
+  .p2-footer-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .p2-brands-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2.5mm;
+    width: 100%;
+  }
+  .p2-brand-logo {
+    width: 100%;
+    height: 10mm;
+    object-fit: contain;
+  }
+</style>
+
+<div class="page p2-container">
+  
+  <div class="p2-top">
+    <!-- Floated Image for Text Wrapping -->
+    <div class="p2-img-1">
+      <div class="p2-img-label" style="left: 20%;">COMPANY FACILITY</div>
+    </div>
+    
+    <div class="p2-label">ABOUT SAQ</div>
+    <div class="p2-h1">LEADING BUILDING<br>MATERIALS SUPPLIER<br><span>IN DUBAI</span></div>
+    
+    <div class="p2-text bold">Established in 2008 as an authorized Jotun dealer, SAQ Building Materials has spent nearly two decades supporting contractors, designers, and builders across Dubai and the UAE.</div>
+    <div class="p2-text">We understand that modern projects demand more than just standard supplies—they require precision, quality, and flexibility.</div>
+    <div class="p2-text">Beyond our core expertise in premium Jotun paints and protective coatings, we specialize in supplying a comprehensive range of materials tailored specifically for interior design and fit-out works.</div>
+    <div class="p2-text">Whether you need exact finishes for a high-end interior space or dependable site deliveries without frustrating minimum order restrictions, we make sure you get the right products exactly when you need them.</div>
+  </div>
+
+  <div class="p2-commitment">
+    <div class="p2-commitment-header">
+      <div>
+        <div class="p2-label">OUR COMMITMENT</div>
+        <div class="p2-h1" style="font-size: 16pt; margin: 0;">WHY PARTNER WITH US</div>
+      </div>
+    </div>
+    
+    <div class="p2-cards">
+      <div class="p2-card">
+        <div class="p2-card-img" style="background-image: url('assets/images/why_1_paint.jpg');"></div>
+        <div class="p2-card-icon">1</div>
+        <div class="p2-card-content">
+          <div class="p2-card-title">AUTHORIZED JOTUN DEALER</div>
+          <div class="p2-card-text">Authentic paints and specialist coatings backed by manufacturer trust.</div>
+        </div>
+      </div>
+      <div class="p2-card">
+        <div class="p2-card-img" style="background-image: url('assets/images/why_2_interior.jpg');"></div>
+        <div class="p2-card-icon">2</div>
+        <div class="p2-card-content">
+          <div class="p2-card-title">INTERIOR & FIT-OUT SPECIALISTS</div>
+          <div class="p2-card-text">Curated materials to meet the demands of modern interior design.</div>
+        </div>
+      </div>
+      <div class="p2-card">
+        <div class="p2-card-img" style="background-image: url('assets/images/why_3_delivery.jpg');"></div>
+        <div class="p2-card-icon">3</div>
+        <div class="p2-card-content">
+          <div class="p2-card-title">FLEXIBLE, RELIABLE SERVICE</div>
+          <div class="p2-card-text">Reliable site deliveries tailored to keep your timelines on track.</div>
+        </div>
+      </div>
+      <div class="p2-card">
+        <div class="p2-card-img" style="background-image: url('assets/images/why_4_support.jpg');"></div>
+        <div class="p2-card-icon">4</div>
+        <div class="p2-card-content">
+          <div class="p2-card-title">PROJECT-FOCUSED SUPPORT</div>
+          <div class="p2-card-text">Dedicated to helping you source the right materials for any project.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p2-mission">
+    <div class="p2-mission-left">
+      <div class="p2-label" style="color: #a68a61;">OUR MISSION</div>
+      <div class="p2-h1" style="color: white; font-size: 14pt; margin-bottom: 2mm;">BUILDING VALUE<br>BEYOND MATERIALS</div>
+      <div class="p2-text" style="color: #ccc; font-size: 7.5pt; margin-bottom: 0;">We combine trusted materials, practical expertise and dependable service to help projects move forward.</div>
+    </div>
+    <div class="p2-mission-right">
+      <div class="p2-step">
+        <svg class="p2-step-icon-bg" viewBox="0 0 24 24" fill="none" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14l2 2 4-4"></path></svg>
+        <div class="p2-step-content">
+          <div class="p2-step-num">01</div>
+          <div class="p2-step-title">SPECIFY</div>
+          <div class="p2-step-text">Understanding the requirement before selecting the material.</div>
+        </div>
+      </div>
+      <div class="p2-step">
+        <svg class="p2-step-icon-bg" viewBox="0 0 24 24" fill="none" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        <div class="p2-step-content">
+          <div class="p2-step-num">02</div>
+          <div class="p2-step-title">SOURCE</div>
+          <div class="p2-step-text">Bringing together the right materials for the project.</div>
+        </div>
+      </div>
+      <div class="p2-step">
+        <svg class="p2-step-icon-bg" viewBox="0 0 24 24" fill="none" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <div class="p2-step-content">
+          <div class="p2-step-num">03</div>
+          <div class="p2-step-title">DELIVER</div>
+          <div class="p2-step-text">Getting materials where they need to be, when they are needed.</div>
+        </div>
+      </div>
+      <div class="p2-step">
+        <svg class="p2-step-icon-bg" viewBox="0 0 24 24" fill="none" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01"></path><path d="M9 13v.01"></path><path d="M9 17v.01"></path></svg>
+        <div class="p2-step-content">
+          <div class="p2-step-num">04</div>
+          <div class="p2-step-title">BUILD</div>
+          <div class="p2-step-text">Helping transform specifications into finished spaces.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p2-approach">
+    <div class="p2-approach-left">
+      <div class="p2-label">OUR APPROACH</div>
+      <div class="p2-text bold" style="font-size: 7.5pt; margin-bottom: 0; line-height: 1.4;">Delivering maximum value through dependable materials, trusted products, and responsive service for contractors, designers, and builders.</div>
+    </div>
+    <div class="p2-approach-right">
+      <div style="position: absolute; top: -4mm; left: 5mm; font-size: 7pt; color: #a68a61; font-weight: 700; background: white; padding: 1mm 3mm; border-radius: 1mm;">WHAT WE STAND FOR</div>
+      
+      <div class="p2-stand-col" style="margin-top: 2mm;">
+        <div class="p2-stand-num"><span>01</span><svg class="p2-stand-icon" viewBox="0 0 24 24" fill="none" stroke="#a68a61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+        <div class="p2-stand-title">EXPERTISE</div>
+        <div class="p2-stand-text">Experience that helps you choose with confidence.</div>
+      </div>
+      <div class="p2-stand-col" style="margin-top: 2mm;">
+        <div class="p2-stand-num"><span>02</span><svg class="p2-stand-icon" viewBox="0 0 24 24" fill="none" stroke="#a68a61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+        <div class="p2-stand-title">QUALITY</div>
+        <div class="p2-stand-text">Quality in every product. Care in every detail.</div>
+      </div>
+      <div class="p2-stand-col" style="margin-top: 2mm;">
+        <div class="p2-stand-num"><span>03</span><svg class="p2-stand-icon" viewBox="0 0 24 24" fill="none" stroke="#a68a61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+        <div class="p2-stand-title">COMMITMENT</div>
+        <div class="p2-stand-text">When we commit, we deliver.</div>
+      </div>
+      <div class="p2-stand-col" style="margin-top: 2mm;">
+        <div class="p2-stand-num"><span>04</span><svg class="p2-stand-icon" viewBox="0 0 24 24" fill="none" stroke="#a68a61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 22 22 7 12 2"></polygon></svg></div>
+        <div class="p2-stand-title">INTEGRITY</div>
+        <div class="p2-stand-text">Straightforward relationships built on trust.</div>
+      </div>
+      <div class="p2-stand-col" style="margin-top: 2mm;">
+        <div class="p2-stand-num"><span>05</span><svg class="p2-stand-icon" viewBox="0 0 24 24" fill="none" stroke="#a68a61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+        <div class="p2-stand-title">RESPONSIBILITY</div>
+        <div class="p2-stand-text">Building responsibly for the long term.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p2-footer">
+    <div class="p2-footer-content">
+      <div style="flex: 0 0 35%;">
+        <div class="p2-label">OUR PARTNERS</div>
+        <div class="p2-h1" style="font-size: 18pt; margin: 0; line-height: 1.1; color: white;">BRANDS WE<br>DISTRIBUTE &amp;<br>REPRESENT</div>
+      </div>
+      <div style="flex: 1;">
+        <div class="p2-brands-grid">
+          <img src="assets/images/b1.png" class="p2-brand-logo">
+          <img src="assets/images/b2.png" class="p2-brand-logo">
+          <img src="assets/images/b3.png" class="p2-brand-logo">
+          <img src="assets/images/b4.png" class="p2-brand-logo">
+          <img src="assets/images/b5.png" class="p2-brand-logo">
+          <img src="assets/images/b6.png" class="p2-brand-logo">
+          <img src="assets/images/b7.png" class="p2-brand-logo">
+          <img src="assets/images/b8.png" class="p2-brand-logo">
+          <img src="assets/images/b9.png" class="p2-brand-logo">
+          <img src="assets/images/b10.png" class="p2-brand-logo">
+          <img src="assets/images/b11.png" class="p2-brand-logo">
+          <img src="assets/images/b12.png" class="p2-brand-logo">
+          <img src="assets/images/b13.png" class="p2-brand-logo">
+          <img src="assets/images/b14.png" class="p2-brand-logo">
+          <img src="assets/images/b15.png" class="p2-brand-logo">
+          <img src="assets/images/b16.png" class="p2-brand-logo">
+          <img src="assets/images/b17.png" class="p2-brand-logo">
+          <img src="assets/images/b18.png" class="p2-brand-logo">
+          <img src="assets/images/b19.png" class="p2-brand-logo">
+          <img src="assets/images/b20.png" class="p2-brand-logo">
+          <img src="assets/images/b21.png" class="p2-brand-logo">
+          <img src="assets/images/b22.png" class="p2-brand-logo">
+          <img src="assets/images/b23.png" class="p2-brand-logo">
+          <img src="assets/images/b24.png" class="p2-brand-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">02</div>
+</div>
+

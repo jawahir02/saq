@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Adhesives & Grouts | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        .color-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .color-swatch { border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
+        .color-swatch:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+        .swatch-block { width: 100%; aspect-ratio: 4/3; }
+        .swatch-label { background: #fff; padding: 0.3rem 0.4rem; font-size: 0.65rem; color: var(--charcoal); line-height: 1.2; }
+        .swatch-label span { display: block; font-weight: 600; color: var(--navy-blue); font-size: 0.6rem; }
+
+        @media (max-width: 1024px) {
+            .color-grid { grid-template-columns: repeat(5, 1fr); }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Tile Adhesives & Grouts</h1>
+                <a href="#glues-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <!-- Add YouTube video link here when available -->
+                    <!-- <div class="intro-video-wrapper"><iframe src="..." frameborder="0" allowfullscreen></iframe></div> -->
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Tile Glue & Grout Suppliers in UAE</h2>
+                    <p class="text-content">The best tile glue and tile grouts to buy for your next project. Tile grouts are essentially used to keep the adjoining tiles in place on the wall or the floor. Traditionally, the tiles used to be placed with a coat of white cement to keep them grounded. However, the white cement tends to break easily due to absorbing the water seepage and the bacterial growth that makes it ineffective. This further leads to stained tiles.</p>
+                    <p class="text-content">So, as tile suppliers in Dubai, SAQ Building Materials offers a selective range of tile grout and tile glue to overcome these challenges. But before placing the tiles in perfect symmetry, you need to know what options are available in the market. And considering you have only one chance to do this right, you might as well choose from the best range of tile grout.</p>
+                    <p class="text-content">So, while deciding which tile glue or tile grout is best suited for your need, you must check out the two most common types of grout:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 1rem; font-size: 0.9rem; color: var(--charcoal); line-height: 1.6;">
+                        <li><strong>Cement-Based Grout:</strong> This is one of the most commonly available and easy-to-use varieties in the market. These are highly useful for small tile joints where it acts as a tile to tile adhesive.</li>
+                        <li><strong>Epoxy Grout:</strong> These tile grouts are more expensive than cement-based, require more labor, and are mainly used in commercial projects. These grouts are a two-part mixture, which includes solid and color additives.</li>
+                    </ul>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="glues-section" class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Top 8 Tile Glues</h2>
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b17.png" alt="Sodamco" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Sodamco</h3>
+                        <p class="text-content" style="font-weight: 500;">High quality ready-mix tile adhesives.</p>
+                        <p class="text-content">Laying tiles for enhanced finishing of the floors and walls, the tile adhesive is specially formulated from OPC. Sodamco tile adhesive is a ready-mix, created by the selection of fine sand and additives to enhance its essential properties.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b18.png" alt="Weber" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Weber</h3>
+                        <p class="text-content" style="font-weight: 500;">Offers one of the best tile glues in the market.</p>
+                        <p class="text-content">The Weber tile adhesive is easy to use as the tiles can be directly laid on top of the adhesive layer right after being unboxed, saving time on construction sites.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b43.png" alt="Fosroc" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Fosroc</h3>
+                        <p class="text-content" style="font-weight: 500;">A top choice for tile adhesive.</p>
+                        <p class="text-content">Fosroc is one of the leading names in the construction industry for tile joint adhesive. Their tile adhesives are well suited to bond concrete structural builts and are suitable for a whole range of applications. As a well-established tile glue and grout supplier, we provide selected, high-quality material from their entire range.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b42.png" alt="Dr. Fixit" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Dr. Fixit</h3>
+                        <p class="text-content" style="font-weight: 500;">Tile adhesive that is one of a kind.</p>
+                        <p class="text-content">Dr.Fixit is one of the well-known tile adhesive brands of Indian origin. Their products are highly efficient in preventing water leakages and seepage. The tile glue from Dr. Fixit helps to protect the roof from problems, such as dampness and flaking, keeping the foundation leak-free due to its innovative technology.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b5.png" alt="Henkel Polybit" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Henkel Polybit</h3>
+                        <p class="text-content" style="font-weight: 500;">Offers the best water-resistant tile adhesive.</p>
+                        <p class="text-content">Henkel polybit provides a varied range of standard and epoxy tile glues. Their water resistant tile glue is highly effective both for indoor and outdoor use. The standard tile glues are crack-resistant and provide colour stability, whereas the epoxy tile adhesive is solvent-free and chemical-resistant.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b44.png" alt="Laticrete" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Laticrete</h3>
+                        <p class="text-content" style="font-weight: 500;">Tile glue with the best bond strength.</p>
+                        <p class="text-content">The brand provides one of the highly efficient thin-set adhesives. It is made of cement-based powder which when mixed with water forms a quick paste. Their tile glue has high bond strength that helps to fix the tiles in perfect symmetry with ease.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b45.png" alt="Mapei" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Mapei</h3>
+                        <p class="text-content" style="font-weight: 500;">Well known for its tile glues.</p>
+                        <p class="text-content">Mapei offers several products that fall under the category of tile glues. These products are useful in fixing and bonding various building materials together for high-quality construction finishing. We offer a specialized range of products from their lineup for professional construction work.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b46.png" alt="Terraco" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Terraco</h3>
+                        <p class="text-content" style="font-weight: 500;">Offers ready-mixed tile adhesives.</p>
+                        <p class="text-content">Terraco offers a full array of high-performance tile adhesives. It provides easy-to-use colored tile glues and other ready-mixed tile adhesives for both wide and narrow joints. Their products are easy to apply across tiles, both on the exterior and interior surfaces of buildings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grouts-section" class="content-section bg-warm-white">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Top 4 Tile Grouts</h2>
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b17.png" alt="Sodamco" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Sodamco</h3>
+                        <p class="text-content" style="font-weight: 500;">Highly effective grouting solutions.</p>
+                        <p class="text-content">Sodamco provides specialized tile grouts designed to meet strict requirements for durability and finish, keeping your tiled surfaces perfectly intact over time.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b18.png" alt="Weber" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Weber</h3>
+                        <p class="text-content" style="font-weight: 500;">Grout that is easy to use and highly effective.</p>
+                        <p class="text-content">The Weber joint grout is one of the best-selling products from their catalogue. These Weber grouts provide better bond strength and can be grouted within a day without waiting for moisture evaporation.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="b45.png" alt="Mapei" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Mapei</h3>
+                        <p class="text-content" style="font-weight: 500;">Creates colored tile grouts for ceramic tiles.</p>
+                        <p class="text-content">Mapei offers a varied range of colored tile grouts for ceramic tiles and stone materials. These are a premix, non-shrink grout that helps to keep tiles in a particular symmetry. It is easy to apply and clean, available in a varied range along with various color palettes.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="assets/b5.png" alt="Henkel Polybit" style="max-width: 80%; max-height: 80%;"></div>
+                        <h3>Henkel Polybit</h3>
+                        <p class="text-content" style="font-weight: 500;">Offers higher crack resistance tile grouts.</p>
+                        <p class="text-content">These tile grouts are highly resistant to cracks and are 100% color stable. Their epoxy grout is highly suitable for wet areas and excellent for a solvent-free solution. It is especially produced to cater to fight moisture, making this water resistant tile grout beneficial for corrosive environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.3rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Available Grout Colors</h2>
+                <p class="text-content" style="text-align: center; color: #666; margin-bottom: 0;">23 standard shades available — from classic whites to deep charcoals.</p>
+                <div class="color-grid">
+                    <div class="color-swatch"><div class="swatch-block" style="background:#F6F5F0;"></div><div class="swatch-label"><span>110</span>Jasmine White</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#F5EDD6;"></div><div class="swatch-label"><span>120</span>Ivory</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#E8D5B5;"></div><div class="swatch-label"><span>121</span>Beige</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#C08050;"></div><div class="swatch-label"><span>122</span>Clay</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#D4A896;"></div><div class="swatch-label"><span>123</span>Cappuccino</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#A84010;"></div><div class="swatch-label"><span>124</span>Terracotta</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#7A2318;"></div><div class="swatch-label"><span>125</span>Chestnut</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#3E2A10;"></div><div class="swatch-label"><span>126</span>Chocolate</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#F0EDB8;"></div><div class="swatch-label"><span>130</span>Pastel Yellow</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#EDE870;"></div><div class="swatch-label"><span>131</span>Camomile</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#E8C820;"></div><div class="swatch-label"><span>132</span>Mustard</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#F0C8C8;"></div><div class="swatch-label"><span>140</span>Baby Pink</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#D4907A;"></div><div class="swatch-label"><span>141</span>Antique Pink</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#B04040;"></div><div class="swatch-label"><span>142</span>Cherry</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#E8EEE0;"></div><div class="swatch-label"><span>150</span>Fresh Mint</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#A8C090;"></div><div class="swatch-label"><span>151</span>Spring Leaf</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#B8D8E8;"></div><div class="swatch-label"><span>160</span>Baby Blue</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#60A8D0;"></div><div class="swatch-label"><span>161</span>Sky Blue</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#D8D8D8;"></div><div class="swatch-label"><span>170</span>Light Grey</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#B8B8B8;"></div><div class="swatch-label"><span>171</span>Platinum</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#909090;"></div><div class="swatch-label"><span>172</span>Ash Grey</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#505050;"></div><div class="swatch-label"><span>173</span>Charcoal</div></div>
+                    <div class="color-swatch"><div class="swatch-block" style="background:#282828;"></div><div class="swatch-label"><span>180</span>Black</div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

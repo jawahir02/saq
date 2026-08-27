@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Products | SAQ Building Materials</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .page-header { padding: 100px 0 20px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .content-section { padding: 2rem 0; }
+        .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 1rem; }
+        .brand-block { display: block; }
+        .brand-block::after { content: ""; display: table; clear: both; }
+        .brand-block h3 { color: var(--navy-blue); margin-bottom: 0.3rem; font-size: 1.1rem; text-transform: uppercase; margin-top: -0.2rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .brand-img { float: left; width: 120px; margin: 0 1rem 0.5rem 0; }
+        .brand-img img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .brand-block .text-content { font-size: 0.82rem; margin-bottom: 0.5rem; line-height: 1.4; }
+
+        .intro-video-wrapper { position: relative; padding-bottom: 19.68%; width: 35%; float: right; margin: 0 0 1rem 1.5rem; border-radius: 8px; overflow: hidden; background: #eee; }
+        .intro-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .jump-btn svg { animation: bounce-down 2s infinite ease-in-out; }
+        .jump-btn:hover svg { animation: none; transform: translateY(3px); transition: transform 0.3s; }
+
+        .pt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .pt-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 4px; padding: 1rem; text-align: center; display: flex; flex-direction: column; transition: transform 0.3s; }
+        .pt-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .pt-img { margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; }
+        .pt-img img { max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+        .pt-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--navy-blue); }
+        .pt-card p { font-size: 0.75rem; color: #666; margin-bottom: 0; line-height: 1.3; flex-grow: 1; }
+
+        @media (max-width: 1024px) {
+            .pt-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        }
+                @media (max-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .brand-img { width: 90px; margin: 0 0.8rem 0.5rem 0; font-size: 0.6rem; }
+            .content-section { padding: 1.5rem 0; }
+            .pt-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+            .text-content { font-size: 0.8rem; margin-bottom: 0.8rem; }
+            .brand-block h3 { font-size: 1rem; }
+            .pt-card { padding: 0.8rem; }
+            .pt-img { font-size: 0.7rem; }
+            .pt-card h4 { font-size: 0.8rem; }
+            .pt-card p { font-size: 0.7rem; }
+            .intro-video-wrapper { width: 45%; padding-bottom: 25.3%; margin: 0.5rem 0 0.5rem 1rem; float: right; }
+            .jump-btn { padding: 0.5rem 1.2rem !important; font-size: 0.85rem; margin-top: 1rem !important; }
+            .jump-btn svg { width: 16px; height: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <saq-header></saq-header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow" style="color: var(--navy-blue); margin-bottom: -0.2rem; display: block; position: relative; z-index: 1;">Explore Our Range</span>
+                <h1 style="color: var(--charcoal); margin-bottom: 0; font-size: clamp(32px, 6.9vw, 66px); letter-spacing: 0.05em; line-height: 1.1; position: relative; z-index: 2;">Safety Products</h1>
+                <a href="#categories-section" class="btn btn-accent jump-btn" style="margin-top: 2rem; display: inline-flex; align-items: center; justify-content: center; position: relative; z-index: 2; padding: 0.8rem 1.5rem; border-radius: 50px;">
+                    View Categories
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section bg-warm-white">
+            <div class="container">
+                <div style="display: block;">
+                    <div class="intro-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/WSmQFu9smgk?si=HS2DL5naRRkgrDXY" title="Safety Products YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-blue); text-transform: uppercase;">Safety Products Wholesaler & Safety Shoes Supplier in Dubai</h2>
+                    <p class="text-content"><strong>At SAQ Building Materials, we believe that 'Safety' is the No.1 priority for all our customers and end-users.</strong></p>
+                    <p class="text-content">We are a renowned supplier of premium quality Personal Protection Equipment (PPE) at pocket-friendly rates. As one of the leading safety items suppliers in the UAE, we offer a complete range of safety solutions from globally trusted brands such as 3M and Vaultex.</p>
+                    <p class="text-content" style="margin-bottom: 0;">Our goal is to ensure your workplace is fully equipped with the best safety solutions available, covering everything from head, eye, and face protection to body, fall, foot, and respiratory gear.</p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories-section" class="content-section">
+            <div class="container">
+                <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--charcoal); text-align: center; text-transform: uppercase;">Product Categories</h2>
+
+                <div class="brands-grid">
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="body protection.png" style=""></div>
+                        <h3>Body Protection</h3>
+                        <p class="text-content" style="font-weight: 500;">Safety Coveralls / Shirts & Pants</p>
+                        <p class="text-content">We are a renowned name in the construction industry for top-quality safety coveralls. Made from premium fabric, our body protection products ensure complete safety while remaining comfortable to wear, offering ultimate protection for outdoor and industrial environments.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="safety shoes.png" style=""></div>
+                        <h3>Foot Protection</h3>
+                        <p class="text-content" style="font-weight: 500;">Steel-Toe Boots & Safety Shoes</p>
+                        <p class="text-content">Our durable safety boots feature protective toe reinforcements to guard against falling objects and compression, combined with mid-sole plates to prevent punctures. We supply trusted brands like Vaultex, suitable for everyone from engineers to construction workers.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="fall protection.png" style=""></div>
+                        <h3>Fall Protection</h3>
+                        <p class="text-content" style="font-weight: 500;">Full Body & Half Body Safety Belts</p>
+                        <p class="text-content">Fall protection is essential for workers at height to control or eliminate injury potential. As a top-rated supplier, we provide full-body and half-body safety belts to ensure the utmost protection for every worker on the construction site.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="eye protection.png" style=""></div>
+                        <h3>Eye Protection - Safety Goggles</h3>
+                        <p class="text-content" style="font-weight: 500;">High-Quality Safety Glasses</p>
+                        <p class="text-content">With your safety in our sights, we supply high-quality safety glasses and goggles. Our eye and face protection solutions ensure clear vision and reliable defence against workplace hazards, so you can return home safely.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="helmet.png" style=""></div>
+                        <h3>Head Protection - Helmet</h3>
+                        <p class="text-content" style="font-weight: 500;">Industrial & Construction Hard Hats</p>
+                        <p class="text-content">Our protection helmets guard the head from falling objects, impacts, debris, rain, and electric shocks. With internal suspension bands to spread impact force, our helmets ensure maximum safety for all end-users.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="welding protection.png" style=""></div>
+                        <h3>Welding Protection</h3>
+                        <p class="text-content" style="font-weight: 500;">Complete Protective Gear for Welders</p>
+                        <p class="text-content">We offer quality welding protection equipment, including fire-resistant clothing, safety glasses, shoes, gloves, helmets, and leathers, designed for workers employed across various industrial sectors.</p>
+                    </div>
+
+                    <div class="brand-block">
+                        <div class="brand-img"><img src="ear hand respitratory protection.png" style=""></div>
+                        <h3>Ear, Hand & Respiratory Protection</h3>
+                        <p class="text-content" style="font-weight: 500;">Complete Safety Gear</p>
+                        <p class="text-content">We provide a comprehensive range of protective equipment for ears, hands, and respiratory systems, ensuring complete safety for workers in hazardous environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <saq-footer></saq-footer>
+    <mobile-contact-bar></mobile-contact-bar>
+
+    <script src="js/components.js"></script>
+</body>
+</html>
