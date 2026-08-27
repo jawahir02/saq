@@ -93,28 +93,37 @@
             <div style="width: 100%; overflow: hidden; position: relative;">
                 <div style="display: flex; width: max-content; animation: scroll-marquee 30s linear infinite;">
                     <!-- First Set -->
-                    <div style="display: flex; gap: 0.6rem; padding: 0 0.4rem; align-items: center;">
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="1.png" alt="Client 1" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="2.png" alt="Client 2" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="3.png" alt="Client 3" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="4.png" alt="Client 4" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="5.png" alt="Client 5" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="6.png" alt="Client 6" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="7.png" alt="Client 7" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                    <div class="client-marquee-set">
+                        <div class="client-box"><img src="1.png" alt="Client 1"></div>
+                        <div class="client-box"><img src="2.png" alt="Client 2"></div>
+                        <div class="client-box"><img src="3.png" alt="Client 3"></div>
+                        <div class="client-box"><img src="4.png" alt="Client 4"></div>
+                        <div class="client-box"><img src="5.png" alt="Client 5"></div>
+                        <div class="client-box"><img src="6.png" alt="Client 6"></div>
+                        <div class="client-box"><img src="7.png" alt="Client 7"></div>
                     </div>
                     <!-- Duplicate Set for infinite scroll -->
-                    <div style="display: flex; gap: 0.6rem; padding: 0 0.4rem; align-items: center;">
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="1.png" alt="Client 1" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="2.png" alt="Client 2" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="3.png" alt="Client 3" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="4.png" alt="Client 4" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="5.png" alt="Client 5" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="6.png" alt="Client 6" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
-                        <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="7.png" alt="Client 7" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
+                    <div class="client-marquee-set">
+                        <div class="client-box"><img src="1.png" alt="Client 1"></div>
+                        <div class="client-box"><img src="2.png" alt="Client 2"></div>
+                        <div class="client-box"><img src="3.png" alt="Client 3"></div>
+                        <div class="client-box"><img src="4.png" alt="Client 4"></div>
+                        <div class="client-box"><img src="5.png" alt="Client 5"></div>
+                        <div class="client-box"><img src="6.png" alt="Client 6"></div>
+                        <div class="client-box"><img src="7.png" alt="Client 7"></div>
                     </div>
                 </div>
             </div>
             <style>
+                .client-marquee-set { display: flex; gap: 0.8rem; padding: 0 0.4rem; align-items: center; }
+                .client-box { background: white; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 85px; width: 180px; box-shadow: 0 1px 4px rgba(0,0,0,0.02); }
+                .client-box img { max-height: 100%; max-width: 100%; object-fit: contain; }
+                
+                @media (max-width: 768px) {
+                    .client-box { height: 55px; width: 120px; padding: 1rem 2rem; }
+                    .client-marquee-set { gap: 0.6rem; }
+                }
+
                 @keyframes scroll-marquee {
                     0% { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
