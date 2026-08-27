@@ -91,7 +91,12 @@
             </div>
             
             <div style="width: 100%; overflow: hidden; position: relative;">
-                <div style="display: flex; width: max-content; animation: scroll-marquee 30s linear infinite;">
+                <style>
+                @media (min-width: 769px) {
+                    #clients-track { transform: scale(1.1); transform-origin: center center; }
+                }
+                </style>
+                <div id="clients-track" style="display: flex; width: max-content; animation: scroll-marquee 30s linear infinite;">
                     <!-- First Set -->
                     <div style="display: flex; gap: 0.6rem; padding: 0 0.4rem; align-items: center;">
                         <div style="background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; height: 55px; width: 120px; box-shadow: 0 1px 4px rgba(0,0,0,0.02);"><img src="1.png" alt="Client 1" style="max-height: 100%; max-width: 100%; object-fit: contain;"></div>
