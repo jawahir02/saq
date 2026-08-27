@@ -6,7 +6,7 @@ window.siteData = {
         { id: 'construction-chemicals', slug: 'construction-chemicals', name: 'Construction Chemicals', desc: 'Admixtures, repair mortars', img: 'Technical & Concrete Repair.png' },
         { id: 'dewalt-tools', slug: 'dewalt', name: 'DeWalt Power Tools', desc: 'Guaranteed tough power tools', img: 'DEWALT DCD776S2-B5 18V XR LI-ION 13MM COMPACT HAMMER DRILL DRIVER.png' },
         { id: 'electrical', slug: 'electrical', name: 'Electrical Products', desc: 'Switches, wiring, fixtures', img: 'assets/electrical-products.PNG' },
-        { id: 'faucets', slug: 'faucets', name: 'Faucets & Mixers', desc: 'Grohe mixers, shattafs', img: 'Grohe Eurosmart Basin Mixer.png' },
+        { id: 'faucets', slug: 'faucets', name: 'Faucets & Mixers', desc: 'Grohe mixers, shattafs', img: 'faucets.jpeg' },
         { id: 'fischer-products', slug: 'fischer', name: 'Fischer Fixings', desc: 'Anchors and fixings', img: 'Fischer Universal Injection Mortar Chemical Anchor FIS VS 300T.png' },
         { id: 'gypsum', slug: 'gypsum', name: 'Gypsum Products', desc: 'Gypsum boards, tiles', img: 'gypsum board.png' },
         { id: 'hardware-tools', slug: 'hardware-tools', name: 'Hardware & Tools', desc: 'Hand tools, accessories', img: 'assets/hardwaretools.png' },
