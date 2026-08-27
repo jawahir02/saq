@@ -853,8 +853,8 @@ saq-header p {
         flex-direction: column;
     }
     .process-timeline-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.2rem;
     }
     .process-timeline-node::after {
         display: none;
@@ -1019,19 +1019,19 @@ saq-header p {
     }
     .process-timeline-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 0.3rem;
+        gap: 0.2rem;
     }
     .process-image-box {
         margin-bottom: 0.3rem; /* Brings box closer to circle */
     }
     .process-overlay {
-        padding: 8px 5px;
+        padding: 4px 2px;
     }
     .process-num {
         font-size: 1rem;
     }
     .process-word {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         letter-spacing: 0.05em;
     }
     .process-icon-circle {

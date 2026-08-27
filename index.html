@@ -521,61 +521,13 @@
             <style>
                 .hover-opacity { transition: opacity 0.2s ease; }
                 .hover-opacity:hover { opacity: 0.7; }
-                @media (max-width: 768px) {
-                    /* Blue box: all 4 items in one row */
-                    .value-banner .container > div {
-                        flex-wrap: nowrap !important;
-                        gap: 0.2rem !important;
-                        justify-content: space-evenly !important;
-                    }
-                    .value-banner .container > div > div,
-                    .value-banner .container > div > a {
-                        min-width: 0 !important;
-                        flex: 1 !important;
-                        padding: 0 0.1rem !important;
-                    }
-                    .value-banner .container > div > div > div,
-                    .value-banner .container > div > a > div {
-                        width: 18px !important;
-                        height: 18px !important;
-                        margin-bottom: 0.2rem !important;
-                    }
-                    .value-banner .container > div h4 {
-                        font-size: 0.48rem !important;
-                        letter-spacing: 0.03em !important;
-                    }
-                    .value-banner {
-                        padding: 0.45rem 0 !important;
-                    }
-                    /* Grey final CTA: compact */
-                    .final-cta > div {
-                        padding: 0 3% !important;
-                    }
-                    .final-cta > div > div {
-                        gap: 1rem !important;
-                    }
-                    .final-cta h2 {
-                        font-size: 1.1rem !important;
-                        margin-bottom: 0.5rem !important;
-                    }
-                    .final-cta p {
-                        font-size: 0.8rem !important;
-                    }
-                    .final-cta > div > div > div:last-child > div {
-                        gap: 0.5rem !important;
-                    }
-                    .final-cta .btn {
-                        padding: 0.5rem 0.8rem !important;
-                        font-size: 0.7rem !important;
-                    }
-                }
             </style>
         </section>
 
         <!-- 13. FINAL CTA -->
         <section class="final-cta bg-charcoal text-white" style="padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1);">
             <div style="padding: 0 4%; max-width: 1600px; margin: 0 auto; width: 100%;">
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3rem;">
+                <div class="final-cta-inner" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3rem;">
                     <div style="flex: 1; min-width: 250px;">
                         <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: 0.05em; color: var(--gold);">NEED MATERIALS FOR YOUR NEXT PROJECT?</h2>
                         <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.6;">Tell us what you need. Our team will help you find the right products and arrange supply tailored to your requirements.</p>
@@ -601,7 +553,18 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
+            <style>
+            @media (max-width: 768px) {
+                .final-cta { padding: 1rem 0 !important; }
+                .final-cta-inner { gap: 1rem !important; }
+                .final-cta-inner h2 { font-size: 1.3rem !important; margin-bottom: 0.5rem !important; }
+                .final-cta-inner p { font-size: 0.9rem !important; line-height: 1.4 !important; }
+                .final-cta-inner > div:last-child > div { gap: 0.8rem !important; padding-bottom: 0 !important; }
+                .final-cta-inner .btn { padding: 0.6rem 0.8rem !important; font-size: 0.85rem !important; }
+            }
+            </style>
         </section>
 
     </main>
