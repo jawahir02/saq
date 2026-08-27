@@ -15,10 +15,10 @@ window.siteData = {
         { id: 'plumbing', slug: 'plumbing', name: 'Plumbing Products', desc: 'Pipes, fittings, valves', img: 'assets/plumbing.PNG' },
         { id: 'plywood', slug: 'plywood', name: 'Plywood', desc: 'Marine plywood, MDF', img: 'plywood.png' },
         { id: 'polythene', slug: 'polythene', name: 'Polythene Sheets', desc: 'Protection rolls', img: 'polythene1.png' },
-        { id: 'safety', slug: 'safety', name: 'Safety Gear', desc: 'Helmets, shoes, protection', img: 'safety shoes.png' },
+        { id: 'safety', slug: 'safety', name: 'Safety Gear', desc: 'Helmets, shoes, protection', img: 'safety products.png' },
         { id: 'tapes', slug: 'tapes', name: 'Tapes', desc: 'Masking, duct, double sided', img: 'double sided masking tape.png' },
-        { id: 'tile-adhesives', slug: 'tile-adhesives', name: 'Tile Adhesives & Glue', desc: 'Mapei keraflex, grouts', img: 'Mapei Keraflex.png' },
-        { id: 'waterproofing', slug: 'waterproofing', name: 'Waterproofing', desc: 'Bituminous membranes', img: 'Bituminous Membran.png' }
+        { id: 'tile-adhesives', slug: 'tile-adhesives', name: 'Tile Adhesives & Glue', desc: 'Mapei keraflex, grouts', img: 'tile adhesive.png' },
+        { id: 'waterproofing', slug: 'waterproofing', name: 'Waterproofing', desc: 'Bituminous membranes', img: 'waterproofing.png' }
     ],
     brands: [
         { name: 'Brand 3', img: 'assets/b1.png', verified: true },
