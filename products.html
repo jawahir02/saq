@@ -8,10 +8,34 @@
     <link rel="stylesheet" href="css/home.css">
     <style>
         .page-header { padding: 100px 0 40px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        
+        #all-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .cat-card {
+            background: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .cat-card:hover {
+            transform: translateY(-5px);
+        }
+        
         @media (max-width: 768px) {
             .final-cta.section-padding {
                 padding-top: 30px !important;
                 padding-bottom: 30px !important;
+            }
+            #all-products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+            .cat-content {
+                padding: 0.5rem !important;
             }
         }
     </style>
@@ -60,18 +84,20 @@
                     card.id = cat.id;
                     card.className = 'cat-card fade-in-up';
                     card.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                    card.style.display = 'flex'; // Ensure flex behaves
+                    card.style.display = 'flex';
+                    card.style.flexDirection = 'column';
                     
                     card.innerHTML = `
                         <div class="cat-img-wrapper" style="width: 100%; aspect-ratio: 1/1; background: white; overflow: hidden; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05);">
-                            <img style="width: 100%; height: 100%; object-fit: contain; padding: 1.5rem;" src="${cat.img}" alt="${cat.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <img style="width: 100%; height: 100%; object-fit: cover; padding: 0;" src="${cat.img}" alt="${cat.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                             <div style="width:100%; height:100%; background:var(--warm-beige); position:absolute; top:0; left:0; display:none; align-items:center; justify-content:center; color:var(--charcoal); text-align:center; padding:1rem; font-size:0.8rem;">[IMG: ${cat.name}]</div>
                         </div>
-                        <div class="cat-content" style="padding: 1.2rem; text-align: left;">
+                        <div class="cat-content" style="padding: 0.8rem; text-align: left;">
                             <div style="font-family:var(--font-secondary); font-size:0.8rem; color:var(--charcoal); margin-bottom:0.5rem;">0${index + 1}</div>
                             <h3 style="color: var(--charcoal); font-family: var(--font-primary); font-size: 1.1rem; margin: 0; text-transform: uppercase; font-weight: 700;">${cat.name}</h3>
                             <p class="prod-desc" style="font-size: 0.85rem; color: #666; margin-top: 5px; line-height: 1.4;">${cat.desc}</p>
                         </div>
+
                     `;
                     grid.appendChild(card);
                 });
