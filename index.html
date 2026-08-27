@@ -470,7 +470,7 @@
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; text-align: center;">
                     
                     <!-- 1. SAME DAY DELIVERY -->
-                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
+                    <div class="vb-item" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
                         <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -482,7 +482,7 @@
                     </div>
 
                     <!-- 2. ASK US -->
-                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
+                    <div class="vb-item" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center;">
                         <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                               <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
@@ -493,7 +493,7 @@
                     </div>
 
                     <!-- 3. INSTAGRAM -->
-                    <a href="https://instagram.com" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;" class="hover-opacity">
+                    <a href="https://instagram.com" class="vb-item hover-opacity" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;">
                         <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -505,7 +505,7 @@
                     </a>
 
                     <!-- 4. LINKEDIN -->
-                    <a href="https://linkedin.com" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;" class="hover-opacity">
+                    <a href="https://linkedin.com" class="vb-item hover-opacity" style="flex: 1; min-width: 150px; display: flex; flex-direction: column; align-items: center; text-decoration: none;">
                         <div style="color: #d4af37; margin-bottom: 0.5rem; width: 32px; height: 32px;">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
                               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -521,6 +521,30 @@
             <style>
                 .hover-opacity { transition: opacity 0.2s ease; }
                 .hover-opacity:hover { opacity: 0.7; }
+                
+                @media (max-width: 768px) {
+                    .value-banner > .container > div {
+                        flex-wrap: nowrap !important;
+                        gap: 0.2rem !important;
+                    }
+                    .value-banner .vb-item {
+                        min-width: 0 !important;
+                        flex: 1 !important;
+                    }
+                    .value-banner .vb-item h4 {
+                        font-size: 0.5rem !important;
+                        letter-spacing: 0 !important;
+                    }
+                    .value-banner .vb-item svg {
+                        width: 18px !important;
+                        height: 18px !important;
+                    }
+                    .value-banner .vb-item > div {
+                        width: 18px !important;
+                        height: 18px !important;
+                        margin-bottom: 0.2rem !important;
+                    }
+                }
             </style>
         </section>
 
