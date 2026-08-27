@@ -38,6 +38,13 @@
                 </div>
                 <style>
                 @media (max-width: 768px) {
+                    .hero-text-content h1 {
+                        font-size: clamp(28px, 7vw, 38px) !important;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 3 !important;
+                        -webkit-box-orient: vertical !important;
+                        overflow: hidden !important;
+                    }
                     #hero-cta-wrap {
                         flex-direction: column !important;
                         align-items: center !important;
