@@ -541,3 +541,9 @@ img {
         display: none !important;
     }
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 80% !important;
+    }
+}
