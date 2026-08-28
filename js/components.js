@@ -91,10 +91,10 @@ class SAQHeader extends HTMLElement {
                     color: var(--gold, #B89C5D);
                 }
                 .nav-cta {
-                    background-color: var(--navy-blue, #1A2B4C) !important;
-                    color: white !important;
+                    background-color: transparent !important;
+                    color: var(--navy-blue, #1A2B4C) !important;
                     padding: 0.7rem 1.5rem;
-                    border: 1px solid rgba(0,0,0,0.08);
+                    border: 1.5px solid var(--navy-blue, #1A2B4C);
                     border-radius: 4px;
                     font-weight: 600;
                     font-size: 0.75rem;
@@ -103,12 +103,12 @@ class SAQHeader extends HTMLElement {
                     display: inline-flex;
                     align-items: center;
                     gap: 8px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
                     transition: all 0.3s ease;
                 }
                 .nav-cta:hover {
-                    border-color: rgba(0,0,0,0.15);
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    background-color: var(--navy-blue, #1A2B4C) !important;
+                    color: white !important;
+                    box-shadow: 0 4px 15px rgba(26,43,76,0.15);
                 }
                 .mobile-menu-btn {
                     display: none;
@@ -179,11 +179,12 @@ class SAQHeader extends HTMLElement {
                 }
                 .mobile-nav .nav-cta-mobile {
                     margin-top: auto;
-                    background-color: var(--navy-blue, #1A2B4C);
-                    color: white;
+                    background-color: transparent;
+                    color: var(--navy-blue, #1A2B4C);
                     padding: 1.2rem;
                     text-align: center;
                     border-radius: 4px;
+                    border: 1.5px solid var(--navy-blue, #1A2B4C);
                     font-weight: 600;
                     font-size: 0.9rem;
                     text-transform: uppercase;
@@ -193,7 +194,7 @@ class SAQHeader extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                     gap: 8px;
-                    box-shadow: 0 4px 15px rgba(26, 43, 76, 0.2);
+                    transition: all 0.3s ease;
                 }
                 @media (max-width: 768px) {
                     /* Keep the header layout */
