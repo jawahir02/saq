@@ -39,19 +39,8 @@
         /* Hero & Contact Wrapper */
         .contact-wrapper {
             position: relative;
-            background-image: url('parallax.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: transparent;
             padding-bottom: 80px; /* Space below map */
-        }
-
-        .contact-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(249, 248, 246, 0.88);
-            z-index: 1;
         }
 
         /* Hero Section */
@@ -371,6 +360,8 @@
     </style>
 </head>
 <body>
+    <!-- Subtle leaf background identical to careers and brands pages -->
+    <img src="parallax.png" alt="" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; opacity: 0.12; z-index: -1; pointer-events: none;">
 
     <!-- Reusable Header Component -->
     <saq-header></saq-header>
@@ -464,6 +455,6 @@
     <saq-footer></saq-footer>
 
     <!-- Components Script -->
-    <script src="js/components.js?v=111"></script>
+    <script src="js/components.js?v=112"></script>
 </body>
 </html>
