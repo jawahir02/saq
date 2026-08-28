@@ -39,7 +39,7 @@
         /* Hero Section */
         .contact-hero {
             position: relative;
-            padding: 150px 5% 60px; /* Reduced padding */
+            padding: 150px 5% 140px; /* Increased bottom padding to underlay cards */
             background-image: url('parallax.png');
             background-size: cover;
             background-position: center;
@@ -83,7 +83,7 @@
         /* Main Content */
         .contact-main {
             max-width: 1200px;
-            margin: -30px auto 0; /* Reduced overlap */
+            margin: -80px auto 0; /* Pull up to sit over the hero background */
             padding: 0 5%;
             position: relative;
             z-index: 3;
@@ -91,11 +91,9 @@
 
         /* Info Section */
         .info-section {
-            background: #FFFFFF;
-            padding: 1.5rem 1rem; /* Reduced padding */
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            /* Removed glow */
+            background: transparent; /* Removed white background */
+            padding: 0; /* Removed padding */
+            border: none; /* Removed border */
         }
         
         .info-list {
@@ -123,7 +121,7 @@
             text-align: center;
             gap: 0.8rem; /* Reduced gap */
             padding: 1rem; /* Reduced padding */
-            background: var(--off-white);
+            background: rgba(0,0,0,0.06); /* Grey card background */
             border-radius: 8px;
             border: 1px solid rgba(0,0,0,0.03);
             transition: transform 0.3s ease;
@@ -131,7 +129,7 @@
         
         .info-item:hover {
             transform: translateY(-2px); /* Reduced hover lift */
-            background: #FFFFFF;
+            background: rgba(0,0,0,0.08); /* Slightly darker grey on hover */
             border-color: var(--gold);
             /* Removed glow */
         }
