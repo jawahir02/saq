@@ -203,21 +203,22 @@ class SAQHeader extends HTMLElement {
                     /* Mobile Logo Styles - Default */
                     .logo-container {
                         flex-direction: column !important;
-                        align-items: flex-start !important;
+                        align-items: center !important;
                         margin-top: 0;
                     }
-                    .logo-container img { height: 79px !important; }
+                    .logo-container img { height: 110px !important; }
                     .logo-tagline {
                         display: block !important;
                         transform: none !important;
-                        margin: 4px 0 0 0 !important;
+                        margin: -2px 0 0 0 !important;
                         padding: 0 !important;
                         border: none !important;
-                        font-size: 0.485rem !important; 
-                        line-height: 1.2 !important;
-                        white-space: normal !important;
-                        max-width: 110px !important;
-                        text-align: left;
+                        font-size: 0.38rem !important; 
+                        line-height: 1 !important;
+                        white-space: nowrap !important;
+                        max-width: none !important;
+                        text-align: center !important;
+                        letter-spacing: 0.06em !important;
                     }
 
                     /* Mobile Logo Styles - Scrolled */
