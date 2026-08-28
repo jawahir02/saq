@@ -92,9 +92,9 @@ class SAQHeader extends HTMLElement {
                 }
                 .nav-cta {
                     background-color: transparent !important;
-                    color: var(--gold, #B89C5D) !important;
+                    color: var(--navy-blue, #1A2B4C) !important;
                     padding: 0.7rem 1.5rem;
-                    border: 1.5px solid var(--gold, #B89C5D);
+                    border: 1.5px solid var(--navy-blue, #1A2B4C);
                     border-radius: 4px;
                     font-weight: 600;
                     font-size: 0.75rem;
@@ -106,9 +106,9 @@ class SAQHeader extends HTMLElement {
                     transition: all 0.3s ease;
                 }
                 .nav-cta:hover {
-                    background-color: var(--gold, #B89C5D) !important;
+                    background-color: var(--navy-blue, #1A2B4C) !important;
                     color: white !important;
-                    box-shadow: 0 4px 15px rgba(184,156,93,0.2);
+                    box-shadow: 0 4px 15px rgba(26,43,76,0.15);
                 }
                 .mobile-menu-btn {
                     display: none;
@@ -180,11 +180,11 @@ class SAQHeader extends HTMLElement {
                 .mobile-nav .nav-cta-mobile {
                     margin-top: auto;
                     background-color: transparent;
-                    color: var(--gold, #B89C5D);
+                    color: var(--navy-blue, #1A2B4C);
                     padding: 1.2rem;
                     text-align: center;
                     border-radius: 4px;
-                    border: 1.5px solid var(--gold, #B89C5D);
+                    border: 1.5px solid var(--navy-blue, #1A2B4C);
                     font-weight: 600;
                     font-size: 0.9rem;
                     text-transform: uppercase;
