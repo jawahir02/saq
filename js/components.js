@@ -613,6 +613,149 @@ class MobileContactBar extends HTMLElement {
 }
 customElements.define('mobile-contact-bar', MobileContactBar);
 
+class ProductCTA extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <style>
+                .product-cta-section {
+                    background-color: #1a2639;
+                    color: white;
+                    padding: 2.2rem 0;
+                    border-top: 1px solid rgba(255,255,255,0.1);
+                    position: relative;
+                    z-index: 10;
+                }
+                .product-cta-container {
+                    padding: 0 4%;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                }
+                .product-cta-text {
+                    flex: 1;
+                    min-width: 280px;
+                }
+                .product-cta-text h4 {
+                    color: var(--gold, #B89C5D);
+                    font-size: 0.8rem;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    margin: 0 0 0.4rem 0;
+                    font-family: var(--font-body, sans-serif);
+                    font-weight: 600;
+                }
+                .product-cta-text h2 {
+                    font-family: var(--font-display, serif);
+                    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+                    color: white;
+                    margin: 0 0 0.5rem 0;
+                    letter-spacing: 0.03em;
+                    line-height: 1.2;
+                }
+                .product-cta-text p {
+                    font-size: 0.95rem;
+                    color: rgba(255,255,255,0.85);
+                    margin: 0;
+                    line-height: 1.5;
+                }
+                .product-cta-btns {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                .product-cta-btn {
+                    padding: 0.75rem 1.4rem;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    white-space: nowrap;
+                }
+                .product-cta-wa {
+                    background: var(--gold, #B89C5D);
+                    color: #FFFFFF;
+                }
+                .product-cta-wa:hover {
+                    background: #a3874b;
+                    transform: translateY(-2px);
+                }
+                .product-cta-outline {
+                    border: 1px solid rgba(255,255,255,0.3);
+                    color: white;
+                    background: transparent;
+                }
+                .product-cta-outline:hover {
+                    border-color: var(--gold, #B89C5D);
+                    color: var(--gold, #B89C5D);
+                    transform: translateY(-2px);
+                }
+                @media (max-width: 768px) {
+                    .product-cta-section {
+                        padding: 1.5rem 0;
+                    }
+                    .product-cta-container {
+                        gap: 1.2rem;
+                    }
+                    .product-cta-text h4 {
+                        font-size: 0.7rem;
+                    }
+                    .product-cta-text h2 {
+                        font-size: 1.2rem;
+                    }
+                    .product-cta-text p {
+                        font-size: 0.82rem;
+                    }
+                    .product-cta-btns {
+                        width: 100%;
+                        gap: 0.6rem;
+                    }
+                    .product-cta-btn {
+                        padding: 0.55rem 0.9rem;
+                        font-size: 0.75rem;
+                        flex: 1;
+                        justify-content: center;
+                    }
+                }
+            </style>
+            <section class="product-cta-section">
+                <div class="product-cta-container">
+                    <div class="product-cta-text">
+                        <h4>NEED INFO ABOUT THIS PRODUCT?</h4>
+                        <h2>Get In Touch For Quotes & Fast Site Delivery</h2>
+                        <p>Speak with our specialists for technical specifications, bulk pricing, and dependable site delivery across Dubai & the UAE.</p>
+                    </div>
+                    <div class="product-cta-btns">
+                        <a href="https://wa.me/971557566060" class="product-cta-btn product-cta-wa" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.397 0 0 5.397 0 12.031C0 14.654 0.852 17.078 2.274 19.043L0.555 24L5.617 22.285C7.525 23.518 9.689 24 12.031 24C18.665 24 24.062 18.603 24.062 11.969C24.062 5.335 18.665 0 12.031 0ZM19.01 16.711C18.713 17.555 17.258 18.272 16.48 18.423C15.86 18.543 15.011 18.643 12.185 17.472C8.57 15.98 6.257 12.289 6.079 12.052C5.901 11.815 4.606 10.095 4.606 8.31C4.606 6.525 5.516 5.666 5.891 5.28C6.19 4.972 6.702 4.814 7.214 4.814C7.373 4.814 7.511 4.822 7.633 4.828C8.01 4.846 8.199 4.869 8.446 5.463C8.754 6.206 9.506 8.046 9.595 8.234C9.684 8.422 9.802 8.679 9.664 8.956C9.535 9.223 9.416 9.342 9.219 9.57C9.022 9.798 8.844 9.957 8.636 10.224C8.448 10.432 8.232 10.668 8.457 11.055C8.682 11.432 9.452 12.688 10.59 13.704C12.05 15.015 13.235 15.43 13.65 15.608C14.065 15.786 14.54 15.736 14.836 15.419C15.212 15.013 15.676 14.331 16.141 13.639C16.477 13.136 16.921 13.076 17.376 13.245C17.831 13.414 20.25 14.611 20.725 14.849C21.2 15.087 21.517 15.206 21.626 15.394C21.735 15.582 21.735 16.463 21.438 17.307Z"/></svg>
+                            WhatsApp
+                        </a>
+                        <a href="tel:+971557566060" class="product-cta-btn product-cta-outline">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            Call
+                        </a>
+                        <a href="mailto:sales@saqtrading.com?subject=Product%20Enquiry%20-%20SAQ%20Building%20Materials" class="product-cta-btn product-cta-outline">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </section>
+        `;
+    }
+}
+customElements.define('product-cta', ProductCTA);
+
 class FloatingCallBtn extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
