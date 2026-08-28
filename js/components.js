@@ -218,7 +218,7 @@ class SAQHeader extends HTMLElement {
                         font-size: 0.485rem !important; /* Reduced by 3% */
                         line-height: 1.2 !important;
                         white-space: normal !important;
-                        max-width: 180px;
+                        max-width: 110px !important; /* Keep it compact under the logo */
                         text-align: left;
                     }
                 }
