@@ -266,7 +266,7 @@ class SAQHeader extends HTMLElement {
 
                         text-align: center !important;
 
-                        font-size: 5.5px !important;
+                        font-size: 5.8px !important;
                         line-height: 1.15 !important;
                         letter-spacing: 0.3px !important;
 
