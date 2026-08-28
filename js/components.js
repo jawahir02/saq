@@ -32,7 +32,7 @@ class SAQHeader extends HTMLElement {
                     margin-top: 5px; /* Reduced top margin */
                 }
                 .logo-container img {
-                    height: 104px; /* Increased by 30% */
+                    height: 107px; /* Increased by an additional 3% */
                 }
                 .logo-tagline {
                     font-size: 0.49rem; /* Increased by 3% */
