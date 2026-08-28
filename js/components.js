@@ -223,15 +223,16 @@ class SAQHeader extends HTMLElement {
                         text-decoration: none !important;
                     }
 
-                    /* MAKE THE ACTUAL SAQ LOGO LARGER */
+                    /* MAKE THE ACTUAL SAQ LOGO LARGER & CROP OUT EMBEDDED TAGLINE */
                     .logo-container img {
                         display: block !important;
 
                         width: 105px !important;
-                        height: auto !important;
+                        height: 26px !important; /* Crops the embedded text at the bottom */
 
                         max-width: none !important;
-                        object-fit: contain !important;
+                        object-fit: cover !important;
+                        object-position: top center !important;
 
                         margin: 0 !important;
                         padding: 0 !important;
@@ -253,7 +254,7 @@ class SAQHeader extends HTMLElement {
                         line-height: 1.15 !important;
                         letter-spacing: 0.15px !important;
 
-                        white-space: nowrap !important;
+                        white-space: normal !important; /* Allows wrapping as requested in visual diagram */
                         transform: translateX(0) !important;
 
                         color: var(--charcoal, #292929) !important;
@@ -269,7 +270,9 @@ class SAQHeader extends HTMLElement {
 
                     .main-header.scrolled .logo-container img {
                         width: 63px !important;
-                        height: auto !important;
+                        height: 16px !important; /* Scaled down height to crop */
+                        object-fit: cover !important;
+                        object-position: top center !important;
                     }
 
                     .main-header.scrolled .logo-tagline {
@@ -282,7 +285,7 @@ class SAQHeader extends HTMLElement {
                         line-height: 1.1 !important;
                         white-space: normal !important;
                         text-align: left !important;
-                        transform: translateX(-20px) !important; /* Pull left to remove invisible image gap */
+                        transform: translateX(-14px) !important; /* Pull left closer to cropped image */
                     }
 
                     /* HAMBURGER */
