@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <style>
-        .page-header { padding: 100px 0 40px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        
+        .page-header {
+            padding: 130px 0 50px;
+            position: relative;
+            background-image: url('parallax.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--charcoal);
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(249, 248, 246, 0.88);
+            z-index: 1;
+        }
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
         #all-products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -24,7 +44,6 @@
         .cat-card:hover {
             transform: translateY(-5px);
         }
-        
         @media (max-width: 768px) {
             .final-cta.section-padding {
                 padding-top: 30px !important;
