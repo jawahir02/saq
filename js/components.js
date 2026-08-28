@@ -227,17 +227,17 @@ class SAQHeader extends HTMLElement {
                         align-items: center !important;
                     }
                     .main-header.scrolled .logo-container img { 
-                        height: 40px !important; 
+                        height: 55px !important; /* Increased for better visibility */
                     }
                     .main-header.scrolled .logo-tagline {
                         display: block !important;
-                        margin: 0 0 0 4px !important; /* Boundary closer to logo */
-                        padding: 0 0 0 6px !important; /* Slightly tighter padding */
+                        margin: 0 0 0 8px !important;
+                        padding: 0 0 0 8px !important;
                         border-left: 1px solid rgba(44, 44, 44, 0.3) !important;
-                        font-size: 0.43rem !important; /* Slightly increased */
+                        font-size: 0.55rem !important; /* Made significantly larger */
                         line-height: 1.2 !important;
                         white-space: normal !important;
-                        max-width: 130px !important;
+                        max-width: 120px !important; /* Sized to force two-line wrap */
                         text-align: left;
                     }
                 }
