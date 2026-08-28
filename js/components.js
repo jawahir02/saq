@@ -490,6 +490,30 @@ class SAQFooter extends HTMLElement {
                     text-align: center;
                     font-size: 0.7rem;
                 }
+                @media (max-width: 768px) {
+                    .main-footer {
+                        padding: 1.5rem 1rem 1rem;
+                    }
+                    .footer-container {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 1.5rem 0.8rem;
+                    }
+                    .footer-container .footer-col:first-child {
+                        grid-column: 1 / -1; /* Logo spans full width at the top */
+                        margin-bottom: 0.2rem;
+                    }
+                    .footer-container .footer-col {
+                        min-width: 0;
+                    }
+                    .footer-col h3 {
+                        font-size: 0.85rem;
+                        margin-bottom: 0.6rem;
+                    }
+                    .footer-links a {
+                        font-size: 0.72rem;
+                        word-break: break-word;
+                    }
+                }
             </style>
             <footer class="main-footer">
                 <div class="footer-container">
