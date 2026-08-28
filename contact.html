@@ -36,18 +36,17 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section */
-        .contact-hero {
+        /* Hero & Contact Wrapper */
+        .contact-wrapper {
             position: relative;
-            padding: 150px 5% 140px; /* Increased bottom padding to underlay cards */
             background-image: url('parallax.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            text-align: center; 
+            padding-bottom: 60px; /* Space below cards */
         }
 
-        .contact-hero::before {
+        .contact-wrapper::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -55,9 +54,16 @@
             z-index: 1;
         }
 
+        /* Hero Section */
+        .contact-hero {
+            position: relative;
+            padding: 150px 5% 40px; 
+            text-align: center; 
+            z-index: 2;
+        }
+
         .hero-content {
             position: relative;
-            z-index: 2;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -66,7 +72,7 @@
             font-family: var(--font-display);
             font-size: clamp(3rem, 6vw, 4.5rem);
             color: var(--navy-blue);
-            margin: 0 0 1rem; /* Reduced margin */
+            margin: 0 0 1rem; 
             font-weight: 500;
             position: relative;
             display: inline-block;
@@ -83,7 +89,7 @@
         /* Main Content */
         .contact-main {
             max-width: 1200px;
-            margin: -80px auto 0; /* Pull up to sit over the hero background */
+            margin: 0 auto; 
             padding: 0 5%;
             position: relative;
             z-index: 3;
@@ -119,19 +125,18 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 0.8rem; /* Reduced gap */
-            padding: 1rem; /* Reduced padding */
-            background: rgba(0,0,0,0.06); /* Grey card background */
+            gap: 0.8rem; 
+            padding: 1.5rem 1rem; 
+            background: rgba(0,0,0,0.08); /* Darkened Grey card background */
             border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.03);
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, background 0.3s ease;
         }
         
         .info-item:hover {
-            transform: translateY(-2px); /* Reduced hover lift */
-            background: rgba(0,0,0,0.08); /* Slightly darker grey on hover */
+            transform: translateY(-2px); 
+            background: rgba(0,0,0,0.12); /* Slightly darker grey on hover */
             border-color: var(--gold);
-            /* Removed glow */
         }
 
         .icon-box {
@@ -166,18 +171,23 @@
 
         /* Map Section */
         .map-section {
-            margin-top: 2rem; /* Moved upwards */
-            width: 100%;
-            height: 300px; /* Reduced height */
+            margin: 2rem 5% 4rem; /* Moved upwards, added horizontal margin */
+            height: 350px; 
             background: #e5e3df;
             position: relative;
+            border-top: 4px solid var(--gold);
+            border-bottom: 4px solid var(--gold);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Highlight shadow */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden;
+            z-index: 4;
         }
 
         .map-section iframe {
             width: 100%;
             height: 100%;
             border: none;
-            filter: grayscale(100%) contrast(1.2) brightness(1.1);
+            filter: grayscale(100%) contrast(1.1) brightness(1.05);
         }
 
         /* Pre-Footer CTA */
@@ -264,68 +274,69 @@
     <!-- Reusable Header Component -->
     <saq-header></saq-header>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <div class="hero-content">
-            <h1>Contact Us</h1>
-            <p>We're here to help. Get in touch with our team for quotes, product enquiries, partnerships or any other information.</p>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="contact-main">
-        
-        <!-- Info Section -->
-        <div class="info-section">
-            <div class="info-list">
-                
-                <!-- Call Us -->
-                <a href="tel:+971557566060" class="info-item" style="text-decoration: none;">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    </div>
-                    <div class="info-content">
-                        <h4>CALL US</h4>
-                        <p>+971 55 756 6060</p>
-                    </div>
-                </a>
-
-                <!-- WhatsApp -->
-                <a href="https://wa.me/971557566060" class="info-item" target="_blank" style="text-decoration: none;">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    </div>
-                    <div class="info-content">
-                        <h4>WHATSAPP</h4>
-                        <p>+971 55 756 6060</p>
-                    </div>
-                </a>
-
-                <!-- Email -->
-                <a href="mailto:samalqasar@gmail.com" class="info-item" style="text-decoration: none;">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </div>
-                    <div class="info-content">
-                        <h4>EMAIL US</h4>
-                        <p>samalqasar@gmail.com</p>
-                    </div>
-                </a>
-
-                <!-- Location -->
-                <a href="https://maps.google.com" class="info-item" target="_blank" style="text-decoration: none;">
-                    <div class="icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    </div>
-                    <div class="info-content">
-                        <h4>VISIT US</h4>
-                        <p>Al Quoz Industrial Area 3<br>Dubai, UAE</p>
-                    </div>
-                </a>
-
+    <!-- Shared Wrapper for Hero and Main to span background -->
+    <div class="contact-wrapper">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>We're here to help. Get in touch with our team for quotes, product enquiries, partnerships or any other information.</p>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Main Content -->
+        <section class="contact-main">
+            <!-- Info Section -->
+            <div class="info-section">
+                <div class="info-list">
+                    <!-- Call Us -->
+                    <a href="tel:+971557566060" class="info-item" style="text-decoration: none;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>CALL US</h4>
+                            <p>+971 55 756 6060</p>
+                        </div>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/971557566060" class="info-item" target="_blank" style="text-decoration: none;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>WHATSAPP</h4>
+                            <p>+971 55 756 6060</p>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:samalqasar@gmail.com" class="info-item" style="text-decoration: none;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>EMAIL US</h4>
+                            <p>samalqasar@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <!-- Location -->
+                    <a href="https://maps.google.com" class="info-item" target="_blank" style="text-decoration: none;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>VISIT US</h4>
+                            <p>Al Quoz Industrial Area 3<br>Dubai, UAE</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Map Section -->
     <section class="map-section">
