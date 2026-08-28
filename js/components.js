@@ -200,52 +200,49 @@ class SAQHeader extends HTMLElement {
                     .mobile-menu-btn { display: block; }
                     .header-container { padding: 0.8rem 5%; }
                     
-                    /* Mobile Logo Styles - Default */
-                    .logo-container {
+                    /*
+                     * Keep the header layout intact.
+                     * Only adjust the logo and tagline.
+                     */
+
+                    .logo-container, .main-header.scrolled .logo-container {
                         display: flex !important;
                         flex-direction: column !important;
                         align-items: center !important;
-                        margin-top: 0;
+                        justify-content: flex-start !important;
+                        width: 190px !important;
+                        max-width: 190px !important;
+                        flex-shrink: 0 !important;
+                        margin-top: 0 !important;
                     }
-                    .logo-container img { 
+
+                    /* Larger SAQ logo */
+                    .logo-container img, .main-header.scrolled .logo-container img {
                         display: block !important;
-                        width: 155px !important;
+                        width: 190px !important;
+                        max-width: 190px !important;
                         height: auto !important;
+                        margin: 0 !important;
                     }
-                    .logo-tagline {
+
+                    /* Tagline is exactly the same width as the logo */
+                    .logo-tagline, .main-header.scrolled .logo-tagline {
+                        width: 190px !important;
+                        max-width: 190px !important;
                         margin-top: 3mm !important;
-                        font-size: 7px !important;
-                        letter-spacing: 0.08em !important;
-                        white-space: nowrap !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        padding: 0 !important;
                         text-align: center !important;
+                        white-space: nowrap !important;
+                        font-size: 6px !important;
+                        line-height: 1 !important;
+                        letter-spacing: 0.05em !important;
+                        box-sizing: border-box !important;
+                        overflow: hidden !important;
                         display: block !important;
                         border: none !important;
                         transform: none !important;
-                        padding: 0 !important;
-                        max-width: none !important;
-                        line-height: 1 !important;
-                    }
-
-                    /* Mobile Logo Styles - Scrolled */
-                    .main-header.scrolled .logo-container {
-                        flex-direction: row !important;
-                        align-items: center !important;
-                    }
-                    .main-header.scrolled .logo-container img { 
-                        height: 55px !important; 
-                    }
-                    .main-header.scrolled .logo-tagline {
-                        display: block !important;
-                        transform: translateX(-18px) !important; /* Eliminate the phantom gap */
-                        margin: 0 !important;
-                        padding: 0 0 0 10px !important;
-                        border-left: 1px solid rgba(44, 44, 44, 0.4) !important;
-                        font-size: 0.55rem !important; 
-                        line-height: 1.2 !important;
-                        white-space: normal !important;
-                        max-width: 120px !important;
-                        text-align: left !important;
-                        letter-spacing: 0.05em !important;
                     }
                 }
             </style>
