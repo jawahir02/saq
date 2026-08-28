@@ -35,13 +35,14 @@ class SAQHeader extends HTMLElement {
                     height: 104px; /* Increased by 30% */
                 }
                 .logo-tagline {
-                    font-size: 0.47rem; /* Reduced by 5% */
+                    font-size: 0.48rem; /* Enlarged slightly by 2% */
                     color: var(--charcoal, #2C2C2C);
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     font-weight: 600;
                     margin-top: 3px;
                     white-space: nowrap;
+                    transform: translateX(-2%); /* Shifted to left by 2% */
                 }
                 .nav-links {
                     display: flex;
