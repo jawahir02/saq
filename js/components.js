@@ -512,6 +512,7 @@ class SAQFooter extends HTMLElement {
                             <li><a href="tel:+971557566060">Phone: +971 55 756 6060</a></li>
                             <li><a href="mailto:sales@saqtrading.com">Email: sales@saqtrading.com</a></li>
                             <li><a href="https://wa.me/971557566060">WhatsApp: +971 55 756 6060</a></li>
+                            <li><a href="https://www.google.com/maps/place/25%C2%B010'22.7%22N+55%C2%B015'18.8%22E/@25.1729789,55.2526545,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1729789!4d55.2552294" target="_blank" rel="noopener">Location: Al Quoz 3, Dubai, UAE</a></li>
                         </ul>
                     </div>
                 </div>
