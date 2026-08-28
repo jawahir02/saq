@@ -198,15 +198,26 @@ class SAQHeader extends HTMLElement {
         const mobileNav = this.querySelector('.mobile-nav');
         const header = this.querySelector('#main-header');
         
+        // Determine if we are on the homepage
+        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '';
+
+        // If not on homepage, permanently apply the scrolled state
+        if (!isHomePage) {
+            header.classList.add('scrolled');
+        }
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
         });
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            // Only toggle on scroll if we are on the homepage
+            if (isHomePage) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
             }
         });
     }
