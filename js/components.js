@@ -32,10 +32,10 @@ class SAQHeader extends HTMLElement {
                     margin-top: 5px; /* Reduced top margin */
                 }
                 .logo-container img {
-                    height: 104px; /* Increased by 30% for desktop */
+                    height: 104px; /* Increased by 30% */
                 }
                 .logo-tagline {
-                    font-size: 0.65rem; /* Scaled up to match logo width */
+                    font-size: 0.47rem; /* Reduced by 5% */
                     color: var(--charcoal, #2C2C2C);
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
