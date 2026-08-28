@@ -210,7 +210,7 @@ class SAQHeader extends HTMLElement {
                     .logo-tagline {
                         display: block !important;
                         transform: none !important;
-                        margin: -2px 0 0 0 !important;
+                        margin: 2px 0 0 0 !important; /* Small gap from logo */
                         padding: 0 !important;
                         border: none !important;
                         font-size: 0.38rem !important; 
