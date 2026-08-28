@@ -45,6 +45,9 @@
             transform: translateY(-5px);
         }
         @media (max-width: 768px) {
+            .page-header {
+                background-attachment: scroll !important;
+            }
             .final-cta.section-padding {
                 padding-top: 30px !important;
                 padding-bottom: 30px !important;
@@ -92,7 +95,7 @@
     <mobile-contact-bar></mobile-contact-bar>
 
     <script src="js/data.js?v=3"></script>
-    <script src="js/components.js?v=110"></script>
+    <script src="js/components.js?v=111"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('all-products-grid');
