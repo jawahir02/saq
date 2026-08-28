@@ -233,8 +233,8 @@ class SAQHeader extends HTMLElement {
                         align-items: flex-start !important;
                         justify-content: flex-start !important;
 
-                        width: 150px !important;
-                        max-width: 150px !important;
+                        width: 170px !important;
+                        max-width: 170px !important;
                         margin: 0 !important;
                         padding: 0 !important;
                         text-decoration: none !important;
@@ -244,7 +244,7 @@ class SAQHeader extends HTMLElement {
                     .logo-container img {
                         display: block !important;
 
-                        width: 116px !important;
+                        width: 139px !important;
                         height: auto !important;
 
                         max-width: none !important;
