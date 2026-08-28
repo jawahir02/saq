@@ -216,8 +216,8 @@ class SAQHeader extends HTMLElement {
                         align-items: flex-start !important;
                         justify-content: flex-start !important;
 
-                        width: 160px !important;
-                        max-width: 160px !important;
+                        width: 150px !important;
+                        max-width: 150px !important;
                         margin: 0 !important;
                         padding: 0 !important;
                         text-decoration: none !important;
@@ -227,7 +227,7 @@ class SAQHeader extends HTMLElement {
                     .logo-container img {
                         display: block !important;
 
-                        width: 136px !important;
+                        width: 105px !important;
                         height: auto !important;
 
                         max-width: none !important;
@@ -241,8 +241,8 @@ class SAQHeader extends HTMLElement {
                     .logo-tagline {
                         display: block !important;
 
-                        width: 136px !important;
-                        max-width: 136px !important;
+                        width: 105px !important;
+                        max-width: 105px !important;
 
                         margin: 3px 0 0 0 !important;
                         padding: 0 !important;
@@ -274,7 +274,7 @@ class SAQHeader extends HTMLElement {
 
                     .main-header.scrolled .logo-tagline {
                         width: auto !important;
-                        max-width: 100px !important;
+                        max-width: 110px !important;
                         margin: 0 !important;
                         padding: 0 0 0 8px !important;
                         border-left: 1px solid rgba(41, 41, 41, 0.5) !important;
@@ -282,7 +282,7 @@ class SAQHeader extends HTMLElement {
                         line-height: 1.1 !important;
                         white-space: normal !important;
                         text-align: left !important;
-                        transform: translateX(-18px) !important; /* Pull left to remove invisible image gap */
+                        transform: translateX(-20px) !important; /* Pull left to remove invisible image gap */
                     }
 
                     /* HAMBURGER */
