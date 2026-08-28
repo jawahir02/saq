@@ -254,21 +254,21 @@ class SAQHeader extends HTMLElement {
                         padding: 0 !important;
                     }
 
-                    /* TAGLINE DIRECTLY UNDER LOGO (moved closer to 280px logo) */
+                    /* TAGLINE DIRECTLY UNDER LOGO (Centered under SAQ letters) */
                     .logo-tagline {
                         display: block !important;
 
-                        width: 280px !important;
-                        max-width: 280px !important;
+                        width: 175px !important;
+                        max-width: 175px !important;
 
-                        margin: -20px 0 0 0 !important;
+                        margin: -16px 0 0 0 !important;
                         padding: 0 !important;
 
                         text-align: center !important;
 
-                        font-size: 5px !important;
+                        font-size: 5.5px !important;
                         line-height: 1.15 !important;
-                        letter-spacing: 0.15px !important;
+                        letter-spacing: 0.3px !important;
 
                         white-space: nowrap !important;
                         transform: translateX(0) !important;
