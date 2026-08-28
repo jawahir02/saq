@@ -48,7 +48,7 @@ class SAQHeader extends HTMLElement {
                     display: flex;
                     gap: 1.8rem; /* Compacted gap */
                     align-items: center;
-                    transform: translateY(-8px); /* Shifted upwards */
+                    transform: translateY(-16px); /* Shifted upwards significantly */
                 }
                 .nav-links a {
                     text-decoration: none;
