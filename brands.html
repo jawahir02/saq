@@ -12,9 +12,15 @@
             --charcoal: #363636;
             --gold: #B89C5D;
         }
+        body { 
+            background-color: #FDFBF9; 
+        }
+        section { 
+            background-color: transparent !important; 
+        }
         .page-header {
-            padding: 120px 0 50px;
-            background: #FDFBF9;
+            padding: 120px 0 30px;
+            background: transparent;
             color: var(--charcoal);
             text-align: center;
             border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -29,31 +35,11 @@
             letter-spacing: 0.15em;
             font-weight: 600;
         }
-        /* Section with Pure Shadow-Only Leaves Effect on Charcoal */
+
+        /* Partners grid section */
         .partners-section {
-            position: relative;
-            background-color: var(--charcoal, #363636);
-            padding: 4rem 0 5rem;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .partners-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('parallax.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            filter: brightness(0) blur(3px);
-            opacity: 0.22;
-            mix-blend-mode: multiply;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .partners-section .container {
-            position: relative;
-            z-index: 1;
+            padding: 2.5rem 0 5rem;
+            background: transparent;
         }
 
         /* Row-based brand grid */
@@ -72,17 +58,17 @@
             align-items: center !important;
             justify-content: center !important;
             background: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(0, 0, 0, 0.07) !important;
             border-radius: 12px !important;
             padding: 1.5rem !important;
             width: 200px !important;
             height: 160px !important;
             transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
         }
         .brand-logo-item:hover {
             transform: translateY(-5px) !important;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
             border-color: var(--gold) !important;
         }
         .brand-logo-item img {
@@ -96,7 +82,7 @@
         }
         @media (max-width: 768px) {
             .partners-section {
-                padding: 2.5rem 0 3.5rem;
+                padding: 1.5rem 0 3rem;
             }
             .brand-logo-item {
                 width: 140px !important;
@@ -114,6 +100,8 @@
     </style>
 </head>
 <body>
+    <!-- Subtle leaf background identical to careers page with low contrast -->
+    <img src="parallax.png" alt="" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; opacity: 0.12; z-index: -1; pointer-events: none;">
     <saq-header></saq-header>
     <main>
         <section class="page-header">
