@@ -14,45 +14,45 @@ class SAQHeader extends HTMLElement {
                     right: 0;
                     width: 100%;
                     z-index: 1000;
-                    padding: 1rem 0;
+                    padding: 0.3rem 0; /* Reduced padding to move navbar upwards and compact */
                 }
                 .header-container {
-                    max-width: 1400px; /* Increased max-width to move logo further left */
+                    max-width: 1400px;
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 0 3%; /* Reduced padding to move logo left */
+                    padding: 0 3%;
                 }
                 .logo-container {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     text-decoration: none;
-                    margin-top: 10px;
+                    margin-top: 5px; /* Reduced top margin */
                 }
                 .logo-container img {
-                    height: 90px; /* Enlarged by 20% */
+                    height: 80px; /* Reduced size */
                 }
                 .logo-tagline {
-                    font-size: 0.55rem;
+                    font-size: 0.5rem; /* Slightly smaller */
                     color: var(--charcoal, #2C2C2C);
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     font-weight: 600;
-                    margin-top: 4px;
+                    margin-top: 3px;
                     white-space: nowrap;
                 }
                 .nav-links {
                     display: flex;
-                    gap: 2.5rem;
+                    gap: 1.8rem; /* Compacted gap */
                     align-items: center;
                 }
                 .nav-links a {
                     text-decoration: none;
                     color: var(--charcoal, #2C2C2C);
                     font-weight: 600;
-                    font-size: 0.75rem;
+                    font-size: 0.7rem; /* Reduced font size */
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     transition: color 0.3s ease;
