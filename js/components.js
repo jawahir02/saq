@@ -223,16 +223,15 @@ class SAQHeader extends HTMLElement {
                         text-decoration: none !important;
                     }
 
-                    /* MAKE THE ACTUAL SAQ LOGO LARGER & CROP OUT EMBEDDED TAGLINE */
+                    /* MAKE THE ACTUAL SAQ LOGO LARGER */
                     .logo-container img {
                         display: block !important;
 
-                        width: 105px !important;
-                        height: 26px !important; /* Crops the embedded text at the bottom */
+                        width: 116px !important;
+                        height: auto !important;
 
                         max-width: none !important;
-                        object-fit: cover !important;
-                        object-position: top center !important;
+                        object-fit: contain !important;
 
                         margin: 0 !important;
                         padding: 0 !important;
@@ -242,19 +241,19 @@ class SAQHeader extends HTMLElement {
                     .logo-tagline {
                         display: block !important;
 
-                        width: 105px !important;
-                        max-width: 105px !important;
+                        width: 116px !important;
+                        max-width: 116px !important;
 
                         margin: 3px 0 0 0 !important;
                         padding: 0 !important;
 
                         text-align: center !important;
 
-                        font-size: 4.5px !important;
+                        font-size: 5px !important;
                         line-height: 1.15 !important;
                         letter-spacing: 0.15px !important;
 
-                        white-space: normal !important; /* Allows wrapping as requested in visual diagram */
+                        white-space: nowrap !important;
                         transform: translateX(0) !important;
 
                         color: var(--charcoal, #292929) !important;
@@ -269,23 +268,21 @@ class SAQHeader extends HTMLElement {
                     }
 
                     .main-header.scrolled .logo-container img {
-                        width: 63px !important;
-                        height: 16px !important; /* Scaled down height to crop */
-                        object-fit: cover !important;
-                        object-position: top center !important;
+                        width: 70px !important;
+                        height: auto !important;
                     }
 
                     .main-header.scrolled .logo-tagline {
                         width: auto !important;
-                        max-width: 110px !important;
+                        max-width: 120px !important;
                         margin: 0 !important;
                         padding: 0 0 0 8px !important;
                         border-left: 1px solid rgba(41, 41, 41, 0.5) !important;
-                        font-size: 4.2px !important;
+                        font-size: 4.6px !important;
                         line-height: 1.1 !important;
                         white-space: normal !important;
                         text-align: left !important;
-                        transform: translateX(-14px) !important; /* Pull left closer to cropped image */
+                        transform: translateX(-22px) !important; /* Pull left to remove invisible image gap */
                     }
 
                     /* HAMBURGER */
