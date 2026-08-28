@@ -47,7 +47,7 @@ class SAQHeader extends HTMLElement {
                     transition: all 0.3s ease;
                 }
                 .main-header.scrolled .logo-container img {
-                    height: 45px;
+                    height: 48px; /* Increased slightly */
                 }
                 .logo-tagline {
                     font-size: 0.49rem;
@@ -63,8 +63,8 @@ class SAQHeader extends HTMLElement {
                 .main-header.scrolled .logo-tagline {
                     transform: none;
                     margin-top: 0;
-                    margin-left: 15px;
-                    padding-left: 15px;
+                    margin-left: 8px; /* Moved vertical line closer to the logo */
+                    padding-left: 12px;
                     border-left: 1px solid rgba(44, 44, 44, 0.3); /* Vertical line */
                     font-size: 0.55rem;
                 }
