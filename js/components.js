@@ -223,22 +223,23 @@ class SAQHeader extends HTMLElement {
 
                     /* Mobile Logo Styles - Scrolled */
                     .main-header.scrolled .logo-container {
-                        flex-direction: row !important;
+                        flex-direction: column !important;
                         align-items: center !important;
                     }
                     .main-header.scrolled .logo-container img { 
-                        height: 55px !important; /* Increased for better visibility */
+                        height: 55px !important; 
                     }
                     .main-header.scrolled .logo-tagline {
                         display: block !important;
-                        margin: 0 0 0 8px !important;
-                        padding: 0 0 0 8px !important;
-                        border-left: 1px solid rgba(44, 44, 44, 0.3) !important;
-                        font-size: 0.55rem !important; /* Made significantly larger */
-                        line-height: 1.2 !important;
-                        white-space: normal !important;
-                        max-width: 120px !important; /* Sized to force two-line wrap */
-                        text-align: left;
+                        margin: 2px 0 0 0 !important; /* ~2mm gap */
+                        padding: 0 !important;
+                        border: none !important;
+                        font-size: 0.39rem !important; /* Slightly increased by 2% */
+                        line-height: 1 !important;
+                        white-space: nowrap !important;
+                        max-width: none !important;
+                        text-align: center !important;
+                        letter-spacing: 0.06em !important;
                     }
                 }
             </style>
