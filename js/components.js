@@ -206,8 +206,8 @@ class SAQHeader extends HTMLElement {
                         align-items: flex-start !important;
                         margin-top: 0;
                     }
-                    .logo-container img { height: 75px !important; }
-                    .main-header.scrolled .logo-container img { height: 60px !important; }
+                    .logo-container img { height: 79px !important; } /* Increased by 5% */
+                    .main-header.scrolled .logo-container img { height: 63px !important; } /* Increased by 5% */
                     
                     .logo-tagline, .main-header.scrolled .logo-tagline {
                         display: block !important;
@@ -215,7 +215,7 @@ class SAQHeader extends HTMLElement {
                         margin: 4px 0 0 0 !important;
                         padding: 0 !important;
                         border: none !important;
-                        font-size: 0.5rem !important;
+                        font-size: 0.485rem !important; /* Reduced by 3% */
                         line-height: 1.2 !important;
                         white-space: normal !important;
                         max-width: 180px;
