@@ -405,9 +405,10 @@ saq-header p {
 }
 .cat-card:hover .cat-content h3 { color: var(--navy-blue); }
 .cat-content p {
-    font-size: 11px;
-    color: var(--charcoal);
-    margin-bottom: 0.5rem;
+    font-size: 10px;
+    text-transform: lowercase;
+    color: #777;
+    margin-bottom: 0.4rem;
     flex-grow: 1;
     line-height: 1.3;
 }
