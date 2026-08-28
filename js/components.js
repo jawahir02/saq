@@ -223,7 +223,7 @@ class SAQHeader extends HTMLElement {
 
                     /* Mobile Logo Styles - Scrolled */
                     .main-header.scrolled .logo-container {
-                        flex-direction: column !important;
+                        flex-direction: row !important;
                         align-items: center !important;
                     }
                     .main-header.scrolled .logo-container img { 
@@ -231,15 +231,16 @@ class SAQHeader extends HTMLElement {
                     }
                     .main-header.scrolled .logo-tagline {
                         display: block !important;
-                        margin: 2px 0 0 0 !important; /* ~2mm gap */
-                        padding: 0 !important;
-                        border: none !important;
-                        font-size: 0.39rem !important; /* Slightly increased by 2% */
-                        line-height: 1 !important;
-                        white-space: nowrap !important;
-                        max-width: none !important;
-                        text-align: center !important;
-                        letter-spacing: 0.06em !important;
+                        transform: translateX(-18px) !important; /* Eliminate the phantom gap */
+                        margin: 0 !important;
+                        padding: 0 0 0 10px !important;
+                        border-left: 1px solid rgba(44, 44, 44, 0.4) !important;
+                        font-size: 0.55rem !important; 
+                        line-height: 1.2 !important;
+                        white-space: normal !important;
+                        max-width: 120px !important;
+                        text-align: left !important;
+                        letter-spacing: 0.05em !important;
                     }
                 }
             </style>
