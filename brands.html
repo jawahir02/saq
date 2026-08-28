@@ -29,14 +29,29 @@
             letter-spacing: 0.15em;
             font-weight: 600;
         }
-        /* Section with Leaf Texture + Charcoal Overlay */
+        /* Section with Subtle Shadow-like Leaf Texture on Charcoal */
         .partners-section {
             position: relative;
-            background-image: linear-gradient(rgba(54, 54, 54, 0.72), rgba(54, 54, 54, 0.72)), url('parallax.png');
+            background-color: var(--charcoal, #363636);
+            padding: 4rem 0 5rem;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .partners-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('parallax.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            padding: 4rem 0 5rem;
+            opacity: 0.18;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .partners-section .container {
+            position: relative;
+            z-index: 1;
         }
 
         /* Row-based brand grid */
