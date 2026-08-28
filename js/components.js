@@ -42,7 +42,7 @@ class SAQHeader extends HTMLElement {
                     font-weight: 600;
                     margin-top: 3px;
                     white-space: nowrap;
-                    transform: translateX(-2%); /* Shifted left by 2% to center visually */
+                    transform: translateX(-12%); /* Shifted left significantly to center under the main body of the SAQ letters */
                 }
                 .nav-links {
                     display: flex;
