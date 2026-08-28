@@ -216,8 +216,8 @@ class SAQHeader extends HTMLElement {
                         align-items: flex-start !important;
                         justify-content: flex-start !important;
 
-                        width: 150px !important;
-                        max-width: 150px !important;
+                        width: 160px !important;
+                        max-width: 160px !important;
                         margin: 0 !important;
                         padding: 0 !important;
                         text-decoration: none !important;
@@ -227,7 +227,7 @@ class SAQHeader extends HTMLElement {
                     .logo-container img {
                         display: block !important;
 
-                        width: 105px !important;
+                        width: 136px !important;
                         height: auto !important;
 
                         max-width: none !important;
@@ -241,8 +241,8 @@ class SAQHeader extends HTMLElement {
                     .logo-tagline {
                         display: block !important;
 
-                        width: 105px !important;
-                        max-width: 105px !important;
+                        width: 136px !important;
+                        max-width: 136px !important;
 
                         margin: 3px 0 0 0 !important;
                         padding: 0 !important;
@@ -268,7 +268,7 @@ class SAQHeader extends HTMLElement {
                     }
 
                     .main-header.scrolled .logo-container img {
-                        width: 55px !important;
+                        width: 63px !important;
                         height: auto !important;
                     }
 
@@ -278,7 +278,7 @@ class SAQHeader extends HTMLElement {
                         margin: 0 !important;
                         padding: 0 0 0 8px !important;
                         border-left: 1px solid rgba(41, 41, 41, 0.5) !important;
-                        font-size: 4px !important;
+                        font-size: 4.2px !important;
                         line-height: 1.1 !important;
                         white-space: normal !important;
                         text-align: left !important;
