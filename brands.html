@@ -7,7 +7,79 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <style>
-        .page-header { padding: 100px 0 40px; background: #FDFBF9; color: var(--charcoal); text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        :root {
+            --navy-blue: #1A2B4C;
+            --charcoal: #363636;
+            --gold: #B89C5D;
+        }
+        .page-header {
+            padding: 120px 0 50px;
+            background: #FDFBF9;
+            color: var(--charcoal);
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .page-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.5rem;
+        }
+        .page-header .eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+        }
+        /* Row-based brand grid */
+        #all-brands-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 2rem !important;
+            padding: 2rem 0 !important;
+        }
+        .brand-logo-item {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: #ffffff !important;
+            border: 1px solid rgba(0,0,0,0.07) !important;
+            border-radius: 10px !important;
+            padding: 1.5rem !important;
+            width: 200px !important;
+            height: 160px !important;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+        }
+        .brand-logo-item:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
+            border-color: var(--gold) !important;
+        }
+        .brand-logo-item img {
+            width: 100% !important;
+            height: 110px !important;
+            object-fit: contain !important;
+            border-radius: 4px !important;
+            background: transparent !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        @media (max-width: 768px) {
+            .brand-logo-item {
+                width: 140px !important;
+                height: 120px !important;
+                padding: 1rem !important;
+            }
+            .brand-logo-item img {
+                height: 80px !important;
+            }
+            #all-brands-grid {
+                gap: 1rem !important;
+            }
+        }
     </style>
 </head>
 <body>
