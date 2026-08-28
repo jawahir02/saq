@@ -370,7 +370,21 @@
         <section class="section-padding" style="background-color: #FDFBF9; padding: 4rem 0;">
             <div class="container" style="text-align: center;">
                 <h2 class="section-title" style="font-family: var(--font-display); font-size: 2.2rem; color: var(--navy-blue); margin: 0 auto 0.5rem auto; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; display: block; width: 100%;">EVERYTHING YOUR PROJECT NEEDS</h2>
-                <p style="margin: 0 auto 3rem auto; color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; line-height: 1.6; max-width: 600px; text-align: center;">A comprehensive range of building materials, finishing products, tools, and construction solutions.</p>
+                <p style="margin: 0 auto 1.2rem auto; color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; line-height: 1.6; max-width: 600px; text-align: center;">A comprehensive range of building materials, finishing products, tools, and construction solutions.</p>
+                
+                <!-- Scroll to Explore Animation Indicator -->
+                <div class="scroll-explore-wrap">
+                    <div class="scroll-explore-pill">
+                        <span class="explore-arrow explore-arrow-left">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </span>
+                        <span class="explore-text">SCROLL TO EXPLORE</span>
+                        <span class="explore-arrow explore-arrow-right">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </span>
+                    </div>
+                </div>
+
                 <div class="category-grid" id="category-grid" style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory;">
                     <!-- Populated by JS -->
                 </div>
@@ -380,6 +394,62 @@
                 </div>
                 
                 <style>
+                    /* Scroll to Explore Animation Styles */
+                    .scroll-explore-wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto 1.5rem auto;
+                    }
+                    .scroll-explore-pill {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 6px 16px;
+                        background: rgba(184, 156, 93, 0.08);
+                        border: 1px solid rgba(184, 156, 93, 0.35);
+                        border-radius: 20px;
+                        color: var(--charcoal, #363636);
+                        font-size: 0.72rem;
+                        font-weight: 600;
+                        letter-spacing: 0.14em;
+                        text-transform: uppercase;
+                        box-shadow: 0 2px 8px rgba(184, 156, 93, 0.12);
+                        user-select: none;
+                        transition: all 0.3s ease;
+                    }
+                    .scroll-explore-pill .explore-text {
+                        color: var(--charcoal, #363636);
+                        font-weight: 600;
+                    }
+                    .scroll-explore-pill .explore-arrow {
+                        display: inline-flex;
+                        align-items: center;
+                        color: var(--gold, #B89C5D);
+                    }
+                    .explore-arrow-left {
+                        animation: explore-bounce-left 1.6s ease-in-out infinite;
+                    }
+                    .explore-arrow-right {
+                        animation: explore-bounce-right 1.6s ease-in-out infinite;
+                    }
+                    @keyframes explore-bounce-right {
+                        0%, 100% { transform: translateX(0); opacity: 0.6; }
+                        50% { transform: translateX(4px); opacity: 1; }
+                    }
+                    @keyframes explore-bounce-left {
+                        0%, 100% { transform: translateX(0); opacity: 0.6; }
+                        50% { transform: translateX(-4px); opacity: 1; }
+                    }
+                    @media (max-width: 768px) {
+                        .scroll-explore-pill {
+                            font-size: 0.68rem;
+                            padding: 5px 12px;
+                            gap: 6px;
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+
                     /* Custom Scrollbar for the horizontal scroll */
                     .category-grid::-webkit-scrollbar {
                         height: 6px;
