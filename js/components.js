@@ -254,14 +254,14 @@ class SAQHeader extends HTMLElement {
                         padding: 0 !important;
                     }
 
-                    /* TAGLINE DIRECTLY UNDER LOGO */
+                    /* TAGLINE DIRECTLY UNDER LOGO (moved closer to 280px logo) */
                     .logo-tagline {
                         display: block !important;
 
-                        width: 116px !important;
-                        max-width: 116px !important;
+                        width: 280px !important;
+                        max-width: 280px !important;
 
-                        margin: 3px 0 0 0 !important;
+                        margin: -20px 0 0 0 !important;
                         padding: 0 !important;
 
                         text-align: center !important;
