@@ -233,18 +233,18 @@ class SAQHeader extends HTMLElement {
                         align-items: flex-start !important;
                         justify-content: flex-start !important;
 
-                        width: 230px !important;
-                        max-width: 230px !important;
+                        width: 280px !important;
+                        max-width: 280px !important;
                         margin: 0 !important;
                         padding: 0 !important;
                         text-decoration: none !important;
                     }
 
-                    /* MAKE THE ACTUAL SAQ LOGO LARGER (230px) */
+                    /* MAKE THE ACTUAL SAQ LOGO LARGER (280px) */
                     .logo-container img {
                         display: block !important;
 
-                        width: 230px !important;
+                        width: 280px !important;
                         height: auto !important;
 
                         max-width: none !important;
