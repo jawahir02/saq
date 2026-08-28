@@ -138,14 +138,14 @@ class SAQHeader extends HTMLElement {
                 .mobile-nav {
                     display: flex;
                     flex-direction: column;
-                    background: #F9F8F6; /* Cream/white */
+                    background: #F9F8F6;
                     position: fixed;
                     top: 0;
                     right: -100%;
-                    width: 320px;
-                    max-width: 85%;
+                    width: 240px;
+                    max-width: 75%;
                     height: 100vh;
-                    padding: 80px 2rem 2rem;
+                    padding: 60px 1.2rem 1.5rem;
                     box-shadow: -5px 0 25px rgba(0,0,0,0.1);
                     transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
                     z-index: 1001;
@@ -168,25 +168,26 @@ class SAQHeader extends HTMLElement {
                     stroke: var(--charcoal, #2C2C2C);
                 }
                 .mobile-nav .nav-link {
-                    padding: 1.2rem 0;
+                    padding: 0.9rem 0;
                     border-bottom: 1px solid rgba(0,0,0,0.05);
                     text-decoration: none;
                     color: var(--charcoal, #2C2C2C);
                     font-weight: 500;
-                    font-size: 0.95rem;
+                    font-size: 0.8rem;
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                 }
                 .mobile-nav .nav-cta-mobile {
-                    margin-top: auto;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
                     background-color: transparent;
                     color: var(--navy-blue, #1A2B4C);
-                    padding: 1.2rem;
+                    padding: 0.8rem 1rem;
                     text-align: center;
                     border-radius: 4px;
                     border: 1.5px solid var(--navy-blue, #1A2B4C);
                     font-weight: 600;
-                    font-size: 0.9rem;
+                    font-size: 0.75rem;
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     text-decoration: none;
@@ -346,15 +347,15 @@ class SAQHeader extends HTMLElement {
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     </button>
+                    <a href="https://wa.me/971557566060" class="nav-cta-mobile">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.397 0 0 5.397 0 12.031C0 14.654 0.852 17.078 2.274 19.043L0.555 24L5.617 22.285C7.525 23.518 9.689 24 12.031 24C18.665 24 24.062 18.603 24.062 11.969C24.062 5.335 18.665 0 12.031 0ZM19.01 16.711C18.713 17.555 17.258 18.272 16.48 18.423C15.86 18.543 15.011 18.643 12.185 17.472C8.57 15.98 6.257 12.289 6.079 12.052C5.901 11.815 4.606 10.095 4.606 8.31C4.606 6.525 5.516 5.666 5.891 5.28C6.19 4.972 6.702 4.814 7.214 4.814C7.373 4.814 7.511 4.822 7.633 4.828C8.01 4.846 8.199 4.869 8.446 5.463C8.754 6.206 9.506 8.046 9.595 8.234C9.684 8.422 9.802 8.679 9.664 8.956C9.535 9.223 9.416 9.342 9.219 9.57C9.022 9.798 8.844 9.957 8.636 10.224C8.448 10.432 8.232 10.668 8.457 11.055C8.682 11.432 9.452 12.688 10.59 13.704C12.05 15.015 13.235 15.43 13.65 15.608C14.065 15.786 14.54 15.736 14.836 15.419C15.212 15.013 15.676 14.331 16.141 13.639C16.477 13.136 16.921 13.076 17.376 13.245C17.831 13.414 20.25 14.611 20.725 14.849C21.2 15.087 21.517 15.206 21.626 15.394C21.735 15.582 21.735 16.463 21.438 17.307Z"/></svg>
+                        ORDER NOW
+                    </a>
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="products.html" class="nav-link">Products</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                     <a href="careers.html" class="nav-link">Careers</a>
-                    <a href="https://wa.me/971557566060" class="nav-cta-mobile">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.397 0 0 5.397 0 12.031C0 14.654 0.852 17.078 2.274 19.043L0.555 24L5.617 22.285C7.525 23.518 9.689 24 12.031 24C18.665 24 24.062 18.603 24.062 11.969C24.062 5.335 18.665 0 12.031 0ZM19.01 16.711C18.713 17.555 17.258 18.272 16.48 18.423C15.86 18.543 15.011 18.643 12.185 17.472C8.57 15.98 6.257 12.289 6.079 12.052C5.901 11.815 4.606 10.095 4.606 8.31C4.606 6.525 5.516 5.666 5.891 5.28C6.19 4.972 6.702 4.814 7.214 4.814C7.373 4.814 7.511 4.822 7.633 4.828C8.01 4.846 8.199 4.869 8.446 5.463C8.754 6.206 9.506 8.046 9.595 8.234C9.684 8.422 9.802 8.679 9.664 8.956C9.535 9.223 9.416 9.342 9.219 9.57C9.022 9.798 8.844 9.957 8.636 10.224C8.448 10.432 8.232 10.668 8.457 11.055C8.682 11.432 9.452 12.688 10.59 13.704C12.05 15.015 13.235 15.43 13.65 15.608C14.065 15.786 14.54 15.736 14.836 15.419C15.212 15.013 15.676 14.331 16.141 13.639C16.477 13.136 16.921 13.076 17.376 13.245C17.831 13.414 20.25 14.611 20.725 14.849C21.2 15.087 21.517 15.206 21.626 15.394C21.735 15.582 21.735 16.463 21.438 17.307Z"/></svg> 
-                        ORDER NOW
-                    </a>
                 </nav>
             </header>
         `;
