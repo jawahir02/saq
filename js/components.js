@@ -219,28 +219,48 @@ class SAQFooter extends HTMLElement {
             <style>
                 .main-footer {
                     background-color: var(--navy-blue, #1A2B4C);
-                    color: rgba(255,255,255,0.8);
-                    padding: 4rem 2rem 2rem;
-                    font-size: 0.9rem;
+                    color: rgba(255,255,255,0.7);
+                    padding: 2.5rem 2rem 1.5rem;
+                    font-size: 0.75rem;
                 }
                 .footer-container {
                     max-width: 1200px;
                     margin: 0 auto;
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                    gap: 3rem;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 2rem;
+                }
+                .footer-logo-container {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }
+                .footer-logo-container img {
+                    height: 48px;
+                    filter: brightness(0) invert(1); /* Make it white to contrast dark footer */
+                }
+                .footer-logo-tagline {
+                    margin-left: 8px;
+                    padding-left: 12px;
+                    border-left: 1px solid rgba(255, 255, 255, 0.3);
+                    font-size: 0.55rem;
+                    color: rgba(255,255,255,0.8);
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    font-weight: 600;
+                    line-height: 1.2;
                 }
                 .footer-col h3 {
                     color: white;
                     font-family: var(--font-display, serif);
-                    font-size: 1.2rem;
-                    margin-bottom: 1.5rem;
+                    font-size: 0.95rem;
+                    margin-bottom: 1rem;
                     letter-spacing: 0.05em;
                     text-transform: uppercase;
                 }
                 .footer-col p {
-                    margin-bottom: 1rem;
-                    line-height: 1.6;
+                    margin-bottom: 0.6rem;
+                    line-height: 1.5;
                 }
                 .footer-links {
                     list-style: none;
@@ -248,10 +268,10 @@ class SAQFooter extends HTMLElement {
                     margin: 0;
                 }
                 .footer-links li {
-                    margin-bottom: 0.8rem;
+                    margin-bottom: 0.6rem;
                 }
                 .footer-links a {
-                    color: rgba(255,255,255,0.8);
+                    color: rgba(255,255,255,0.7);
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
@@ -260,17 +280,20 @@ class SAQFooter extends HTMLElement {
                 }
                 .footer-bottom {
                     max-width: 1200px;
-                    margin: 3rem auto 0;
-                    padding-top: 2rem;
+                    margin: 2rem auto 0;
+                    padding-top: 1.5rem;
                     border-top: 1px solid rgba(255,255,255,0.1);
                     text-align: center;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
             </style>
             <footer class="main-footer">
                 <div class="footer-container">
                     <div class="footer-col">
-                        <h3>SAQ Building Materials</h3>
+                        <div class="footer-logo-container">
+                            <img src="herologo.png" alt="SAQ Logo" onerror="this.src='1.png'">
+                            <div class="footer-logo-tagline">Building Materials<br>Supplier In Dubai</div>
+                        </div>
                         <p>Leading supplier of premium building materials, paints, and consumables for contractors across the UAE.</p>
                         <p>Dubai, United Arab Emirates</p>
                     </div>
