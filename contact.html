@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SAQ Building Materials</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        :root {
+            --navy-blue: #1A2B4C;
+            --charcoal: #2C2C2C;
+            --off-white: #F9F8F6;
+            --gold: #B89C5D;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background-color: var(--off-white);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            padding: 180px 5% 100px;
+            background-color: var(--off-white);
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--navy-blue);
+            margin: 0 0 1rem;
+            font-weight: 500;
+        }
+
+        .contact-hero p {
+            font-size: 1.1rem;
+            color: rgba(44,44,44,0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Layout Container */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* Contact Info Cards */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
+
+        .info-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--navy-blue);
+            margin: 0 0 1rem;
+            font-weight: 600;
+        }
+
+        .info-card p, .info-card a {
+            font-size: 1rem;
+            color: var(--charcoal);
+            text-decoration: none;
+            line-height: 1.6;
+            margin: 0;
+            display: block;
+        }
+
+        .info-card a {
+            transition: color 0.3s ease;
+        }
+
+        .info-card a:hover {
+            color: var(--gold);
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .contact-form-container h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--navy-blue);
+            margin: 0 0 2rem;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 0;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--charcoal);
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            outline: none;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            border-bottom-color: var(--gold);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--navy-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .submit-btn:hover {
+            background-color: #111C33;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Reusable Header Component -->
+    <saq-header></saq-header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p>We are here to assist with your inquiries. Whether you're a contractor, architect, or designer, reach out to us for premium building materials and supply solutions.</p>
+    </section>
+
+    <!-- Contact Grid -->
+    <div class="contact-container">
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+            
+            <div class="info-card">
+                <h3>Our Location</h3>
+                <p>Dubai, United Arab Emirates</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(44,44,44,0.7);">Available for distribution and supply across the entire UAE.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Contact Details</h3>
+                <a href="tel:+971557566060" style="margin-bottom: 0.5rem;"><strong>Phone:</strong> +971 55 756 6060</a>
+                <a href="mailto:sales@saqtrading.com" style="margin-bottom: 0.5rem;"><strong>Email:</strong> sales@saqtrading.com</a>
+                <a href="https://wa.me/971557566060" target="_blank"><strong>WhatsApp:</strong> +971 55 756 6060</a>
+            </div>
+
+            <div class="info-card">
+                <h3>Business Hours</h3>
+                <p><strong>Monday - Saturday:</strong> 8:00 AM - 6:00 PM</p>
+                <p><strong>Sunday:</strong> Closed</p>
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <h2>Send a Message</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+971 50 123 4567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="How can we help you with your project?" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Reusable Footer Component -->
+    <saq-footer></saq-footer>
+
+    <!-- Components Script -->
+    <script src="js/components.js?v=3"></script>
+</body>
+</html>
