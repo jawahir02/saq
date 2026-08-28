@@ -138,7 +138,7 @@ class SAQHeader extends HTMLElement {
                 .mobile-nav {
                     display: flex;
                     flex-direction: column;
-                    background: #F9F8F6; /* Cream/white */
+                    background: var(--charcoal, #363636); /* Charcoal grey */
                     position: fixed;
                     top: 0;
                     bottom: 0;
@@ -149,7 +149,7 @@ class SAQHeader extends HTMLElement {
                     height: 100dvh;
                     box-sizing: border-box;
                     padding: 80px 1.5rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
-                    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+                    box-shadow: -5px 0 25px rgba(0,0,0,0.3);
                     transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
                     z-index: 1001;
                     overflow-y: auto;
@@ -169,28 +169,32 @@ class SAQHeader extends HTMLElement {
                 .mobile-nav-close svg {
                     width: 24px;
                     height: 24px;
-                    stroke: var(--charcoal, #2C2C2C);
+                    stroke: #FFFFFF;
                 }
                 .mobile-nav .nav-link {
                     padding: 1.2rem 0;
-                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
                     text-decoration: none;
-                    color: var(--charcoal, #2C2C2C);
+                    color: #FFFFFF;
                     font-weight: 500;
                     font-size: 0.95rem;
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     flex-shrink: 0;
+                    transition: color 0.3s ease;
+                }
+                .mobile-nav .nav-link:hover {
+                    color: var(--gold, #B89C5D);
                 }
                 .mobile-nav .nav-cta-mobile {
                     margin-top: auto !important;
                     margin-bottom: 0 !important;
                     background-color: transparent;
-                    color: var(--navy-blue, #1A2B4C);
+                    color: #FFFFFF;
                     padding: 1.1rem 1rem;
                     text-align: center;
                     border-radius: 4px;
-                    border: 1.5px solid var(--navy-blue, #1A2B4C);
+                    border: 1.5px solid #FFFFFF;
                     font-weight: 600;
                     font-size: 0.9rem;
                     text-transform: uppercase;
@@ -204,6 +208,9 @@ class SAQHeader extends HTMLElement {
                     flex-shrink: 0;
                     box-sizing: border-box;
                     width: 100%;
+                }
+                .mobile-nav .nav-cta-mobile:hover {
+                    background-color: rgba(255,255,255,0.1);
                 }
                 @media (max-width: 768px) {
                     /* Keep the header layout */
