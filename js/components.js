@@ -200,25 +200,43 @@ class SAQHeader extends HTMLElement {
                     .mobile-menu-btn { display: block; }
                     .header-container { padding: 0.8rem 5%; }
                     
-                    /* Mobile Logo Styles */
-                    .logo-container, .main-header.scrolled .logo-container {
+                    /* Mobile Logo Styles - Default */
+                    .logo-container {
                         flex-direction: column !important;
                         align-items: flex-start !important;
                         margin-top: 0;
                     }
-                    .logo-container img { height: 79px !important; } /* Increased by 5% */
-                    .main-header.scrolled .logo-container img { height: 63px !important; } /* Increased by 5% */
-                    
-                    .logo-tagline, .main-header.scrolled .logo-tagline {
+                    .logo-container img { height: 79px !important; }
+                    .logo-tagline {
                         display: block !important;
                         transform: none !important;
                         margin: 4px 0 0 0 !important;
                         padding: 0 !important;
                         border: none !important;
-                        font-size: 0.485rem !important; /* Reduced by 3% */
+                        font-size: 0.485rem !important; 
                         line-height: 1.2 !important;
                         white-space: normal !important;
-                        max-width: 110px !important; /* Keep it compact under the logo */
+                        max-width: 110px !important;
+                        text-align: left;
+                    }
+
+                    /* Mobile Logo Styles - Scrolled */
+                    .main-header.scrolled .logo-container {
+                        flex-direction: row !important;
+                        align-items: center !important;
+                    }
+                    .main-header.scrolled .logo-container img { 
+                        height: 40px !important; 
+                    }
+                    .main-header.scrolled .logo-tagline {
+                        display: block !important;
+                        margin: 0 0 0 8px !important;
+                        padding: 0 0 0 8px !important;
+                        border-left: 1px solid rgba(44, 44, 44, 0.3) !important;
+                        font-size: 0.42rem !important;
+                        line-height: 1.2 !important;
+                        white-space: normal !important;
+                        max-width: 130px !important;
                         text-align: left;
                     }
                 }
