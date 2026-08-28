@@ -29,7 +29,7 @@
             letter-spacing: 0.15em;
             font-weight: 600;
         }
-        /* Section with Subtle Shadow-like Leaf Texture on Charcoal */
+        /* Section with Pure Shadow-Only Leaves Effect on Charcoal */
         .partners-section {
             position: relative;
             background-color: var(--charcoal, #363636);
@@ -45,7 +45,9 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.18;
+            filter: brightness(0) blur(3px);
+            opacity: 0.22;
+            mix-blend-mode: multiply;
             pointer-events: none;
             z-index: 0;
         }
