@@ -6,338 +6,291 @@ class SAQHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <style>
-            /* =========================================
-               VARIABLES
-            ========================================= */
-            :root {
-                --saq-gold: #c9a052;
-                --saq-navy: #142c57;
-                --saq-charcoal: #292929;
-                --saq-cream: #fdfbf9;
-                --saq-border: #e5e1da;
-            }
-
-            /* =========================================
-               HEADER
-            ========================================= */
-            .saq-header {
-                position: relative;
-                z-index: 100;
-                height: 158px;
-                background: rgba(253, 251, 249, 0.98);
-                border-bottom: 1px solid var(--saq-border);
-                transition: all 0.3s ease;
-            }
-            .saq-header.scrolled {
-                height: 100px;
-                box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            }
-            .saq-header-inner {
-                width: 100%;
-                height: 100%;
-                padding: 0 38px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            /* LOGO */
-            .saq-brand {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                text-decoration: none;
-            }
-            .saq-brand img {
-                width: 185px;
-                height: auto;
-                display: block;
-            }
-            .saq-brand span {
-                margin-top: 3px;
-                font-family: Arial, sans-serif;
-                font-size: 9px;
-                letter-spacing: 0.08em;
-                color: #333;
-                white-space: nowrap;
-            }
-
-            /* NAV */
-            .saq-nav {
-                display: flex;
-                align-items: center;
-                gap: 35px;
-            }
-            .saq-nav > a,
-            .products-nav > a {
-                position: relative;
-                font-family: Arial, sans-serif;
-                font-size: 12px;
-                font-weight: 500;
-                color: var(--saq-charcoal);
-                text-decoration: none;
-                letter-spacing: 0.03em;
-                transition: color 0.25s ease;
-            }
-            .saq-nav > a:hover,
-            .products-nav > a:hover {
-                color: var(--saq-gold);
-            }
-
-            /* ACTIVE PAGE */
-            .saq-nav > a.active {
-                color: var(--saq-gold);
-            }
-
-            /* PRODUCTS */
-            .products-nav {
-                position: relative;
-            }
-            .products-nav > a {
-                display: flex;
-                align-items: center;
-                gap: 7px;
-            }
-            .chevron {
-                font-size: 14px;
-                line-height: 1;
-            }
-
-            /* PRODUCT DROPDOWN */
-            .products-dropdown {
-                position: absolute;
-                top: calc(100% + 20px);
-                left: -20px;
-                width: 245px;
-                background: #fff;
-                border: 1px solid var(--saq-border);
-                padding: 12px 0;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(8px);
-                transition: 0.25s ease;
-                box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            }
-            .products-nav:hover .products-dropdown {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-            .products-dropdown a {
-                display: block;
-                padding: 10px 18px;
-                color: #333;
-                text-decoration: none;
-                font-family: Arial, sans-serif;
-                font-size: 11px;
-            }
-            .products-dropdown a:hover {
-                color: var(--saq-gold);
-                background: #faf8f4;
-            }
-
-            /* ORDER NOW */
-            .header-order {
-                min-width: 130px;
-                height: 43px;
-                padding: 0 18px;
-                background: var(--saq-navy) !important;
-                color: #fff !important;
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-                text-decoration: none;
-            }
-            .whatsapp-icon {
-                font-size: 14px;
-            }
-
-            /* MOBILE MENU BUTTON */
-            .mobile-menu-btn {
-                display: none;
-                width: 38px;
-                height: 38px;
-                padding: 8px;
-                border: 0;
-                background: transparent;
-                cursor: pointer;
-            }
-            .mobile-menu-btn span {
-                display: block;
-                width: 19px;
-                height: 1.5px;
-                background: #292929;
-                margin: 4px auto;
-            }
-
-            /* RETAINED MOBILE NAV STYLES */
-            .mobile-nav-overlay {
-                position: fixed;
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: rgba(0,0,0,0.5);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.4s ease;
-                z-index: 1000;
-            }
-            .mobile-nav-overlay.active {
-                opacity: 1;
-                visibility: visible;
-            }
-            .mobile-nav {
-                display: flex;
-                flex-direction: column;
-                background: #F9F8F6;
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 320px;
-                max-width: 85%;
-                height: 100vh;
-                padding: 80px 2rem 2rem;
-                box-shadow: -5px 0 25px rgba(0,0,0,0.1);
-                transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-                z-index: 1001;
-            }
-            .mobile-nav.active {
-                right: 0;
-            }
-            .mobile-nav-close {
-                position: absolute;
-                top: 25px;
-                right: 25px;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0.5rem;
-            }
-            .mobile-nav-close svg {
-                width: 24px;
-                height: 24px;
-                stroke: var(--charcoal, #2C2C2C);
-            }
-            .mobile-nav .nav-link {
-                padding: 1.2rem 0;
-                border-bottom: 1px solid rgba(0,0,0,0.05);
-                text-decoration: none;
-                color: var(--charcoal, #2C2C2C);
-                font-weight: 500;
-                font-size: 0.95rem;
-                text-transform: uppercase;
-                letter-spacing: 0.08em;
-            }
-            .mobile-nav .nav-cta-mobile {
-                margin-top: auto;
-                background-color: var(--navy-blue, #1A2B4C);
-                color: white;
-                padding: 1.2rem;
-                text-align: center;
-                border-radius: 4px;
-                font-weight: 600;
-                font-size: 0.9rem;
-                text-transform: uppercase;
-                letter-spacing: 0.08em;
-                text-decoration: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 8px;
-                box-shadow: 0 4px 15px rgba(26, 43, 76, 0.2);
-            }
-
-            /* =========================================
-               MOBILE
-            ========================================= */
-            @media (max-width: 768px) {
-                /* HEADER */
-                .saq-header {
-                    height: 98px;
+                .main-header {
+                    background-color: transparent;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    padding: 0.3rem 0;
+                    transition: all 0.3s ease;
                 }
-                .saq-header-inner {
-                    padding: 0 18px;
+                .main-header.scrolled {
+                    background-color: #F9F8F6; /* Off-white background */
+                    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+                    padding: 0.5rem 0;
                 }
-                .saq-brand img {
-                    width: 158px;
+                .header-container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 3%;
                 }
-                .saq-brand span {
-                    font-size: 7px;
-                    letter-spacing: 0.07em;
-                    margin-top: 2px;
+                .logo-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    margin-top: 5px;
+                    transition: all 0.3s ease;
                 }
-                .saq-nav {
-                    display: none;
+                .main-header.scrolled .logo-container {
+                    flex-direction: row;
+                    margin-top: 0;
+                }
+                .logo-container img {
+                    height: 107px;
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .logo-container img {
+                    height: 48px; /* Increased slightly */
+                }
+                .logo-tagline {
+                    font-size: 0.49rem;
+                    color: var(--charcoal, #2C2C2C);
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    font-weight: 600;
+                    margin-top: 3px;
+                    white-space: nowrap;
+                    transform: translateX(-12%);
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .logo-tagline {
+                    transform: none;
+                    margin-top: 0;
+                    margin-left: 8px; /* Moved vertical line closer to the logo */
+                    padding-left: 12px;
+                    border-left: 1px solid rgba(44, 44, 44, 0.3); /* Vertical line */
+                    font-size: 0.55rem;
+                }
+                .nav-links {
+                    display: flex;
+                    gap: 1.8rem;
+                    align-items: center;
+                    transform: translateY(-16px);
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .nav-links {
+                    transform: translateY(0);
+                }
+                .nav-links a {
+                    text-decoration: none;
+                    color: var(--charcoal, #2C2C2C);
+                    font-weight: 600;
+                    font-size: 0.7rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    transition: color 0.3s ease;
+                }
+                .nav-links a:hover {
+                    color: var(--gold, #B89C5D);
+                }
+                .nav-cta {
+                    background-color: var(--navy-blue, #1A2B4C) !important;
+                    color: white !important;
+                    padding: 0.7rem 1.5rem;
+                    border: 1px solid rgba(0,0,0,0.08);
+                    border-radius: 4px;
+                    font-weight: 600;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+                    transition: all 0.3s ease;
+                }
+                .nav-cta:hover {
+                    border-color: rgba(0,0,0,0.15);
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
                 }
                 .mobile-menu-btn {
-                    display: block;
+                    display: none;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem;
                 }
-            }
+                .mobile-menu-btn svg {
+                    width: 28px;
+                    height: 28px;
+                    stroke: var(--charcoal, #2C2C2C);
+                }
+                .mobile-nav-overlay {
+                    position: fixed;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background: rgba(0,0,0,0.5);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.4s ease;
+                    z-index: 1000;
+                }
+                .mobile-nav-overlay.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .mobile-nav {
+                    display: flex;
+                    flex-direction: column;
+                    background: #F9F8F6; /* Cream/white */
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 320px;
+                    max-width: 85%;
+                    height: 100vh;
+                    padding: 80px 2rem 2rem;
+                    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+                    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+                    z-index: 1001;
+                }
+                .mobile-nav.active {
+                    right: 0;
+                }
+                .mobile-nav-close {
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                }
+                .mobile-nav-close svg {
+                    width: 24px;
+                    height: 24px;
+                    stroke: var(--charcoal, #2C2C2C);
+                }
+                .mobile-nav .nav-link {
+                    padding: 1.2rem 0;
+                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                    text-decoration: none;
+                    color: var(--charcoal, #2C2C2C);
+                    font-weight: 500;
+                    font-size: 0.95rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                }
+                .mobile-nav .nav-cta-mobile {
+                    margin-top: auto;
+                    background-color: var(--navy-blue, #1A2B4C);
+                    color: white;
+                    padding: 1.2rem;
+                    text-align: center;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    box-shadow: 0 4px 15px rgba(26, 43, 76, 0.2);
+                }
+                @media (max-width: 900px) {
+                    .nav-links { display: none; }
+                    .mobile-menu-btn { display: block; }
+                    .header-container { padding: 0.8rem 5%; }
+                    
+                    /* Mobile Logo Styles - Default */
+                    .logo-container {
+                        display: flex !important;
+                        flex-direction: column !important;
+                        align-items: center !important;
+                        margin-top: 0;
+                    }
+                    .logo-container img { 
+                        display: block !important;
+                        width: 155px !important;
+                        height: auto !important;
+                    }
+                    .logo-tagline {
+                        margin-top: 3mm !important;
+                        font-size: 7px !important;
+                        letter-spacing: 0.08em !important;
+                        white-space: nowrap !important;
+                        text-align: center !important;
+                        display: block !important;
+                        border: none !important;
+                        transform: none !important;
+                        padding: 0 !important;
+                        max-width: none !important;
+                        line-height: 1 !important;
+                    }
 
-            /* SMALL PHONES */
-            @media (max-width: 390px) {
-                .saq-header {
-                    height: 94px;
+                    /* Mobile Logo Styles - Scrolled */
+                    .main-header.scrolled .logo-container {
+                        flex-direction: row !important;
+                        align-items: center !important;
+                    }
+                    .main-header.scrolled .logo-container img { 
+                        height: 55px !important; 
+                    }
+                    .main-header.scrolled .logo-tagline {
+                        display: block !important;
+                        transform: translateX(-18px) !important; /* Eliminate the phantom gap */
+                        margin: 0 !important;
+                        padding: 0 0 0 10px !important;
+                        border-left: 1px solid rgba(44, 44, 44, 0.4) !important;
+                        font-size: 0.55rem !important; 
+                        line-height: 1.2 !important;
+                        white-space: normal !important;
+                        max-width: 120px !important;
+                        text-align: left !important;
+                        letter-spacing: 0.05em !important;
+                    }
                 }
-                .saq-brand img {
-                    width: 148px;
-                }
-            }
             </style>
-
-            <header class="saq-header" id="main-header">
-                <div class="saq-header-inner">
-                    <!-- LOGO -->
-                    <a href="index.html" class="saq-brand">
-                        <img src="assets/saq-logo.png" onerror="this.src='herologo.png'" alt="SAQ Building Materials Supplier">
-                        <span>BUILDING MATERIALS SUPPLIER IN DUBAI</span>
+            <header class="main-header" id="main-header">
+                <div class="mobile-nav-overlay"></div>
+                <div class="header-container">
+                    <a href="index.html" class="logo-container">
+                        <img src="herologo.png" alt="SAQ Building Materials Logo" onerror="this.src='1.png'">
+                        <div class="logo-tagline">Building Materials Supplier In Dubai</div>
                     </a>
-
-                    <!-- DESKTOP NAVIGATION -->
-                    <nav class="saq-nav">
-                        <a href="index.html" class="active">HOME</a>
-                        <a href="about.html">ABOUT</a>
-                        <div class="products-nav">
-                            <a href="products.html">PRODUCTS<span class="chevron">⌄</span></a>
-                            <div class="products-dropdown">
-                                <a href="products.html#paints">Paints & Protective Coatings</a>
-                                <a href="products.html#cement">Cement</a>
-                                <a href="products.html#plumbing">Plumbing Products</a>
-                                <a href="products.html#gypsum">Gypsum Products</a>
-                                <a href="products.html#waterproofing">Waterproofing</a>
-                                <a href="products.html#hardware">Hardware & Tools</a>
-                            </div>
-                        </div>
-                        <a href="contact.html">CONTACT</a>
-                        <a href="https://wa.me/971557566060" class="header-order" target="_blank">
-                            <span class="whatsapp-icon">◉</span>ORDER NOW
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="https://wa.me/971557566060" class="nav-cta">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                            ORDER NOW
                         </a>
                     </nav>
-
-                    <!-- MOBILE HAMBURGER -->
-                    <button class="mobile-menu-btn" aria-label="Open menu">
-                        <span></span><span></span><span></span>
+                    <button class="mobile-menu-btn" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
                     </button>
                 </div>
+                <nav class="mobile-nav">
+                    <button class="mobile-nav-close" aria-label="Close menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="https://wa.me/971557566060" class="nav-cta-mobile">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg> 
+                        ORDER NOW
+                    </a>
+                </nav>
             </header>
-            
-            <!-- RETAINED MOBILE MENU HTML -->
-            <div class="mobile-nav-overlay"></div>
-            <nav class="mobile-nav">
-                <button class="mobile-nav-close" aria-label="Close menu">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="https://wa.me/971557566060" class="nav-cta-mobile">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg> 
-                ORDER NOW
-                </a>
-            </nav>
         `;
 
         const mobileMenuBtn = this.querySelector('.mobile-menu-btn');
