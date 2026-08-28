@@ -47,6 +47,7 @@ class SAQHeader extends HTMLElement {
                     display: flex;
                     gap: 1.8rem; /* Compacted gap */
                     align-items: center;
+                    transform: translateY(-8px); /* Shifted upwards */
                 }
                 .nav-links a {
                     text-decoration: none;
@@ -61,8 +62,8 @@ class SAQHeader extends HTMLElement {
                     color: var(--gold, #B89C5D);
                 }
                 .nav-cta {
-                    background-color: white !important;
-                    color: var(--navy-blue, #1A2B4C) !important;
+                    background-color: var(--navy-blue, #1A2B4C) !important;
+                    color: white !important;
                     padding: 0.7rem 1.5rem;
                     border: 1px solid rgba(0,0,0,0.08);
                     border-radius: 4px;
