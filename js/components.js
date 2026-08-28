@@ -231,7 +231,7 @@ class SAQFooter extends HTMLElement {
                 .main-footer {
                     background-color: var(--navy-blue, #1A2B4C);
                     color: rgba(255,255,255,0.7);
-                    padding: 2.5rem 2rem 1.5rem;
+                    padding: 1.5rem 2rem 1rem; /* Reduced padding to make blue box smaller */
                     font-size: 0.75rem;
                 }
                 .footer-container {
@@ -248,7 +248,7 @@ class SAQFooter extends HTMLElement {
                 }
                 .footer-logo-container img {
                     height: 48px;
-                    filter: brightness(0) invert(1); /* Make it white to contrast dark footer */
+                    /* Removed filter to use original logo colors */
                 }
                 .footer-logo-tagline {
                     margin-left: 8px;
