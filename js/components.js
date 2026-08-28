@@ -195,54 +195,94 @@ class SAQHeader extends HTMLElement {
                     gap: 8px;
                     box-shadow: 0 4px 15px rgba(26, 43, 76, 0.2);
                 }
-                @media (max-width: 900px) {
-                    .nav-links { display: none; }
-                    .mobile-menu-btn { display: block; }
-                    .header-container { padding: 0.8rem 5%; }
-                    
-                    /*
-                     * Keep the header layout intact.
-                     * Only adjust the logo and tagline.
-                     */
+                @media (max-width: 768px) {
+                    /* Keep the header layout */
+                    .main-header {
+                        width: 100%;
+                    }
 
-                    .logo-container, .main-header.scrolled .logo-container {
+                    .header-container {
+                        position: relative;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        padding: 14px 18px 10px;
+                    }
+
+                    /* LOGO BLOCK */
+                    .logo-container {
                         display: flex !important;
                         flex-direction: column !important;
-                        align-items: center !important;
+                        align-items: flex-start !important;
                         justify-content: flex-start !important;
-                        width: 190px !important;
-                        max-width: 190px !important;
-                        flex-shrink: 0 !important;
-                        margin-top: 0 !important;
-                    }
 
-                    /* Larger SAQ logo */
-                    .logo-container img, .main-header.scrolled .logo-container img {
-                        display: block !important;
-                        width: 190px !important;
-                        max-width: 190px !important;
-                        height: auto !important;
+                        width: 150px !important;
+                        max-width: 150px !important;
                         margin: 0 !important;
+                        padding: 0 !important;
+                        text-decoration: none !important;
                     }
 
-                    /* Tagline is exactly the same width as the logo */
-                    .logo-tagline, .main-header.scrolled .logo-tagline {
-                        width: 190px !important;
-                        max-width: 190px !important;
-                        margin-top: 3mm !important;
-                        margin-left: 0 !important;
-                        margin-right: 0 !important;
-                        padding: 0 !important;
-                        text-align: center !important;
-                        white-space: nowrap !important;
-                        font-size: 6px !important;
-                        line-height: 1 !important;
-                        letter-spacing: 0.05em !important;
-                        box-sizing: border-box !important;
-                        overflow: hidden !important;
+                    /* MAKE THE ACTUAL SAQ LOGO LARGER */
+                    .logo-container img {
                         display: block !important;
-                        border: none !important;
-                        transform: none !important;
+
+                        width: 105px !important;
+                        height: auto !important;
+
+                        max-width: none !important;
+                        object-fit: contain !important;
+
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+
+                    /* TAGLINE DIRECTLY UNDER LOGO */
+                    .logo-tagline {
+                        display: block !important;
+
+                        width: 105px !important;
+                        max-width: 105px !important;
+
+                        margin: 3px 0 0 0 !important;
+                        padding: 0 !important;
+
+                        text-align: center !important;
+
+                        font-size: 4.5px !important;
+                        line-height: 1.15 !important;
+                        letter-spacing: 0.15px !important;
+
+                        white-space: nowrap !important;
+                        transform: translateX(0) !important;
+
+                        color: var(--charcoal, #292929) !important;
+                    }
+
+                    /* HAMBURGER */
+                    .mobile-menu-btn {
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+
+                        width: 36px !important;
+                        height: 36px !important;
+
+                        margin: 2px 0 0 auto !important;
+                        padding: 0 !important;
+
+                        background: transparent !important;
+                        border: 0 !important;
+                    }
+
+                    .mobile-menu-btn svg {
+                        width: 21px !important;
+                        height: 21px !important;
+                    }
+
+                    /* DESKTOP NAV MUST REMAIN HIDDEN */
+                    .nav-links {
+                        display: none !important;
                     }
                 }
             </style>
