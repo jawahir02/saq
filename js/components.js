@@ -231,10 +231,10 @@ class SAQHeader extends HTMLElement {
                     }
                     .main-header.scrolled .logo-tagline {
                         display: block !important;
-                        margin: 0 0 0 8px !important;
-                        padding: 0 0 0 8px !important;
+                        margin: 0 0 0 4px !important; /* Boundary closer to logo */
+                        padding: 0 0 0 6px !important; /* Slightly tighter padding */
                         border-left: 1px solid rgba(44, 44, 44, 0.3) !important;
-                        font-size: 0.42rem !important;
+                        font-size: 0.43rem !important; /* Slightly increased */
                         line-height: 1.2 !important;
                         white-space: normal !important;
                         max-width: 130px !important;
