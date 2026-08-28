@@ -229,48 +229,50 @@ class SAQFooter extends HTMLElement {
         this.innerHTML = `
             <style>
                 .main-footer {
-                    background-color: white; /* Changed to white */
-                    color: var(--charcoal, #2C2C2C); /* Dark text */
-                    padding: 1rem 2rem 0.5rem; /* Reduced padding further */
+                    background-color: #FFFFFF;
+                    color: var(--charcoal, #2C2C2C);
+                    padding: 1.5rem 2rem 1rem;
                     font-size: 0.75rem;
-                    border-top: 1px solid rgba(0,0,0,0.05); /* Subtle top border for separation */
+                    border-top: 1px solid rgba(0,0,0,0.05); /* Added slight border to separate from body */
                 }
                 .footer-container {
                     max-width: 1200px;
                     margin: 0 auto;
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 2rem;
+                    gap: 1.5rem; /* Reduced gap to compact further */
                 }
                 .footer-logo-container {
                     display: flex;
-                    flex-direction: column; /* Stack logo and text vertically */
-                    align-items: flex-start;
-                    margin-bottom: 1rem;
+                    align-items: center;
+                    margin-bottom: 0.5rem; /* Reduced margin */
                 }
                 .footer-logo-container img {
-                    height: 55px;
-                    margin-bottom: 8px; /* Space between logo and text */
+                    height: 48px;
+                    /* Original logo colors */
                 }
                 .footer-logo-tagline {
+                    margin-left: 8px;
+                    padding-left: 12px;
+                    border-left: 1px solid rgba(44, 44, 44, 0.3); /* Dark border for white footer */
                     font-size: 0.55rem;
-                    color: var(--charcoal, #2C2C2C);
+                    color: var(--charcoal, #2C2C2C); /* Dark text */
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     font-weight: 600;
                     line-height: 1.2;
                 }
                 .footer-col h3 {
-                    color: var(--charcoal, #2C2C2C); /* Dark text */
+                    color: var(--navy-blue, #1A2B4C); /* Dark heading for white footer */
                     font-family: var(--font-display, serif);
                     font-size: 0.95rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.8rem;
                     letter-spacing: 0.05em;
                     text-transform: uppercase;
                 }
                 .footer-col p {
-                    margin-bottom: 0.6rem;
-                    line-height: 1.5;
+                    margin-bottom: 0.4rem;
+                    line-height: 1.4;
                 }
                 .footer-links {
                     list-style: none;
@@ -278,10 +280,10 @@ class SAQFooter extends HTMLElement {
                     margin: 0;
                 }
                 .footer-links li {
-                    margin-bottom: 0.6rem;
+                    margin-bottom: 0.4rem;
                 }
                 .footer-links a {
-                    color: var(--charcoal, #2C2C2C); /* Dark text */
+                    color: var(--charcoal, #2C2C2C); /* Dark links */
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
@@ -290,9 +292,9 @@ class SAQFooter extends HTMLElement {
                 }
                 .footer-bottom {
                     max-width: 1200px;
-                    margin: 1.5rem auto 0; /* Reduced margin */
-                    padding-top: 1rem; /* Reduced padding */
-                    border-top: 1px solid rgba(0,0,0,0.1); /* Darker subtle border */
+                    margin: 1.5rem auto 0;
+                    padding-top: 1rem;
+                    border-top: 1px solid rgba(0,0,0,0.1); /* Darker border for white footer */
                     text-align: center;
                     font-size: 0.7rem;
                 }
@@ -304,7 +306,7 @@ class SAQFooter extends HTMLElement {
                             <img src="herologo.png" alt="SAQ Logo" onerror="this.src='1.png'">
                             <div class="footer-logo-tagline">Building Materials<br>Supplier In Dubai</div>
                         </div>
-                        <!-- Removed extra text below logo -->
+                        <p>Dubai, United Arab Emirates</p>
                     </div>
                     <div class="footer-col">
                         <h3>Quick Links</h3>
