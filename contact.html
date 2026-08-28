@@ -43,7 +43,7 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            padding-bottom: 60px; /* Space below cards */
+            padding-bottom: 80px; /* Space below map */
         }
 
         .contact-wrapper::before {
@@ -127,15 +127,15 @@
             text-align: center;
             gap: 0.8rem; 
             padding: 1.5rem 1rem; 
-            background: rgba(0,0,0,0.08); /* Darkened Grey card background */
+            background: var(--charcoal); /* Charcoal background */
             border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.05); /* Lighter border for dark background */
             transition: transform 0.3s ease, background 0.3s ease;
         }
         
         .info-item:hover {
             transform: translateY(-2px); 
-            background: rgba(0,0,0,0.12); /* Slightly darker grey on hover */
+            background: #1a1a1a; /* Slightly lighter charcoal on hover */
             border-color: var(--gold);
         }
 
@@ -156,7 +156,7 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--navy-blue);
+            color: var(--gold); /* Gold text for contrast on charcoal */
             margin: 0 0 0.5rem;
             font-weight: 700;
         }
@@ -164,21 +164,21 @@
         .info-content p {
             margin: 0;
             font-size: 1.05rem;
-            color: var(--charcoal);
+            color: #FFFFFF; /* White text for readability on charcoal */
             line-height: 1.5;
             font-weight: 600;
         }
 
         /* Map Section */
         .map-section {
-            margin: 2rem 5% 4rem; /* Moved upwards, added horizontal margin */
-            height: 350px; 
+            margin: 3rem 5% 0; /* Placed over leaf background */
+            height: 400px; 
             background: #e5e3df;
             position: relative;
-            border-top: 4px solid var(--gold);
-            border-bottom: 4px solid var(--gold);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Highlight shadow */
-            border-radius: 8px; /* Rounded corners */
+            border-top: 6px solid #8A7039; /* Thicker, darker gold */
+            border-bottom: 6px solid #8A7039; /* Thicker, darker gold */
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25); /* Stronger shadow */
+            border-radius: 8px; 
             overflow: hidden;
             z-index: 4;
         }
@@ -336,13 +336,13 @@
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <!-- Embedded Google Maps iframe pointing to Al Quoz Industrial Area 3 -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14446.549247659616!2d55.2285116!3d25.1479532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69f2eeb471ed%3A0xcb572dd2bc7d639b!2sAl%20Quoz%20Industrial%20Area%203%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+        <!-- Map Section -->
+        <section class="map-section">
+            <!-- Embedded Google Maps iframe pointing to Al Quoz Industrial Area 3 -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14446.549247659616!2d55.2285116!3d25.1479532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69f2eeb471ed%3A0xcb572dd2bc7d639b!2sAl%20Quoz%20Industrial%20Area%203%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
 
     <!-- Pre-Footer CTA -->
     <section class="pre-footer-cta">
