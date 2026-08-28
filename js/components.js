@@ -276,7 +276,7 @@ class SAQHeader extends HTMLElement {
                         color: var(--charcoal, #292929) !important;
                     }
 
-                    /* SCROLLED COMPACT LOGO */
+                    /* SCROLLED COMPACT LOGO (Matching Footer Logo Size & Distance) */
                     .main-header.scrolled .logo-container {
                         flex-direction: row !important;
                         align-items: center !important;
@@ -285,7 +285,7 @@ class SAQHeader extends HTMLElement {
                     }
 
                     .main-header.scrolled .logo-container img {
-                        width: 70px !important;
+                        width: 95px !important;
                         height: auto !important;
                     }
 
@@ -293,13 +293,17 @@ class SAQHeader extends HTMLElement {
                         width: auto !important;
                         max-width: 120px !important;
                         margin: 0 !important;
-                        padding: 0 0 0 8px !important;
-                        border-left: 1px solid rgba(41, 41, 41, 0.5) !important;
-                        font-size: 4.6px !important;
-                        line-height: 1.1 !important;
+                        padding: 0 0 0 9px !important;
+                        border-left: 1px solid rgba(44, 44, 44, 0.35) !important;
+                        font-size: 7.5px !important;
+                        font-weight: 600 !important;
+                        line-height: 1.15 !important;
+                        letter-spacing: 0.06em !important;
+                        text-transform: uppercase !important;
                         white-space: normal !important;
                         text-align: left !important;
-                        transform: translateX(-22px) !important; /* Pull left to remove invisible image gap */
+                        transform: translateX(-27px) !important; /* Perfectly aligns next to SAQ letters */
+                        color: var(--charcoal, #2C2C2C) !important;
                     }
 
                     /* HAMBURGER */
