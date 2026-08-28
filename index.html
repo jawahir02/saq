@@ -39,35 +39,41 @@
                 <style>
                 @media (max-width: 768px) {
                     .hero {
-                        padding-top: 190px !important; /* Push down to clear large mobile header */
+                        padding-top: 140px !important;
                     }
                     .hero-text-content h1 {
-                        font-size: clamp(28px, 7vw, 38px) !important;
+                        font-size: clamp(32px, 8vw, 42px) !important;
                         display: block !important;
                         overflow: visible !important;
-                        margin-left: 3% !important; 
+                        margin-left: 5% !important; 
+                        margin-right: 5% !important;
                         text-align: left !important;
+                        line-height: 1.15 !important;
                     }
                     .hero-text-content p {
-                        margin-left: 3% !important;
-                        text-align: left !important;
+                        margin: 1.5rem auto !important;
+                        text-align: center !important;
                         max-width: 90% !important;
+                        font-size: 0.95rem !important;
+                        line-height: 1.5 !important;
                     }
                     #hero-cta-wrap {
                         flex-direction: column !important;
-                        align-items: center !important; /* Centered */
+                        align-items: center !important; 
                         justify-content: center !important;
-                        gap: 0.6rem !important;
+                        gap: 0.8rem !important;
                         width: 100% !important;
-                        margin: 1.5rem auto 0 auto !important; /* Centered */
+                        margin: 1.5rem auto 0 auto !important;
                     }
                     #hero-cta-wrap .btn {
-                        width: 220px !important; /* Equal and contained width */
-                        padding: 0.5rem 1rem !important; /* Shorter height */
-                        font-size: 0.65rem !important;
+                        width: 85% !important;
+                        max-width: 400px !important;
+                        padding: 0.8rem 1rem !important;
+                        font-size: 0.75rem !important;
                         justify-content: center !important;
                         display: flex !important;
                         text-align: center !important;
+                        letter-spacing: 0.05em !important;
                     }
                 }
                 </style>
@@ -632,7 +638,7 @@
     <floating-call-btn></floating-call-btn>
 
     <script src="js/data.js?v=3"></script>
-    <script src="js/components.js?v=13"></script>
+    <script src="js/components.js?v=14"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
