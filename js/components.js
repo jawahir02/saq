@@ -229,10 +229,11 @@ class SAQFooter extends HTMLElement {
         this.innerHTML = `
             <style>
                 .main-footer {
-                    background-color: var(--navy-blue, #1A2B4C);
-                    color: rgba(255,255,255,0.7);
-                    padding: 1.5rem 2rem 1rem; /* Reduced padding to make blue box smaller */
+                    background-color: white; /* Changed to white */
+                    color: var(--charcoal, #2C2C2C); /* Dark text */
+                    padding: 1rem 2rem 0.5rem; /* Reduced padding further */
                     font-size: 0.75rem;
+                    border-top: 1px solid rgba(0,0,0,0.05); /* Subtle top border for separation */
                 }
                 .footer-container {
                     max-width: 1200px;
@@ -243,26 +244,24 @@ class SAQFooter extends HTMLElement {
                 }
                 .footer-logo-container {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column; /* Stack logo and text vertically */
+                    align-items: flex-start;
                     margin-bottom: 1rem;
                 }
                 .footer-logo-container img {
-                    height: 48px;
-                    /* Removed filter to use original logo colors */
+                    height: 55px;
+                    margin-bottom: 8px; /* Space between logo and text */
                 }
                 .footer-logo-tagline {
-                    margin-left: 8px;
-                    padding-left: 12px;
-                    border-left: 1px solid rgba(255, 255, 255, 0.3);
                     font-size: 0.55rem;
-                    color: rgba(255,255,255,0.8);
+                    color: var(--charcoal, #2C2C2C);
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     font-weight: 600;
                     line-height: 1.2;
                 }
                 .footer-col h3 {
-                    color: white;
+                    color: var(--charcoal, #2C2C2C); /* Dark text */
                     font-family: var(--font-display, serif);
                     font-size: 0.95rem;
                     margin-bottom: 1rem;
@@ -282,7 +281,7 @@ class SAQFooter extends HTMLElement {
                     margin-bottom: 0.6rem;
                 }
                 .footer-links a {
-                    color: rgba(255,255,255,0.7);
+                    color: var(--charcoal, #2C2C2C); /* Dark text */
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
@@ -291,9 +290,9 @@ class SAQFooter extends HTMLElement {
                 }
                 .footer-bottom {
                     max-width: 1200px;
-                    margin: 2rem auto 0;
-                    padding-top: 1.5rem;
-                    border-top: 1px solid rgba(255,255,255,0.1);
+                    margin: 1.5rem auto 0; /* Reduced margin */
+                    padding-top: 1rem; /* Reduced padding */
+                    border-top: 1px solid rgba(0,0,0,0.1); /* Darker subtle border */
                     text-align: center;
                     font-size: 0.7rem;
                 }
@@ -305,8 +304,7 @@ class SAQFooter extends HTMLElement {
                             <img src="herologo.png" alt="SAQ Logo" onerror="this.src='1.png'">
                             <div class="footer-logo-tagline">Building Materials<br>Supplier In Dubai</div>
                         </div>
-                        <p>Leading supplier of premium building materials, paints, and consumables for contractors across the UAE.</p>
-                        <p>Dubai, United Arab Emirates</p>
+                        <!-- Removed extra text below logo -->
                     </div>
                     <div class="footer-col">
                         <h3>Quick Links</h3>
