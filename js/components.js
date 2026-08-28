@@ -8,13 +8,19 @@ class SAQHeader extends HTMLElement {
             <style>
                 .main-header {
                     background-color: transparent;
-                    position: absolute;
+                    position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     width: 100%;
                     z-index: 1000;
-                    padding: 0.3rem 0; /* Reduced padding to move navbar upwards and compact */
+                    padding: 0.3rem 0;
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled {
+                    background-color: #F9F8F6; /* Off-white background */
+                    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+                    padding: 0.5rem 0;
                 }
                 .header-container {
                     max-width: 1400px;
@@ -29,32 +35,54 @@ class SAQHeader extends HTMLElement {
                     flex-direction: column;
                     align-items: center;
                     text-decoration: none;
-                    margin-top: 5px; /* Reduced top margin */
+                    margin-top: 5px;
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .logo-container {
+                    flex-direction: row;
+                    margin-top: 0;
                 }
                 .logo-container img {
-                    height: 107px; /* Increased by an additional 3% */
+                    height: 107px;
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .logo-container img {
+                    height: 45px;
                 }
                 .logo-tagline {
-                    font-size: 0.49rem; /* Increased by 3% */
+                    font-size: 0.49rem;
                     color: var(--charcoal, #2C2C2C);
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     font-weight: 600;
                     margin-top: 3px;
                     white-space: nowrap;
-                    transform: translateX(-12%); /* Shifted left significantly to center under the main body of the SAQ letters */
+                    transform: translateX(-12%);
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .logo-tagline {
+                    transform: none;
+                    margin-top: 0;
+                    margin-left: 15px;
+                    padding-left: 15px;
+                    border-left: 1px solid rgba(44, 44, 44, 0.3); /* Vertical line */
+                    font-size: 0.55rem;
                 }
                 .nav-links {
                     display: flex;
-                    gap: 1.8rem; /* Compacted gap */
+                    gap: 1.8rem;
                     align-items: center;
-                    transform: translateY(-16px); /* Shifted upwards significantly */
+                    transform: translateY(-16px);
+                    transition: all 0.3s ease;
+                }
+                .main-header.scrolled .nav-links {
+                    transform: translateY(0);
                 }
                 .nav-links a {
                     text-decoration: none;
                     color: var(--charcoal, #2C2C2C);
                     font-weight: 600;
-                    font-size: 0.7rem; /* Reduced font size */
+                    font-size: 0.7rem;
                     text-transform: uppercase;
                     letter-spacing: 0.08em;
                     transition: color 0.3s ease;
@@ -126,9 +154,11 @@ class SAQHeader extends HTMLElement {
                     .mobile-menu-btn { display: block; }
                     .header-container { padding: 0.8rem 5%; }
                     .logo-container img { height: 50px; }
+                    .main-header.scrolled .logo-container img { height: 35px; }
+                    .main-header.scrolled .logo-tagline { display: none; } /* Hide text on mobile when scrolled to save space */
                 }
             </style>
-            <header class="main-header">
+            <header class="main-header" id="main-header">
                 <div class="header-container">
                     <a href="index.html" class="logo-container">
                         <img src="herologo.png" alt="SAQ Building Materials Logo" onerror="this.src='1.png'">
@@ -166,9 +196,18 @@ class SAQHeader extends HTMLElement {
 
         const mobileMenuBtn = this.querySelector('.mobile-menu-btn');
         const mobileNav = this.querySelector('.mobile-nav');
+        const header = this.querySelector('#main-header');
         
         mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     }
 }
