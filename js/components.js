@@ -259,6 +259,32 @@ class SAQHeader extends HTMLElement {
                         color: var(--charcoal, #292929) !important;
                     }
 
+                    /* SCROLLED COMPACT LOGO */
+                    .main-header.scrolled .logo-container {
+                        flex-direction: row !important;
+                        align-items: center !important;
+                        width: auto !important;
+                        max-width: none !important;
+                    }
+
+                    .main-header.scrolled .logo-container img {
+                        width: 55px !important;
+                        height: auto !important;
+                    }
+
+                    .main-header.scrolled .logo-tagline {
+                        width: auto !important;
+                        max-width: 100px !important;
+                        margin: 0 !important;
+                        padding: 0 0 0 8px !important;
+                        border-left: 1px solid rgba(41, 41, 41, 0.5) !important;
+                        font-size: 4px !important;
+                        line-height: 1.1 !important;
+                        white-space: normal !important;
+                        text-align: left !important;
+                        transform: translateX(-18px) !important; /* Pull left to remove invisible image gap */
+                    }
+
                     /* HAMBURGER */
                     .mobile-menu-btn {
                         display: flex !important;
