@@ -24,19 +24,22 @@
   }
   .p2-img-1 {
     float: right;
-    width: 72mm;
+    width: 75mm;
     height: 60mm;
     margin-left: 6mm;
     margin-bottom: 2mm;
-    background-color: #ddd;
-    background-image: url('assets/images/aboutus.png');
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-    shape-outside: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-    shape-margin: 2mm;
+    shape-outside: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    shape-margin: 3mm;
     position: relative;
+  }
+  .p2-img-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
     border-radius: 2mm;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .p2-label {
     color: #a68a61;
@@ -280,7 +283,9 @@
   
   <div class="p2-top">
     <!-- Floated Image for Text Wrapping -->
-    <div class="p2-img-1"></div>
+    <div class="p2-img-1">
+      <img src="assets/images/aboutus.png" alt="About SAQ Facility">
+    </div>
     
     <div class="p2-label">ABOUT SAQ</div>
     <div class="p2-h1">LEADING BUILDING<br>MATERIALS SUPPLIER<br><span>IN DUBAI</span></div>
