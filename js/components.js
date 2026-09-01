@@ -87,8 +87,11 @@ class SAQHeader extends HTMLElement {
                     letter-spacing: 0.08em;
                     transition: color 0.3s ease;
                 }
-                .nav-links a:hover {
+                .nav-links a:hover, .nav-links a.active {
                     color: var(--gold, #B89C5D);
+                }
+                .nav-links a.active {
+                    font-weight: 800;
                 }
                 .nav-cta {
                     background-color: transparent !important;
@@ -183,8 +186,11 @@ class SAQHeader extends HTMLElement {
                     flex-shrink: 0;
                     transition: color 0.3s ease;
                 }
-                .mobile-nav .nav-link:hover {
+                .mobile-nav .nav-link:hover, .mobile-nav .nav-link.active {
                     color: var(--gold, #B89C5D);
+                }
+                .mobile-nav .nav-link.active {
+                    font-weight: 800;
                 }
                 .mobile-nav .nav-cta-mobile {
                     margin-top: auto !important;
@@ -392,6 +398,18 @@ class SAQHeader extends HTMLElement {
         if (!isHomePage) {
             header.classList.add('scrolled');
         }
+
+        // Set active state on nav links
+        const currentPath = window.location.pathname;
+        const navLinks = this.querySelectorAll('.nav-links a:not(.nav-cta), .mobile-nav a.nav-link');
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href) {
+                if (currentPath.endsWith(href) || (href === 'index.html' && isHomePage)) {
+                    link.classList.add('active');
+                }
+            }
+        });
 
         function toggleMenu() {
             mobileNav.classList.toggle('active');
