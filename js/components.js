@@ -404,8 +404,13 @@ class SAQHeader extends HTMLElement {
         const navLinks = this.querySelectorAll('.nav-links a:not(.nav-cta), .mobile-nav a.nav-link');
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
-            if (href) {
-                if (currentPath.endsWith(href) || (href === 'index.html' && isHomePage)) {
+            if (href && !href.startsWith('http')) {
+                const cleanHref = href.split('/').pop().replace('.html', '');
+                const cleanPath = currentPath.split('/').pop().replace('.html', '');
+                
+                if (cleanHref === 'index' && (cleanPath === '' || cleanPath === 'index')) {
+                    link.classList.add('active');
+                } else if (cleanHref !== 'index' && cleanHref === cleanPath) {
                     link.classList.add('active');
                 }
             }
