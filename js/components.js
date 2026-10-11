@@ -561,6 +561,7 @@ class SAQFooter extends HTMLElement {
                         <h3>Contact Us</h3>
                         <ul class="footer-links">
                             <li><a href="tel:+971529376999">Phone: +971 52 937 6999</a></li>
+                            <li><a href="tel:+971557566060">Phone: +971 55 756 6060</a></li>
                             <li><a href="mailto:sales@saqtrading.com">Email: sales@saqtrading.com</a></li>
                             <li><a href="https://wa.me/971529376999">WhatsApp: +971 52 937 6999</a></li>
                             <li><a href="https://www.google.com/maps/place/25%C2%B010'22.7%22N+55%C2%B015'18.8%22E/@25.1729789,55.2526545,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1729789!4d55.2552294" target="_blank" rel="noopener">Location: Al Quoz 3, Dubai, UAE</a></li>
@@ -621,7 +622,7 @@ class MobileContactBar extends HTMLElement {
             </style>
             <div class="mobile-contact-bar">
                 <div class="mcb-container">
-                    <a href="tel:+971529376999" class="mcb-btn mcb-call">
+                    <a href="tel:+971529376999" class="mcb-btn mcb-call" onclick="if(window.openCallModal){event.preventDefault(); window.openCallModal();}">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         Call
                     </a>
@@ -763,7 +764,7 @@ class ProductCTA extends HTMLElement {
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.397 0 0 5.397 0 12.031C0 14.654 0.852 17.078 2.274 19.043L0.555 24L5.617 22.285C7.525 23.518 9.689 24 12.031 24C18.665 24 24.062 18.603 24.062 11.969C24.062 5.335 18.665 0 12.031 0ZM19.01 16.711C18.713 17.555 17.258 18.272 16.48 18.423C15.86 18.543 15.011 18.643 12.185 17.472C8.57 15.98 6.257 12.289 6.079 12.052C5.901 11.815 4.606 10.095 4.606 8.31C4.606 6.525 5.516 5.666 5.891 5.28C6.19 4.972 6.702 4.814 7.214 4.814C7.373 4.814 7.511 4.822 7.633 4.828C8.01 4.846 8.199 4.869 8.446 5.463C8.754 6.206 9.506 8.046 9.595 8.234C9.684 8.422 9.802 8.679 9.664 8.956C9.535 9.223 9.416 9.342 9.219 9.57C9.022 9.798 8.844 9.957 8.636 10.224C8.448 10.432 8.232 10.668 8.457 11.055C8.682 11.432 9.452 12.688 10.59 13.704C12.05 15.015 13.235 15.43 13.65 15.608C14.065 15.786 14.54 15.736 14.836 15.419C15.212 15.013 15.676 14.331 16.141 13.639C16.477 13.136 16.921 13.076 17.376 13.245C17.831 13.414 20.25 14.611 20.725 14.849C21.2 15.087 21.517 15.206 21.626 15.394C21.735 15.582 21.735 16.463 21.438 17.307Z"/></svg>
                             WhatsApp
                         </a>
-                        <a href="tel:+971529376999" class="product-cta-btn product-cta-outline">
+                        <a href="tel:+971529376999" class="product-cta-btn product-cta-outline" onclick="if(window.openCallModal){event.preventDefault(); window.openCallModal();}">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             Call
                         </a>
@@ -814,3 +815,216 @@ class FloatingCallBtn extends HTMLElement {
     }
 }
 customElements.define('floating-call-btn', FloatingCallBtn);
+
+// Global Call Chooser Modal for calling only
+function openCallModal() {
+    let modal = document.getElementById('saq-call-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'saq-call-modal';
+        modal.innerHTML = `
+            <div class="saq-call-backdrop" onclick="closeCallModal()"></div>
+            <div class="saq-call-dialog" role="dialog" aria-modal="true" aria-labelledby="saq-call-title">
+                <button class="saq-call-close" onclick="closeCallModal()" aria-label="Close">&times;</button>
+                <div class="saq-call-header">
+                    <div class="saq-call-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3 id="saq-call-title">Call SAQ Building Materials</h3>
+                    <p>Select a phone line to place your call:</p>
+                </div>
+                <div class="saq-call-options">
+                    <a href="tel:+971529376999" class="saq-call-option">
+                        <div class="saq-call-opt-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="saq-call-opt-details">
+                            <span class="saq-call-num">+971 52 937 6999</span>
+                            <span class="saq-call-label">Main Helpline & Orders</span>
+                        </div>
+                        <span class="saq-call-action">Call &rarr;</span>
+                    </a>
+                    <a href="tel:+971557566060" class="saq-call-option">
+                        <div class="saq-call-opt-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="saq-call-opt-details">
+                            <span class="saq-call-num">+971 55 756 6060</span>
+                            <span class="saq-call-label">Direct Line</span>
+                        </div>
+                        <span class="saq-call-action">Call &rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <style>
+                #saq-call-modal {
+                    position: fixed;
+                    inset: 0;
+                    z-index: 10000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.25s ease;
+                }
+                #saq-call-modal.active {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                .saq-call-backdrop {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(10, 15, 25, 0.7);
+                    backdrop-filter: blur(4px);
+                    -webkit-backdrop-filter: blur(4px);
+                }
+                .saq-call-dialog {
+                    position: relative;
+                    background: #1A2B4C;
+                    border: 1px solid rgba(212, 175, 55, 0.3);
+                    border-radius: 14px;
+                    width: 100%;
+                    max-width: 400px;
+                    padding: 1.8rem 1.5rem;
+                    color: white;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                    transform: scale(0.95);
+                    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+                #saq-call-modal.active .saq-call-dialog {
+                    transform: scale(1);
+                }
+                .saq-call-close {
+                    position: absolute;
+                    top: 12px;
+                    right: 14px;
+                    background: transparent;
+                    border: none;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 1.8rem;
+                    line-height: 1;
+                    cursor: pointer;
+                    padding: 4px;
+                    transition: color 0.2s;
+                }
+                .saq-call-close:hover {
+                    color: #FFFFFF;
+                }
+                .saq-call-header {
+                    text-align: center;
+                    margin-bottom: 1.4rem;
+                }
+                .saq-call-icon-wrap {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: rgba(212, 175, 55, 0.15);
+                    color: #d4af37;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 0.8rem;
+                }
+                .saq-call-header h3 {
+                    margin: 0 0 0.3rem 0;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: white;
+                    letter-spacing: 0.02em;
+                }
+                .saq-call-header p {
+                    margin: 0;
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+                .saq-call-options {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                }
+                .saq-call-option {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 0.9rem 1.1rem;
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    border-radius: 10px;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.2s ease;
+                }
+                .saq-call-option:hover {
+                    background: rgba(212, 175, 55, 0.15);
+                    border-color: #d4af37;
+                    transform: translateY(-2px);
+                }
+                .saq-call-opt-icon {
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 8px;
+                    background: #d4af37;
+                    color: #1A2B4C;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+                .saq-call-opt-details {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                }
+                .saq-call-num {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: white;
+                    letter-spacing: 0.03em;
+                }
+                .saq-call-label {
+                    font-size: 0.75rem;
+                    color: rgba(255, 255, 255, 0.65);
+                }
+                .saq-call-action {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: #d4af37;
+                    letter-spacing: 0.05em;
+                }
+                @media (max-width: 480px) {
+                    .saq-call-dialog {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        max-width: 100%;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        transform: translateY(100%);
+                        padding-bottom: calc(1.8rem + env(safe-area-inset-bottom, 0px));
+                    }
+                    #saq-call-modal.active .saq-call-dialog {
+                        transform: translateY(0);
+                    }
+                }
+            </style>
+        `;
+        document.body.appendChild(modal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCallModal();
+        });
+    }
+    modal.classList.add('active');
+}
+
+function closeCallModal() {
+    const modal = document.getElementById('saq-call-modal');
+    if (modal) modal.classList.remove('active');
+}
+window.openCallModal = openCallModal;
+window.closeCallModal = closeCallModal;

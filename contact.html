@@ -359,6 +359,44 @@
         }
 
     </style>
+    <!-- Google Search Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SAQ Building Materials Trading LLC",
+      "image": "https://saqtradingdubai.com/saq-favicon-v2.png",
+      "url": "https://saqtradingdubai.com/contact",
+      "telephone": ["+971 52 937 6999", "+971 55 756 6060"],
+      "email": "sales@saqtrading.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Quoz Industrial Area 3",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.1729789,
+        "longitude": 55.2552294
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+971 52 937 6999",
+          "contactType": "sales & customer support",
+          "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+971 55 756 6060",
+          "contactType": "phone orders & general helpline",
+          "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Subtle leaf background identical to careers and brands pages -->
@@ -383,15 +421,18 @@
             <div class="info-section">
                 <div class="info-list">
                     <!-- Call Us -->
-                    <a href="tel:+971529376999" class="info-item" style="text-decoration: none;">
+                    <div class="info-item" style="text-decoration: none;">
                         <div class="icon-box">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
                         <div class="info-content">
                             <h4>CALL US</h4>
-                            <p>+971 52 937 6999</p>
+                            <p style="display: flex; flex-direction: column; gap: 4px;">
+                                <a href="tel:+971529376999" style="color: #FFFFFF; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='#FFFFFF'">+971 52 937 6999</a>
+                                <a href="tel:+971557566060" style="color: #FFFFFF; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='#FFFFFF'">+971 55 756 6060</a>
+                            </p>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- WhatsApp -->
                     <a href="https://wa.me/971529376999" class="info-item" target="_blank" style="text-decoration: none;">
